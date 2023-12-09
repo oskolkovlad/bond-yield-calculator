@@ -8,4 +8,9 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\BondYieldCalculator.Entities\BondYieldCalculator.Entities.csproj" />
+    <ProjectReference Include="..\BondYieldCalculator.Parser\BondYieldCalculator.Parser.csproj" />
+  </ItemGroup>
+
 </Project>

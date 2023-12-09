@@ -47,8 +47,8 @@
             nominalPriceLabel = new Label();
             maturityTextBox = new TextBox();
             nominalPriceTextBox = new TextBox();
-            currentValueTextBox = new TextBox();
-            currentValueLabel = new Label();
+            currentPriceTextBox = new TextBox();
+            currentPriceLabel = new Label();
             maturityLabel = new Label();
             couponInfoGroupBox = new GroupBox();
             couponInfoTableLayoutPanel = new TableLayoutPanel();
@@ -171,8 +171,8 @@
             commonInfoTableLayoutPanel.Controls.Add(nominalPriceLabel, 0, 0);
             commonInfoTableLayoutPanel.Controls.Add(maturityTextBox, 1, 2);
             commonInfoTableLayoutPanel.Controls.Add(nominalPriceTextBox, 1, 0);
-            commonInfoTableLayoutPanel.Controls.Add(currentValueTextBox, 1, 1);
-            commonInfoTableLayoutPanel.Controls.Add(currentValueLabel, 0, 1);
+            commonInfoTableLayoutPanel.Controls.Add(currentPriceTextBox, 1, 1);
+            commonInfoTableLayoutPanel.Controls.Add(currentPriceLabel, 0, 1);
             commonInfoTableLayoutPanel.Controls.Add(maturityLabel, 0, 2);
             commonInfoTableLayoutPanel.Name = "commonInfoTableLayoutPanel";
             // 
@@ -193,16 +193,16 @@
             nominalPriceTextBox.Name = "nominalPriceTextBox";
             nominalPriceTextBox.ReadOnly = true;
             // 
-            // currentValueTextBox
+            // currentPriceTextBox
             // 
-            resources.ApplyResources(currentValueTextBox, "currentValueTextBox");
-            currentValueTextBox.Name = "currentValueTextBox";
-            currentValueTextBox.ReadOnly = true;
+            resources.ApplyResources(currentPriceTextBox, "currentPriceTextBox");
+            currentPriceTextBox.Name = "currentPriceTextBox";
+            currentPriceTextBox.ReadOnly = true;
             // 
-            // currentValueLabel
+            // currentPriceLabel
             // 
-            resources.ApplyResources(currentValueLabel, "currentValueLabel");
-            currentValueLabel.Name = "currentValueLabel";
+            resources.ApplyResources(currentPriceLabel, "currentPriceLabel");
+            currentPriceLabel.Name = "currentPriceLabel";
             // 
             // maturityLabel
             // 
@@ -344,8 +344,8 @@
         private Label nominalPriceLabel;
         private TextBox nominalPriceTextBox;
         private TableLayoutPanel couponInfoTableLayoutPanel;
-        private TextBox currentValueTextBox;
-        private Label currentValueLabel;
+        private TextBox currentPriceTextBox;
+        private Label currentPriceLabel;
         private TextBox maturityTextBox;
         private Label maturityLabel;
         private Label accumulatedCouponIncomeLabel;
