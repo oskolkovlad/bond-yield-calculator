@@ -1,9 +1,9 @@
-﻿using BondYieldCalculator.Entities;
-
-namespace BondYieldCalculator.Parser
+﻿namespace BondYieldCalculator.Parser
 {
+    using BondYieldCalculator.Entities;
+
     public interface IBondParser
     {
-        BondInfo GetBondInfo(string url);
+        Task<BondInfo?> GetBondInfoAsync(string url);
     }
 }

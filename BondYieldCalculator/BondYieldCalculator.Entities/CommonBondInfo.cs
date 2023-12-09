@@ -6,6 +6,6 @@
 
         public decimal CurrentPrice { get; set; }
 
-        public double Maturity { get; set; }
+        public decimal Maturity { get; set; }
     }
 }
