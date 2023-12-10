@@ -6,6 +6,10 @@
 
         public const string CouponInfoXpath = ".//div[@class='quotes-body__block']/section[@class='quotes-info-list']/article[2]";
 
+        public const string BondNameInfoXpath = ".//div[@class='quotes-body__block']/section[@class='quotes-info-list']/article[4]";
+
+        public const string NameXpath = ".//div/div[1]/div[2]";
+
         public const string NominalPriceXpath = ".//div/div[11]/div[2]";
 
         public const string CurrentPriceXpath = ".//div/div[1]/div[2]";

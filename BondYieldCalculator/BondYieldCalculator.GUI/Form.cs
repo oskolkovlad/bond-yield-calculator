@@ -40,7 +40,7 @@ namespace BondYieldCalculator.GUI
             set { InvokeIfRequired(() => bondTableLayoutPanel.Enabled = value); }
         }
 
-        public string LinkText
+        public string? LinkText
         {
             get { return linkTextBox.Text; }
             set { InvokeIfRequired(() => linkTextBox.Text = value); }
@@ -52,19 +52,25 @@ namespace BondYieldCalculator.GUI
 
         #region ICommonBondInfoForm Members
 
-        public string NominalPriceText
+        public string? NameText
+        {
+            get { return nameTextBox.Text; }
+            set { InvokeIfRequired(() => nameTextBox.Text = value); }
+        }
+
+        public string? NominalPriceText
         {
             get { return nominalPriceTextBox.Text; }
             set { InvokeIfRequired(() => nominalPriceTextBox.Text = value); }
         }
 
-        public string CurrentPriceText
+        public string? CurrentPriceText
         {
             get { return currentPriceTextBox.Text; }
             set { InvokeIfRequired(() => currentPriceTextBox.Text = value); }
         }
 
-        public string MaturityText
+        public string? MaturityText
         {
             get { return maturityTextBox.Text; }
             set { InvokeIfRequired(() => maturityTextBox.Text = value); }

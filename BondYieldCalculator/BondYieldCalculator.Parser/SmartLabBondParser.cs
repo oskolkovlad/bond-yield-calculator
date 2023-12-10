@@ -21,7 +21,15 @@
 
         private CommonBondInfo? GetCommonInfo(HtmlDocument document)
         {
-            var node = document.DocumentNode.SelectSingleNode(BondInfoElements.CommonBondInfoXpath);
+            var node = document.DocumentNode.SelectSingleNode(BondInfoElements.BondNameInfoXpath);
+
+            var name = node?.SelectSingleNode(BondInfoElements.NameXpath)?.InnerText?.TrimInnerText();
+            if (name is null)
+            {
+                return null;
+            }
+
+            node = document.DocumentNode.SelectSingleNode(BondInfoElements.CommonBondInfoXpath);
 
             var nominalPrice = node?.SelectSingleNode(BondInfoElements.NominalPriceXpath)?.InnerText?.TrimInnerText();
             if (nominalPrice is null)
@@ -41,7 +49,7 @@
                 return null;
             }
 
-            var result = new CommonBondInfo { NominalPrice = nominalPrice.ParseInnerText(), Maturity = maturity.ParseInnerText() };
+            var result = new CommonBondInfo { Name = name, NominalPrice = nominalPrice.ParseInnerText(), Maturity = maturity.ParseInnerText() };
             result.CurrentPrice = currentPricePercent.ParseInnerText() * 1000 / 100;
 
             return result;

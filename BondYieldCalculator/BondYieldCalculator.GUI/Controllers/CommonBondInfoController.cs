@@ -21,6 +21,7 @@
                 return;
             }
 
+            _form.NameText = bondInfo.CommonInfo?.Name;
             _form.NominalPriceText = bondInfo.CommonInfo?.NominalPrice.ToString(CultureInfo.InvariantCulture);
             _form.CurrentPriceText = bondInfo.CommonInfo?.CurrentPrice.ToString(CultureInfo.InvariantCulture);
             _form.MaturityText = bondInfo.CommonInfo?.Maturity.ToString(CultureInfo.InvariantCulture);

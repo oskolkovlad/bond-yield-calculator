@@ -4,7 +4,7 @@
     {
         bool BondPanelEnabled { get; set; }
 
-        string LinkText { get; set; }
+        string? LinkText { get; set; }
 
         event EventHandler AnalyzeBond;
     }
