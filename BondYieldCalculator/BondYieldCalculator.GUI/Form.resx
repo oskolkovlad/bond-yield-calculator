@@ -934,7 +934,7 @@
     <value>4</value>
   </data>
   <data name="linkLabel.Text" xml:space="preserve">
-    <value>Введите ссылки на облигацию:</value>
+    <value>Введите ссылку на облигацию:</value>
   </data>
   <data name="&gt;&gt;quantityOfPaymentsInYearTextBox.Type" xml:space="preserve">
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
