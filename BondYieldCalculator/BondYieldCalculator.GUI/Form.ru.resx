@@ -109,6 +109,15 @@
   <data name="LinkColumn.MinimumWidth" type="System.Int32, mscorlib">
     <value>50</value>
   </data>
+  <data name="LinkColumn.Width" type="System.Int32, mscorlib">
+    <value>360</value>
+  </data>
+  <data name="MaturityColumn.HeaderText" xml:space="preserve">
+    <value>Срок, лет</value>
+  </data>
+  <data name="MaturityColumn.MinimumWidth" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
   <data name="RealYieldPercentColumn.MinimumWidth" type="System.Int32, mscorlib">
     <value>10</value>
   </data>
@@ -172,14 +181,8 @@
   <data name="openLinksButton.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
   </data>
-  <data name="openLinksButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>828, 287</value>
-  </data>
   <data name="openLinksButton.Size" type="System.Drawing.Size, System.Drawing">
     <value>74, 23</value>
-  </data>
-  <data name="openLinksButton.TabIndex" type="System.Int32, mscorlib">
-    <value>7</value>
   </data>
   <data name="openLinksButton.Text" xml:space="preserve">
     <value>Открыть</value>

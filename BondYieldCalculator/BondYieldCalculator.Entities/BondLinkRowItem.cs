@@ -6,6 +6,8 @@
 
         public string? Link { get; set; }
 
+        public decimal? Maturity { get; set; }
+
         public decimal? RealYieldPercent { get; set; }
     }
 }

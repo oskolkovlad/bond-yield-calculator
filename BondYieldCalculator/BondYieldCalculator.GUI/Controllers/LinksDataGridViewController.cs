@@ -77,6 +77,7 @@
             }
 
             linkRowItem.Name = bondInfo.CommonInfo?.Name;
+            linkRowItem.Maturity = bondInfo.CommonInfo?.Maturity;
             linkRowItem.RealYieldPercent = bondInfo.YieldInfo?.RealYieldPercent;
 
             RefreshDataSource();
