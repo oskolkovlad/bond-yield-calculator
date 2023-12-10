@@ -20,8 +20,8 @@
 
         public const string CouponXpath = ".//div/div[2]/div[2]";
 
-        public const string CouponsQuantityXpath = ".//div/div[4]/div[2]";
+        public const string CouponsQuantityXpath = "/html/body/div[1]/main/div[2]/div[3]/div[2]/table/tbody/tr";
 
-        public const string CouponPaymentsRowsXpath = "/html/body/div[1]/main/div[2]/div[3]/div[2]/table/tbody/tr";
+        public const string QuantityOfPaymentsInYearXpath = ".//div/div[4]/div[2]";
     }
 }
