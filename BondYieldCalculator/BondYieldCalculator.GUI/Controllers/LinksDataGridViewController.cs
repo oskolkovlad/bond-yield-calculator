@@ -1,6 +1,7 @@
 ﻿namespace BondYieldCalculator.GUI.Controllers
 {
     using System.Collections.Generic;
+    using System.ComponentModel;
     using System.Windows.Forms;
     using BondYieldCalculator.Entities;
     using BondYieldCalculator.GUI.Interfaces.Controllers;
@@ -133,6 +134,30 @@
 
             _lastSelectedRowIndex = selectedRows[0].Index;
             SelectionChanged?.Invoke(this, EventArgs.Empty);
+        }
+
+        private void HandleColumnHeaderMouseClick(DataGridViewCellMouseEventArgs args)
+        {
+            ListSortDirection direction;
+
+            var newColumn = DataGridView.Columns[args.ColumnIndex];
+            var oldColumn = DataGridView.SortedColumn;
+
+            if (oldColumn == newColumn)
+            {
+                direction = DataGridView.SortOrder == SortOrder.Ascending ? ListSortDirection.Descending : ListSortDirection.Ascending;
+            }
+            else
+            {
+                direction = ListSortDirection.Ascending;
+                if (oldColumn != null)
+                {
+                    oldColumn.HeaderCell.SortGlyphDirection = SortOrder.None;
+                }
+            }
+
+            DataGridView.Sort(newColumn, direction);
+            newColumn.HeaderCell.SortGlyphDirection = direction == ListSortDirection.Ascending ? SortOrder.Ascending : SortOrder.Descending;
         }
 
         #endregion Private Members
