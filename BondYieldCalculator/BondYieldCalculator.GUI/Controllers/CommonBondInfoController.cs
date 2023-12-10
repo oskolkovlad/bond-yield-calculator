@@ -14,7 +14,15 @@
             _form = form;
         }
 
-        public void FillInfo(BondInfo bondInfo)
+        public void ClearInfo()
+        {
+            _form.NameText = null;
+            _form.NominalPriceText = null;
+            _form.CurrentPriceText = null;
+            _form.MaturityText = null;
+        }
+
+        public void FillInfo(BondInfo? bondInfo)
         {
             if (bondInfo is null)
             {

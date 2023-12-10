@@ -4,6 +4,6 @@
 
     public interface IBondParser
     {
-        Task<BondInfo?> GetBondInfoAsync(string url);
+        Task<BondInfo?> GetBondInfoAsync(string? url);
     }
 }

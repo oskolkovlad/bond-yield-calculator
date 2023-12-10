@@ -8,7 +8,7 @@
         private const decimal TaxClearanceRatio = 0.87M; // TODO: get from config.
         private const decimal BrokerCommission = 0.0006M; // TODO: get from config.
 
-        public void UpdateYieldInfo(BondInfo bondInfo)
+        public void UpdateYieldInfo(BondInfo? bondInfo)
         {
             if (bondInfo?.CommonInfo is null || bondInfo?.CouponInfo is null)
             {

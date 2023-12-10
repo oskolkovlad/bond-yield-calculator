@@ -4,6 +4,6 @@
 
     internal interface IYieldCalculatorService
     {
-        void UpdateYieldInfo(BondInfo bondInfo);
+        void UpdateYieldInfo(BondInfo? bondInfo);
     }
 }

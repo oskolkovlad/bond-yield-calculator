@@ -9,7 +9,7 @@
 
         protected abstract BondInfo? GetBondInfo(HtmlDocument document);
 
-        protected async Task<BondInfo?> ParseAsync(string url)
+        protected async Task<BondInfo?> ParseAsync(string? url)
         {
             if (string.IsNullOrEmpty(url))
             {

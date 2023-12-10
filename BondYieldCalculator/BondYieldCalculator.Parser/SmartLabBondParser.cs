@@ -7,7 +7,7 @@
     {
         #region IBondParser Members
 
-        public Task<BondInfo?> GetBondInfoAsync(string url) => ParseAsync(url);
+        public Task<BondInfo?> GetBondInfoAsync(string? url) => ParseAsync(url);
 
         #endregion IBondParser Members
 

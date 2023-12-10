@@ -4,27 +4,31 @@
     using BondYieldCalculator.Entities;
     using BondYieldCalculator.GUI.Interfaces.Controllers;
     using BondYieldCalculator.GUI.Interfaces.Forms;
-    using BondYieldCalculator.GUI.Interfaces.Services;
 
     internal class YieldInfoController : IInfoObserverController
     {
         private readonly IYieldInfoForm _form;
-        private readonly IYieldCalculatorService _yieldCalculatorService;
 
-        public YieldInfoController(IYieldInfoForm form, IYieldCalculatorService yieldCalculatorService)
+        public YieldInfoController(IYieldInfoForm form)
         {
             _form = form;
-            _yieldCalculatorService = yieldCalculatorService;
         }
 
-        public void FillInfo(BondInfo bondInfo)
+        public void ClearInfo()
+        {
+            _form.YieldText = null;
+            _form.CapitalGainsPercentText = null;
+            _form.RealCouponIncomeText = null;
+            _form.RealCouponIncomePercentText = null;
+            _form.RealYieldPercentText = null;
+        }
+
+        public void FillInfo(BondInfo? bondInfo)
         {
             if (bondInfo is null)
             {
                 return;
             }
-
-            _yieldCalculatorService.UpdateYieldInfo(bondInfo);
 
             _form.YieldText = bondInfo.YieldInfo?.Yield.ToString(CultureInfo.InvariantCulture);
             _form.CapitalGainsPercentText = bondInfo.YieldInfo?.CapitalGainsPercent.ToString(CultureInfo.InvariantCulture);

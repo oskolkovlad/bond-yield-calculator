@@ -6,6 +6,10 @@
 
         string? LinkText { get; set; }
 
-        event EventHandler AnalyzeBond;
+        event EventHandler LinkAdded;
+
+        event EventHandler LinksRemoved;
+
+        event EventHandler LinksAnalyzed;
     }
 }

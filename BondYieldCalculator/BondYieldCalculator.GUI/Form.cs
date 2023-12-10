@@ -4,6 +4,7 @@ namespace BondYieldCalculator.GUI
 
     public partial class Form : System.Windows.Forms.Form,
         ILinkForm,
+        ILinksDataGridViewForm,
         ICommonBondInfoForm,
         ICouponInfoForm,
         IYieldInfoForm
@@ -13,7 +14,10 @@ namespace BondYieldCalculator.GUI
             InitializeComponent();
 
             BondPanelEnabled = false;
-            analyzeButton.Click += (sender, args) => AnalyzeBond?.Invoke(this, EventArgs.Empty);
+
+            addButton.Click += (sender, args) => LinkAdded.Invoke(this, EventArgs.Empty);
+            removeButton.Click += (sender, args) => LinksRemoved.Invoke(this, EventArgs.Empty);
+            analyzeButton.Click += (sender, args) => LinksAnalyzed.Invoke(this, EventArgs.Empty);
         }
 
         #region IForm
@@ -46,9 +50,25 @@ namespace BondYieldCalculator.GUI
             set { InvokeIfRequired(() => linkTextBox.Text = value); }
         }
 
-        public event EventHandler AnalyzeBond;
+        public event EventHandler LinkAdded = delegate { };
+
+        public event EventHandler LinksRemoved = delegate { };
+
+        public event EventHandler LinksAnalyzed = delegate { };
 
         #endregion ILinkForm Members
+
+        #region ILinksDataGridViewForm Members
+
+        public bool RemoveButtonEnabled
+        {
+            get { return removeButton.Enabled; }
+            set { InvokeIfRequired(() => removeButton.Enabled = value); }
+        }
+
+        public DataGridView LinksDataGridView => linksDataGridView;
+
+        #endregion ILinksDataGridViewForm Members
 
         #region ICommonBondInfoForm Members
 

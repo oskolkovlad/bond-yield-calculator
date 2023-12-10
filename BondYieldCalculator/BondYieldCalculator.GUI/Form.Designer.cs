@@ -29,10 +29,18 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form));
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             mainTableLayoutPanel = new TableLayoutPanel();
             linkTableLayoutPanel = new TableLayoutPanel();
             linkLabel = new Label();
             linkTextBox = new TextBox();
+            addButton = new Button();
+            linksDataGridView = new DataGridView();
+            NameColumn = new DataGridViewTextBoxColumn();
+            LinkColumn = new DataGridViewTextBoxColumn();
+            RealYieldPercentColumn = new DataGridViewTextBoxColumn();
+            removeButton = new Button();
             analyzeButton = new Button();
             bondTableLayoutPanel = new TableLayoutPanel();
             yieldInfoGroupBox = new GroupBox();
@@ -69,6 +77,7 @@
             quantityOfPaymentsInYearTextBox = new TextBox();
             mainTableLayoutPanel.SuspendLayout();
             linkTableLayoutPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)linksDataGridView).BeginInit();
             bondTableLayoutPanel.SuspendLayout();
             yieldInfoGroupBox.SuspendLayout();
             yieldInfoTableLayoutPanel.SuspendLayout();
@@ -90,7 +99,10 @@
             resources.ApplyResources(linkTableLayoutPanel, "linkTableLayoutPanel");
             linkTableLayoutPanel.Controls.Add(linkLabel, 0, 0);
             linkTableLayoutPanel.Controls.Add(linkTextBox, 1, 0);
-            linkTableLayoutPanel.Controls.Add(analyzeButton, 2, 0);
+            linkTableLayoutPanel.Controls.Add(addButton, 2, 0);
+            linkTableLayoutPanel.Controls.Add(linksDataGridView, 0, 1);
+            linkTableLayoutPanel.Controls.Add(removeButton, 3, 0);
+            linkTableLayoutPanel.Controls.Add(analyzeButton, 0, 2);
             linkTableLayoutPanel.Name = "linkTableLayoutPanel";
             // 
             // linkLabel
@@ -102,6 +114,70 @@
             // 
             resources.ApplyResources(linkTextBox, "linkTextBox");
             linkTextBox.Name = "linkTextBox";
+            // 
+            // addButton
+            // 
+            resources.ApplyResources(addButton, "addButton");
+            addButton.Name = "addButton";
+            addButton.UseVisualStyleBackColor = true;
+            // 
+            // linksDataGridView
+            // 
+            resources.ApplyResources(linksDataGridView, "linksDataGridView");
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = SystemColors.Control;
+            dataGridViewCellStyle1.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            dataGridViewCellStyle1.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
+            linksDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            linksDataGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            linksDataGridView.Columns.AddRange(new DataGridViewColumn[] { NameColumn, LinkColumn, RealYieldPercentColumn });
+            linkTableLayoutPanel.SetColumnSpan(linksDataGridView, 4);
+            linksDataGridView.Name = "linksDataGridView";
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = SystemColors.Control;
+            dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle2.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
+            linksDataGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            linksDataGridView.RowTemplate.Height = 25;
+            // 
+            // NameColumn
+            // 
+            NameColumn.DataPropertyName = "Name";
+            NameColumn.FillWeight = 150F;
+            NameColumn.Frozen = true;
+            resources.ApplyResources(NameColumn, "NameColumn");
+            NameColumn.Name = "NameColumn";
+            NameColumn.ReadOnly = true;
+            // 
+            // LinkColumn
+            // 
+            LinkColumn.DataPropertyName = "Link";
+            LinkColumn.FillWeight = 450F;
+            LinkColumn.Frozen = true;
+            resources.ApplyResources(LinkColumn, "LinkColumn");
+            LinkColumn.Name = "LinkColumn";
+            // 
+            // RealYieldPercentColumn
+            // 
+            RealYieldPercentColumn.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
+            RealYieldPercentColumn.DataPropertyName = "RealYieldPercent";
+            RealYieldPercentColumn.Frozen = true;
+            resources.ApplyResources(RealYieldPercentColumn, "RealYieldPercentColumn");
+            RealYieldPercentColumn.Name = "RealYieldPercentColumn";
+            RealYieldPercentColumn.ReadOnly = true;
+            RealYieldPercentColumn.Resizable = DataGridViewTriState.False;
+            // 
+            // removeButton
+            // 
+            resources.ApplyResources(removeButton, "removeButton");
+            removeButton.Name = "removeButton";
+            removeButton.UseVisualStyleBackColor = true;
             // 
             // analyzeButton
             // 
@@ -334,6 +410,7 @@
             mainTableLayoutPanel.PerformLayout();
             linkTableLayoutPanel.ResumeLayout(false);
             linkTableLayoutPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)linksDataGridView).EndInit();
             bondTableLayoutPanel.ResumeLayout(false);
             bondTableLayoutPanel.PerformLayout();
             yieldInfoGroupBox.ResumeLayout(false);
@@ -389,8 +466,14 @@
         private Label quantityOfPaymentsInYearLabel;
         private Label realCouponIncomeLabel;
         private Label realCouponIncomePercentLabel;
-        private Button analyzeButton;
+        private Button addButton;
         private Label nameLabel;
         private TextBox nameTextBox;
+        private Button removeButton;
+        private Button analyzeButton;
+        private DataGridView linksDataGridView;
+        private DataGridViewTextBoxColumn NameColumn;
+        private DataGridViewTextBoxColumn LinkColumn;
+        private DataGridViewTextBoxColumn RealYieldPercentColumn;
     }
 }

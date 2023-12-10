@@ -14,7 +14,15 @@
             _form = form;
         }
 
-        public void FillInfo(BondInfo bondInfo)
+        public void ClearInfo()
+        {
+            _form.AccumulatedCouponIncomeText = null;
+            _form.CouponText = null;
+            _form.CouponsQuantityText = null;
+            _form.QuantityOfPaymentsInYearText = null;
+        }
+
+        public void FillInfo(BondInfo? bondInfo)
         {
             if (bondInfo is null)
             {

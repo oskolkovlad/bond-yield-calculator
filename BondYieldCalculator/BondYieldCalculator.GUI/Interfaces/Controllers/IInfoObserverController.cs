@@ -1,9 +1,11 @@
-﻿using BondYieldCalculator.Entities;
-
-namespace BondYieldCalculator.GUI.Interfaces.Controllers
+﻿namespace BondYieldCalculator.GUI.Interfaces.Controllers
 {
+    using BondYieldCalculator.Entities;
+
     internal interface IInfoObserverController : IController
     {
-        void FillInfo(BondInfo bondInfo);
+        void ClearInfo();
+
+        void FillInfo(BondInfo? bondInfo);
     }
 }

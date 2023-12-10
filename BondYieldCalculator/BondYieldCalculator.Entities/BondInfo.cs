@@ -2,7 +2,7 @@
 {
     public class BondInfo
     {
-        public string Link { get; set; }
+        public string? Link { get; set; }
 
         public CommonBondInfo? CommonInfo { get; set; }
 
