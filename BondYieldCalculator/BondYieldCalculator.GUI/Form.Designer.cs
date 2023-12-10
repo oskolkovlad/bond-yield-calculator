@@ -33,15 +33,20 @@
             linkTableLayoutPanel = new TableLayoutPanel();
             linkLabel = new Label();
             linkTextBox = new TextBox();
+            analyzeButton = new Button();
             bondTableLayoutPanel = new TableLayoutPanel();
             yieldInfoGroupBox = new GroupBox();
             yieldInfoTableLayoutPanel = new TableLayoutPanel();
-            yieldTextBox = new TextBox();
-            capitalGainsPercentTextBox = new TextBox();
-            realYieldPercentTextBox = new TextBox();
             yieldLabel = new Label();
+            yieldTextBox = new TextBox();
             capitalGainsPercentLabel = new Label();
+            capitalGainsPercentTextBox = new TextBox();
+            realCouponIncomeLabel = new Label();
+            realCouponIncomeTextBox = new TextBox();
+            realCouponIncomePercentLabel = new Label();
+            realCouponIncomePercentTextBox = new TextBox();
             realYieldPercentLabel = new Label();
+            realYieldPercentTextBox = new TextBox();
             commonInfoGroupBox = new GroupBox();
             commonInfoTableLayoutPanel = new TableLayoutPanel();
             nominalPriceLabel = new Label();
@@ -50,21 +55,18 @@
             currentPriceTextBox = new TextBox();
             currentPriceLabel = new Label();
             maturityLabel = new Label();
+            nameLabel = new Label();
+            nameTextBox = new TextBox();
             couponInfoGroupBox = new GroupBox();
             couponInfoTableLayoutPanel = new TableLayoutPanel();
             accumulatedCouponIncomeLabel = new Label();
             accumulatedCouponIncomeTextBox = new TextBox();
-            couponTextBox = new TextBox();
-            couponsQuantityTextBox = new TextBox();
-            quantityOfPaymentsTextBox = new TextBox();
-            realCouponIncomeTextBox = new TextBox();
-            realCouponIncomePercentTextBox = new TextBox();
             couponLabel = new Label();
+            couponTextBox = new TextBox();
             couponsQuantityLabel = new Label();
+            couponsQuantityTextBox = new TextBox();
             quantityOfPaymentsLabel = new Label();
-            realCouponIncomeLabel = new Label();
-            realCouponIncomePercentLabel = new Label();
-            analyzeButton = new Button();
+            quantityOfPaymentsTextBox = new TextBox();
             mainTableLayoutPanel.SuspendLayout();
             linkTableLayoutPanel.SuspendLayout();
             bondTableLayoutPanel.SuspendLayout();
@@ -101,6 +103,12 @@
             resources.ApplyResources(linkTextBox, "linkTextBox");
             linkTextBox.Name = "linkTextBox";
             // 
+            // analyzeButton
+            // 
+            resources.ApplyResources(analyzeButton, "analyzeButton");
+            analyzeButton.Name = "analyzeButton";
+            analyzeButton.UseVisualStyleBackColor = true;
+            // 
             // bondTableLayoutPanel
             // 
             resources.ApplyResources(bondTableLayoutPanel, "bondTableLayoutPanel");
@@ -119,13 +127,22 @@
             // yieldInfoTableLayoutPanel
             // 
             resources.ApplyResources(yieldInfoTableLayoutPanel, "yieldInfoTableLayoutPanel");
-            yieldInfoTableLayoutPanel.Controls.Add(yieldTextBox, 1, 0);
-            yieldInfoTableLayoutPanel.Controls.Add(capitalGainsPercentTextBox, 1, 1);
-            yieldInfoTableLayoutPanel.Controls.Add(realYieldPercentTextBox, 1, 2);
             yieldInfoTableLayoutPanel.Controls.Add(yieldLabel, 0, 0);
+            yieldInfoTableLayoutPanel.Controls.Add(yieldTextBox, 1, 0);
             yieldInfoTableLayoutPanel.Controls.Add(capitalGainsPercentLabel, 0, 1);
-            yieldInfoTableLayoutPanel.Controls.Add(realYieldPercentLabel, 0, 2);
+            yieldInfoTableLayoutPanel.Controls.Add(capitalGainsPercentTextBox, 1, 1);
+            yieldInfoTableLayoutPanel.Controls.Add(realCouponIncomeLabel, 0, 2);
+            yieldInfoTableLayoutPanel.Controls.Add(realCouponIncomeTextBox, 1, 2);
+            yieldInfoTableLayoutPanel.Controls.Add(realCouponIncomePercentLabel, 0, 3);
+            yieldInfoTableLayoutPanel.Controls.Add(realCouponIncomePercentTextBox, 1, 3);
+            yieldInfoTableLayoutPanel.Controls.Add(realYieldPercentLabel, 0, 4);
+            yieldInfoTableLayoutPanel.Controls.Add(realYieldPercentTextBox, 1, 4);
             yieldInfoTableLayoutPanel.Name = "yieldInfoTableLayoutPanel";
+            // 
+            // yieldLabel
+            // 
+            resources.ApplyResources(yieldLabel, "yieldLabel");
+            yieldLabel.Name = "yieldLabel";
             // 
             // yieldTextBox
             // 
@@ -133,32 +150,49 @@
             yieldTextBox.Name = "yieldTextBox";
             yieldTextBox.ReadOnly = true;
             // 
+            // capitalGainsPercentLabel
+            // 
+            resources.ApplyResources(capitalGainsPercentLabel, "capitalGainsPercentLabel");
+            capitalGainsPercentLabel.Name = "capitalGainsPercentLabel";
+            // 
             // capitalGainsPercentTextBox
             // 
             resources.ApplyResources(capitalGainsPercentTextBox, "capitalGainsPercentTextBox");
             capitalGainsPercentTextBox.Name = "capitalGainsPercentTextBox";
             capitalGainsPercentTextBox.ReadOnly = true;
             // 
-            // realYieldPercentTextBox
+            // realCouponIncomeLabel
             // 
-            resources.ApplyResources(realYieldPercentTextBox, "realYieldPercentTextBox");
-            realYieldPercentTextBox.Name = "realYieldPercentTextBox";
-            realYieldPercentTextBox.ReadOnly = true;
+            resources.ApplyResources(realCouponIncomeLabel, "realCouponIncomeLabel");
+            realCouponIncomeLabel.Name = "realCouponIncomeLabel";
             // 
-            // yieldLabel
+            // realCouponIncomeTextBox
             // 
-            resources.ApplyResources(yieldLabel, "yieldLabel");
-            yieldLabel.Name = "yieldLabel";
+            resources.ApplyResources(realCouponIncomeTextBox, "realCouponIncomeTextBox");
+            realCouponIncomeTextBox.Name = "realCouponIncomeTextBox";
+            realCouponIncomeTextBox.ReadOnly = true;
             // 
-            // capitalGainsPercentLabel
+            // realCouponIncomePercentLabel
             // 
-            resources.ApplyResources(capitalGainsPercentLabel, "capitalGainsPercentLabel");
-            capitalGainsPercentLabel.Name = "capitalGainsPercentLabel";
+            resources.ApplyResources(realCouponIncomePercentLabel, "realCouponIncomePercentLabel");
+            realCouponIncomePercentLabel.Name = "realCouponIncomePercentLabel";
+            // 
+            // realCouponIncomePercentTextBox
+            // 
+            resources.ApplyResources(realCouponIncomePercentTextBox, "realCouponIncomePercentTextBox");
+            realCouponIncomePercentTextBox.Name = "realCouponIncomePercentTextBox";
+            realCouponIncomePercentTextBox.ReadOnly = true;
             // 
             // realYieldPercentLabel
             // 
             resources.ApplyResources(realYieldPercentLabel, "realYieldPercentLabel");
             realYieldPercentLabel.Name = "realYieldPercentLabel";
+            // 
+            // realYieldPercentTextBox
+            // 
+            resources.ApplyResources(realYieldPercentTextBox, "realYieldPercentTextBox");
+            realYieldPercentTextBox.Name = "realYieldPercentTextBox";
+            realYieldPercentTextBox.ReadOnly = true;
             // 
             // commonInfoGroupBox
             // 
@@ -170,12 +204,14 @@
             // commonInfoTableLayoutPanel
             // 
             resources.ApplyResources(commonInfoTableLayoutPanel, "commonInfoTableLayoutPanel");
-            commonInfoTableLayoutPanel.Controls.Add(nominalPriceLabel, 0, 0);
-            commonInfoTableLayoutPanel.Controls.Add(maturityTextBox, 1, 2);
-            commonInfoTableLayoutPanel.Controls.Add(nominalPriceTextBox, 1, 0);
-            commonInfoTableLayoutPanel.Controls.Add(currentPriceTextBox, 1, 1);
-            commonInfoTableLayoutPanel.Controls.Add(currentPriceLabel, 0, 1);
-            commonInfoTableLayoutPanel.Controls.Add(maturityLabel, 0, 2);
+            commonInfoTableLayoutPanel.Controls.Add(nominalPriceLabel, 0, 1);
+            commonInfoTableLayoutPanel.Controls.Add(maturityTextBox, 1, 3);
+            commonInfoTableLayoutPanel.Controls.Add(nominalPriceTextBox, 1, 1);
+            commonInfoTableLayoutPanel.Controls.Add(currentPriceTextBox, 1, 2);
+            commonInfoTableLayoutPanel.Controls.Add(currentPriceLabel, 0, 2);
+            commonInfoTableLayoutPanel.Controls.Add(maturityLabel, 0, 3);
+            commonInfoTableLayoutPanel.Controls.Add(nameLabel, 0, 0);
+            commonInfoTableLayoutPanel.Controls.Add(nameTextBox, 1, 0);
             commonInfoTableLayoutPanel.Name = "commonInfoTableLayoutPanel";
             // 
             // nominalPriceLabel
@@ -211,6 +247,17 @@
             resources.ApplyResources(maturityLabel, "maturityLabel");
             maturityLabel.Name = "maturityLabel";
             // 
+            // nameLabel
+            // 
+            resources.ApplyResources(nameLabel, "nameLabel");
+            nameLabel.Name = "nameLabel";
+            // 
+            // nameTextBox
+            // 
+            resources.ApplyResources(nameTextBox, "nameTextBox");
+            nameTextBox.Name = "nameTextBox";
+            nameTextBox.ReadOnly = true;
+            // 
             // couponInfoGroupBox
             // 
             resources.ApplyResources(couponInfoGroupBox, "couponInfoGroupBox");
@@ -223,16 +270,12 @@
             resources.ApplyResources(couponInfoTableLayoutPanel, "couponInfoTableLayoutPanel");
             couponInfoTableLayoutPanel.Controls.Add(accumulatedCouponIncomeLabel, 0, 0);
             couponInfoTableLayoutPanel.Controls.Add(accumulatedCouponIncomeTextBox, 1, 0);
-            couponInfoTableLayoutPanel.Controls.Add(couponTextBox, 1, 1);
-            couponInfoTableLayoutPanel.Controls.Add(couponsQuantityTextBox, 1, 2);
-            couponInfoTableLayoutPanel.Controls.Add(quantityOfPaymentsTextBox, 1, 3);
-            couponInfoTableLayoutPanel.Controls.Add(realCouponIncomeTextBox, 1, 4);
-            couponInfoTableLayoutPanel.Controls.Add(realCouponIncomePercentTextBox, 1, 5);
             couponInfoTableLayoutPanel.Controls.Add(couponLabel, 0, 1);
+            couponInfoTableLayoutPanel.Controls.Add(couponTextBox, 1, 1);
             couponInfoTableLayoutPanel.Controls.Add(couponsQuantityLabel, 0, 2);
+            couponInfoTableLayoutPanel.Controls.Add(couponsQuantityTextBox, 1, 2);
             couponInfoTableLayoutPanel.Controls.Add(quantityOfPaymentsLabel, 0, 3);
-            couponInfoTableLayoutPanel.Controls.Add(realCouponIncomeLabel, 0, 4);
-            couponInfoTableLayoutPanel.Controls.Add(realCouponIncomePercentLabel, 0, 5);
+            couponInfoTableLayoutPanel.Controls.Add(quantityOfPaymentsTextBox, 1, 3);
             couponInfoTableLayoutPanel.Name = "couponInfoTableLayoutPanel";
             // 
             // accumulatedCouponIncomeLabel
@@ -246,11 +289,21 @@
             accumulatedCouponIncomeTextBox.Name = "accumulatedCouponIncomeTextBox";
             accumulatedCouponIncomeTextBox.ReadOnly = true;
             // 
+            // couponLabel
+            // 
+            resources.ApplyResources(couponLabel, "couponLabel");
+            couponLabel.Name = "couponLabel";
+            // 
             // couponTextBox
             // 
             resources.ApplyResources(couponTextBox, "couponTextBox");
             couponTextBox.Name = "couponTextBox";
             couponTextBox.ReadOnly = true;
+            // 
+            // couponsQuantityLabel
+            // 
+            resources.ApplyResources(couponsQuantityLabel, "couponsQuantityLabel");
+            couponsQuantityLabel.Name = "couponsQuantityLabel";
             // 
             // couponsQuantityTextBox
             // 
@@ -258,54 +311,16 @@
             couponsQuantityTextBox.Name = "couponsQuantityTextBox";
             couponsQuantityTextBox.ReadOnly = true;
             // 
-            // quantityOfPaymentsTextBox
-            // 
-            resources.ApplyResources(quantityOfPaymentsTextBox, "quantityOfPaymentsTextBox");
-            quantityOfPaymentsTextBox.Name = "quantityOfPaymentsTextBox";
-            quantityOfPaymentsTextBox.ReadOnly = true;
-            // 
-            // realCouponIncomeTextBox
-            // 
-            resources.ApplyResources(realCouponIncomeTextBox, "realCouponIncomeTextBox");
-            realCouponIncomeTextBox.Name = "realCouponIncomeTextBox";
-            realCouponIncomeTextBox.ReadOnly = true;
-            // 
-            // realCouponIncomePercentTextBox
-            // 
-            resources.ApplyResources(realCouponIncomePercentTextBox, "realCouponIncomePercentTextBox");
-            realCouponIncomePercentTextBox.Name = "realCouponIncomePercentTextBox";
-            realCouponIncomePercentTextBox.ReadOnly = true;
-            // 
-            // couponLabel
-            // 
-            resources.ApplyResources(couponLabel, "couponLabel");
-            couponLabel.Name = "couponLabel";
-            // 
-            // couponsQuantityLabel
-            // 
-            resources.ApplyResources(couponsQuantityLabel, "couponsQuantityLabel");
-            couponsQuantityLabel.Name = "couponsQuantityLabel";
-            // 
             // quantityOfPaymentsLabel
             // 
             resources.ApplyResources(quantityOfPaymentsLabel, "quantityOfPaymentsLabel");
             quantityOfPaymentsLabel.Name = "quantityOfPaymentsLabel";
             // 
-            // realCouponIncomeLabel
+            // quantityOfPaymentsTextBox
             // 
-            resources.ApplyResources(realCouponIncomeLabel, "realCouponIncomeLabel");
-            realCouponIncomeLabel.Name = "realCouponIncomeLabel";
-            // 
-            // realCouponIncomePercentLabel
-            // 
-            resources.ApplyResources(realCouponIncomePercentLabel, "realCouponIncomePercentLabel");
-            realCouponIncomePercentLabel.Name = "realCouponIncomePercentLabel";
-            // 
-            // analyzeButton
-            // 
-            resources.ApplyResources(analyzeButton, "analyzeButton");
-            analyzeButton.Name = "analyzeButton";
-            analyzeButton.UseVisualStyleBackColor = true;
+            resources.ApplyResources(quantityOfPaymentsTextBox, "quantityOfPaymentsTextBox");
+            quantityOfPaymentsTextBox.Name = "quantityOfPaymentsTextBox";
+            quantityOfPaymentsTextBox.ReadOnly = true;
             // 
             // Form
             // 
@@ -375,5 +390,7 @@
         private Label realCouponIncomeLabel;
         private Label realCouponIncomePercentLabel;
         private Button analyzeButton;
+        private Label nameLabel;
+        private TextBox nameTextBox;
     }
 }

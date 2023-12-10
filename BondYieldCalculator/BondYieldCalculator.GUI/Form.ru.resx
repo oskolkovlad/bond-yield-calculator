@@ -134,14 +134,8 @@
   <data name="linkTextBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>816, 31</value>
   </data>
-  <data name="analyzeButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1170, 6</value>
-  </data>
   <data name="analyzeButton.Size" type="System.Drawing.Size, System.Drawing">
     <value>102, 34</value>
-  </data>
-  <data name="analyzeButton.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
   </data>
   <data name="analyzeButton.Text" xml:space="preserve">
     <value>Анализ</value>
@@ -168,31 +162,10 @@
   <data name="yieldInfoTableLayoutPanel.ColumnCount" type="System.Int32, mscorlib">
     <value>2</value>
   </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="yieldTextBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Left, Right</value>
-  </data>
-  <data name="yieldTextBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>912, 31</value>
-  </data>
-  <data name="capitalGainsPercentTextBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Left, Right</value>
-  </data>
-  <data name="capitalGainsPercentTextBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>912, 31</value>
-  </data>
-  <data name="realYieldPercentTextBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Left, Right</value>
-  </data>
-  <data name="realYieldPercentTextBox.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 9pt, style=Bold</value>
-  </data>
-  <data name="realYieldPercentTextBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>912, 31</value>
-  </data>
   <data name="yieldLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="yieldLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
@@ -201,6 +174,12 @@
   </data>
   <data name="yieldLabel.Text" xml:space="preserve">
     <value>Прибыль, руб.:</value>
+  </data>
+  <data name="yieldTextBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="yieldTextBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>912, 31</value>
   </data>
   <data name="capitalGainsPercentLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -214,17 +193,86 @@
   <data name="capitalGainsPercentLabel.Text" xml:space="preserve">
     <value>Прирост вложенного капитала, %:</value>
   </data>
+  <data name="capitalGainsPercentTextBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="capitalGainsPercentTextBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>912, 31</value>
+  </data>
+  <data name="realCouponIncomeLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="realCouponIncomeLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="realCouponIncomeLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 74</value>
+  </data>
+  <data name="realCouponIncomeLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>316, 25</value>
+  </data>
+  <data name="realCouponIncomeLabel.Text" xml:space="preserve">
+    <value>Реальный купон. доход (за год), руб.:</value>
+  </data>
+  <data name="realCouponIncomeTextBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="realCouponIncomeTextBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>333, 77</value>
+  </data>
+  <data name="realCouponIncomeTextBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>912, 31</value>
+  </data>
+  <data name="realCouponIncomePercentLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="realCouponIncomePercentLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="realCouponIncomePercentLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 111</value>
+  </data>
+  <data name="realCouponIncomePercentLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>292, 25</value>
+  </data>
+  <data name="realCouponIncomePercentLabel.Text" xml:space="preserve">
+    <value>Реальная купон. доход (за год), %:</value>
+  </data>
+  <data name="realCouponIncomePercentTextBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="realCouponIncomePercentTextBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>333, 114</value>
+  </data>
+  <data name="realCouponIncomePercentTextBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>912, 31</value>
+  </data>
   <data name="realYieldPercentLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="realYieldPercentLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
+  <data name="realYieldPercentLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 148</value>
+  </data>
   <data name="realYieldPercentLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>303, 25</value>
   </data>
   <data name="realYieldPercentLabel.Text" xml:space="preserve">
     <value>Реальная доходность (по сроку), %:</value>
+  </data>
+  <data name="realYieldPercentTextBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="realYieldPercentTextBox.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 9pt, style=Bold</value>
+  </data>
+  <data name="realYieldPercentTextBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>333, 151</value>
+  </data>
+  <data name="realYieldPercentTextBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>912, 31</value>
   </data>
   <data name="yieldInfoTableLayoutPanel.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
@@ -236,16 +284,16 @@
     <value>3</value>
   </data>
   <data name="yieldInfoTableLayoutPanel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1248, 111</value>
+    <value>1248, 185</value>
   </data>
   <data name="yieldInfoGroupBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 444</value>
+    <value>3, 407</value>
   </data>
   <data name="yieldInfoGroupBox.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>12, 12, 12, 12</value>
   </data>
   <data name="yieldInfoGroupBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1272, 159</value>
+    <value>1272, 233</value>
   </data>
   <data name="commonInfoTableLayoutPanel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -256,8 +304,14 @@
   <data name="nominalPriceLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
+  <data name="nominalPriceLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 37</value>
+  </data>
   <data name="nominalPriceLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>134, 25</value>
+  </data>
+  <data name="nominalPriceLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
   </data>
   <data name="nominalPriceLabel.Text" xml:space="preserve">
     <value>Номинал, руб.:</value>
@@ -266,25 +320,37 @@
     <value>Top, Left, Right</value>
   </data>
   <data name="maturityTextBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>333, 77</value>
+    <value>333, 114</value>
   </data>
   <data name="maturityTextBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>912, 31</value>
+  </data>
+  <data name="maturityTextBox.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
   </data>
   <data name="nominalPriceTextBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Left, Right</value>
   </data>
   <data name="nominalPriceTextBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>333, 3</value>
+    <value>333, 40</value>
   </data>
   <data name="nominalPriceTextBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>912, 31</value>
   </data>
+  <data name="nominalPriceTextBox.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
   <data name="currentPriceTextBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Left, Right</value>
   </data>
+  <data name="currentPriceTextBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>333, 77</value>
+  </data>
   <data name="currentPriceTextBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>912, 31</value>
+  </data>
+  <data name="currentPriceTextBox.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
   </data>
   <data name="currentPriceLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -292,8 +358,14 @@
   <data name="currentPriceLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
+  <data name="currentPriceLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 74</value>
+  </data>
   <data name="currentPriceLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>217, 25</value>
+  </data>
+  <data name="currentPriceLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
   </data>
   <data name="currentPriceLabel.Text" xml:space="preserve">
     <value>Текущая стоимость, руб.:</value>
@@ -304,11 +376,35 @@
   <data name="maturityLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
+  <data name="maturityLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 111</value>
+  </data>
   <data name="maturityLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>92, 25</value>
   </data>
+  <data name="maturityLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
   <data name="maturityLabel.Text" xml:space="preserve">
     <value>Срок, лет:</value>
+  </data>
+  <data name="nameLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="nameLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="nameLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>139, 25</value>
+  </data>
+  <data name="nameLabel.Text" xml:space="preserve">
+    <value>Наименование:</value>
+  </data>
+  <data name="nameTextBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="nameTextBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>912, 31</value>
   </data>
   <data name="commonInfoTableLayoutPanel.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
@@ -317,16 +413,16 @@
     <value>12, 36</value>
   </data>
   <data name="commonInfoTableLayoutPanel.RowCount" type="System.Int32, mscorlib">
-    <value>3</value>
+    <value>4</value>
   </data>
   <data name="commonInfoTableLayoutPanel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1248, 111</value>
+    <value>1248, 148</value>
   </data>
   <data name="commonInfoGroupBox.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>12, 12, 12, 12</value>
   </data>
   <data name="commonInfoGroupBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1272, 159</value>
+    <value>1272, 196</value>
   </data>
   <data name="couponInfoTableLayoutPanel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -361,36 +457,6 @@
   <data name="accumulatedCouponIncomeTextBox.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
   </data>
-  <data name="couponTextBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Left, Right</value>
-  </data>
-  <data name="couponTextBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>912, 31</value>
-  </data>
-  <data name="couponsQuantityTextBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Left, Right</value>
-  </data>
-  <data name="couponsQuantityTextBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>912, 31</value>
-  </data>
-  <data name="quantityOfPaymentsTextBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Left, Right</value>
-  </data>
-  <data name="quantityOfPaymentsTextBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>912, 31</value>
-  </data>
-  <data name="realCouponIncomeTextBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Left, Right</value>
-  </data>
-  <data name="realCouponIncomeTextBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>912, 31</value>
-  </data>
-  <data name="realCouponIncomePercentTextBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Left, Right</value>
-  </data>
-  <data name="realCouponIncomePercentTextBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>912, 31</value>
-  </data>
   <data name="couponLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -402,6 +468,12 @@
   </data>
   <data name="couponLabel.Text" xml:space="preserve">
     <value>Купон, руб.:</value>
+  </data>
+  <data name="couponTextBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="couponTextBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>912, 31</value>
   </data>
   <data name="couponsQuantityLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -415,6 +487,12 @@
   <data name="couponsQuantityLabel.Text" xml:space="preserve">
     <value>Общее кол-во купонов, шт.:</value>
   </data>
+  <data name="couponsQuantityTextBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="couponsQuantityTextBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>912, 31</value>
+  </data>
   <data name="quantityOfPaymentsLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -427,29 +505,11 @@
   <data name="quantityOfPaymentsLabel.Text" xml:space="preserve">
     <value>Кол-во выплат в год, шт.:</value>
   </data>
-  <data name="realCouponIncomeLabel.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="quantityOfPaymentsTextBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
   </data>
-  <data name="realCouponIncomeLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="realCouponIncomeLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>316, 25</value>
-  </data>
-  <data name="realCouponIncomeLabel.Text" xml:space="preserve">
-    <value>Реальный купон. доход (за год), руб.:</value>
-  </data>
-  <data name="realCouponIncomePercentLabel.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="realCouponIncomePercentLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="realCouponIncomePercentLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>292, 25</value>
-  </data>
-  <data name="realCouponIncomePercentLabel.Text" xml:space="preserve">
-    <value>Реальная купон. доход (за год), %:</value>
+  <data name="quantityOfPaymentsTextBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>912, 31</value>
   </data>
   <data name="couponInfoTableLayoutPanel.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
@@ -458,19 +518,19 @@
     <value>12, 36</value>
   </data>
   <data name="couponInfoTableLayoutPanel.RowCount" type="System.Int32, mscorlib">
-    <value>6</value>
+    <value>4</value>
   </data>
   <data name="couponInfoTableLayoutPanel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1248, 222</value>
+    <value>1248, 148</value>
   </data>
   <data name="couponInfoGroupBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 168</value>
+    <value>3, 205</value>
   </data>
   <data name="couponInfoGroupBox.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>12, 12, 12, 12</value>
   </data>
   <data name="couponInfoGroupBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1272, 270</value>
+    <value>1272, 196</value>
   </data>
   <data name="bondTableLayoutPanel.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
@@ -482,19 +542,19 @@
     <value>3</value>
   </data>
   <data name="bondTableLayoutPanel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1278, 603</value>
+    <value>1278, 636</value>
   </data>
   <data name="mainTableLayoutPanel.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>12, 12, 12, 12</value>
   </data>
   <data name="mainTableLayoutPanel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1308, 735</value>
+    <value>1308, 768</value>
   </data>
   <data name="$this.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>1308, 735</value>
+    <value>1308, 768</value>
   </data>
   <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
     <value>CenterScreen</value>
