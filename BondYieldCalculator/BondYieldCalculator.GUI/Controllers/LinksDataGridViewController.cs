@@ -12,6 +12,8 @@
         private readonly BindingSource _bindingSource;
         private readonly List<BondLinkRowItem> _linkRowItems;
 
+        private int _lastSelectedRowIndex = -1;
+
         #region ILinksDataGridViewController Members
 
         public LinksDataGridViewController(ILinksDataGridViewForm form)
@@ -39,8 +41,7 @@
                 return;
             }
 
-            var item = new BondLinkRowItem { Link = link };
-            _bindingSource.Add(item);
+            _bindingSource.Add(new BondLinkRowItem { Link = link });
         }
 
         public void RemoveSelectedLinkRows()
@@ -98,8 +99,8 @@
 
         public BondLinkRowItem? GetSelectedBondLinkRowItem()
         {
-            var selectedRow = GetSelectedDataGridViewRow();
-            return selectedRow?.DataBoundItem as BondLinkRowItem;
+            var selectedRows = GetSelectedRows().ToList();
+            return selectedRows.Count == 1 ? selectedRows[0].DataBoundItem as BondLinkRowItem : null;
         }
 
         public event EventHandler SelectionChanged = delegate { };
@@ -116,29 +117,28 @@
             _bindingSource.DataSource = _linkRowItems;
         }
 
-        private DataGridViewRow? GetSelectedDataGridViewRow()
+        private IEnumerable<DataGridViewRow> GetSelectedRows()
         {
             var rowIndexes = DataGridView.SelectedCells
                 .OfType<DataGridViewCell>()
                 .Select(cell => cell.RowIndex)
-                .Distinct()
-                .ToList();
-            if (rowIndexes.Count != 1)
+                .Distinct();
+            foreach (var rowIndex in rowIndexes)
             {
-                return null;
+                yield return DataGridView.Rows[rowIndex];
             }
-
-            var selectedRow = DataGridView.Rows[rowIndexes[0]];
-            return selectedRow;
         }
 
         private void HandleSelectionChanged()
         {
-            var selectedRow = GetSelectedDataGridViewRow();
-            if (selectedRow is not null)
+            var selectedRows = GetSelectedRows().ToList();
+            if (selectedRows.Count != 1 || _lastSelectedRowIndex == selectedRows[0].Index)
             {
-                SelectionChanged?.Invoke(this, EventArgs.Empty);
+                return;
             }
+
+            _lastSelectedRowIndex = selectedRows[0].Index;
+            SelectionChanged?.Invoke(this, EventArgs.Empty);
         }
 
         #endregion Private Members

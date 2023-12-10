@@ -119,7 +119,7 @@
     <value>Fill</value>
   </data>
   <data name="linksDataGridView.Size" type="System.Drawing.Size, System.Drawing">
-    <value>969, 244</value>
+    <value>969, 249</value>
   </data>
   <data name="removeButton.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
@@ -143,7 +143,7 @@
     <value>Top, Left, Right</value>
   </data>
   <data name="analyzeButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>5, 282</value>
+    <value>5, 287</value>
   </data>
   <data name="analyzeButton.Size" type="System.Drawing.Size, System.Drawing">
     <value>233, 23</value>
@@ -167,7 +167,7 @@
     <value>3</value>
   </data>
   <data name="linkTableLayoutPanel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>979, 310</value>
+    <value>979, 315</value>
   </data>
   <data name="bondTableLayoutPanel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -692,7 +692,7 @@
     <value>Fill</value>
   </data>
   <data name="bondTableLayoutPanel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>10, 353</value>
+    <value>10, 358</value>
   </data>
   <data name="bondTableLayoutPanel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>2, 2, 2, 2</value>
@@ -701,7 +701,7 @@
     <value>3</value>
   </data>
   <data name="bondTableLayoutPanel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>979, 453</value>
+    <value>979, 448</value>
   </data>
   <data name="mainTableLayoutPanel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>2, 2, 2, 2</value>

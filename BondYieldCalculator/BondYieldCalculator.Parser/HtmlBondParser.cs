@@ -65,7 +65,7 @@
                     return htmlContent;
                 }
             }
-            catch (Exception exception)
+            catch (Exception)
             {
                 // TODO: log errors.
             }

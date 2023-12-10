@@ -49,14 +49,35 @@
 
         #region Private Members
 
+        private void UpdateBondInfo()
+        {
+            var linkRowItem = _bondLinkRowSelectionController.GetSelectedBondLinkRowItem();
+            if (linkRowItem is null)
+            {
+                return;
+            }
+
+            var bondInfo = _bondInfoItems.FirstOrDefault(item => item!.Link == linkRowItem.Link);
+            if (bondInfo is null)
+            {
+                return;
+            }
+
+            _subscribers.AsParallel().ForAll(subscriber => subscriber.FillInfo(bondInfo));
+        }
+
         private void HandleLinkAdded() => _linksDataGridViewController.AddLinkRow(_form.LinkText);
 
         private void HandleLinksRemoved() => _linksDataGridViewController.RemoveSelectedLinkRows();
 
         private void HandleLinksAnalyzed()
         {
+            foreach (var subscriber in _subscribers)
+            {
+                subscriber.ClearInfo();
+            }
+
             _form.BondPanelEnabled = false;
-            _subscribers.AsParallel().ForAll(subscriber => subscriber.ClearInfo());
 
             var links = _linksDataGridViewController.GetLinks();
             _bondInfoItems = links
@@ -79,36 +100,16 @@
                 _linksDataGridViewController.UpdateLinkRowItem(bondInfo);
             }
 
-            var linkRowItem = _bondLinkRowSelectionController.GetSelectedBondLinkRowItem();
-            if (linkRowItem is not null)
-            {
-                var bondInfo = _bondInfoItems.FirstOrDefault(item => item!.Link == linkRowItem.Link);
-                _subscribers.AsParallel().ForAll(subscriber => subscriber.FillInfo(bondInfo));
-            }
+            UpdateBondInfo();
+            _form.BondPanelEnabled = true;
 
             _bondLinkRowSelectionController.SelectionChanged += HandleSelectionChanged;
-
-            _form.BondPanelEnabled = true;
         }
 
         private void HandleSelectionChanged(object? sender, EventArgs args)
         {
             _form.BondPanelEnabled = false;
-
-            var linkRowItem = _bondLinkRowSelectionController.GetSelectedBondLinkRowItem();
-            if (linkRowItem is null)
-            {
-                return;
-            }
-
-            var bondInfo = _bondInfoItems.FirstOrDefault(item => item!.Link == linkRowItem.Link);
-            if (bondInfo is null)
-            {
-                return;
-            }
-
-            _subscribers.AsParallel().ForAll(subscriber => subscriber.FillInfo(bondInfo));
-
+            UpdateBondInfo();
             _form.BondPanelEnabled = true;
         }
 

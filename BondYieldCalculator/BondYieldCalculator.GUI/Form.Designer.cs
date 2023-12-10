@@ -124,6 +124,9 @@
             // linksDataGridView
             // 
             resources.ApplyResources(linksDataGridView, "linksDataGridView");
+            linksDataGridView.AllowUserToAddRows = false;
+            linksDataGridView.AllowUserToResizeColumns = false;
+            linksDataGridView.AllowUserToResizeRows = false;
             dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = SystemColors.Control;
             dataGridViewCellStyle1.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
