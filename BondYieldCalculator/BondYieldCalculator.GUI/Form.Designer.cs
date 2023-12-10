@@ -64,6 +64,7 @@
             quantityOfPaymentsLabel = new Label();
             realCouponIncomeLabel = new Label();
             realCouponIncomePercentLabel = new Label();
+            analyzeButton = new Button();
             mainTableLayoutPanel.SuspendLayout();
             linkTableLayoutPanel.SuspendLayout();
             bondTableLayoutPanel.SuspendLayout();
@@ -87,6 +88,7 @@
             resources.ApplyResources(linkTableLayoutPanel, "linkTableLayoutPanel");
             linkTableLayoutPanel.Controls.Add(linkLabel, 0, 0);
             linkTableLayoutPanel.Controls.Add(linkTextBox, 1, 0);
+            linkTableLayoutPanel.Controls.Add(analyzeButton, 2, 0);
             linkTableLayoutPanel.Name = "linkTableLayoutPanel";
             // 
             // linkLabel
@@ -299,6 +301,12 @@
             resources.ApplyResources(realCouponIncomePercentLabel, "realCouponIncomePercentLabel");
             realCouponIncomePercentLabel.Name = "realCouponIncomePercentLabel";
             // 
+            // analyzeButton
+            // 
+            resources.ApplyResources(analyzeButton, "analyzeButton");
+            analyzeButton.Name = "analyzeButton";
+            analyzeButton.UseVisualStyleBackColor = true;
+            // 
             // Form
             // 
             resources.ApplyResources(this, "$this");
@@ -366,5 +374,6 @@
         private Label quantityOfPaymentsLabel;
         private Label realCouponIncomeLabel;
         private Label realCouponIncomePercentLabel;
+        private Button analyzeButton;
     }
 }

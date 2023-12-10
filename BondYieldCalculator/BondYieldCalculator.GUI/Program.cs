@@ -1,6 +1,7 @@
 namespace BondYieldCalculator.GUI
 {
     using System;
+    using BondYieldCalculator.GUI.Controllers;
     using BondYieldCalculator.Parser;
 
     internal static class Program
@@ -16,6 +17,7 @@ namespace BondYieldCalculator.GUI
             var mainForm = new Form();
             var bondParser = new BondParserCreator();
             var smartLabBondParser = bondParser.CreateSmartLabBondParser();
+            var linkController = new LinkController(mainForm, smartLabBondParser);
 
             try
             {
