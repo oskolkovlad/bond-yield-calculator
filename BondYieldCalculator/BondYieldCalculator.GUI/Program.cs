@@ -30,7 +30,6 @@ namespace BondYieldCalculator.GUI
 
             try
             {
-                mainForm.LinkText = "https://smart-lab.ru/q/bonds/SU26227RMFS7/"; // For local testing. Delete.
                 Application.Run(mainForm);
             }
             catch (Exception ex)
