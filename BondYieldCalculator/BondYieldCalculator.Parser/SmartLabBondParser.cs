@@ -71,14 +71,14 @@
                 return null;
             }
 
-            var couponsQuantity = node?.SelectSingleNode(BondInfoElements.CouponsQuantityXpath)?.InnerText?.TrimInnerText();
-            if (couponsQuantity is null)
+            var couponsQuantityInYear = node?.SelectSingleNode(BondInfoElements.CouponsQuantityXpath)?.InnerText?.TrimInnerText();
+            if (couponsQuantityInYear is null)
             {
                 return null;
             }
 
-            var quantityOfPayments = node?.SelectNodes(BondInfoElements.CouponPaymentsRowsXpath)?.Count;
-            if (quantityOfPayments is null)
+            var quantityOfPaymentsInYear = node?.SelectNodes(BondInfoElements.CouponPaymentsRowsXpath)?.Count;
+            if (quantityOfPaymentsInYear is null)
             {
                 return null;
             }
@@ -87,8 +87,8 @@
             {
                 AccumulatedCouponIncome = accumulatedCouponIncome.ParseInnerText(),
                 Coupon = coupon.ParseInnerText(),
-                CouponsQuantity = (int)couponsQuantity.ParseInnerText(),
-                QuantityOfPayments = quantityOfPayments.HasValue ? quantityOfPayments.Value : 0
+                CouponsQuantity = (int)couponsQuantityInYear.ParseInnerText(),
+                QuantityOfPaymentsInYear = quantityOfPaymentsInYear.HasValue ? quantityOfPaymentsInYear.Value : 0
             };
         }
 

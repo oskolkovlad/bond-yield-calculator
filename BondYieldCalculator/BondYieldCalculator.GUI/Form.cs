@@ -77,5 +77,67 @@ namespace BondYieldCalculator.GUI
         }
 
         #endregion ICommonBondInfoForm Members
+
+        #region ICouponInfoForm Members
+
+        public string? AccumulatedCouponIncomeText
+        {
+            get { return accumulatedCouponIncomeTextBox.Text; }
+            set { InvokeIfRequired(() => accumulatedCouponIncomeTextBox.Text = value); }
+        }
+
+        public string? CouponText
+        {
+            get { return couponTextBox.Text; }
+            set { InvokeIfRequired(() => couponTextBox.Text = value); }
+        }
+
+        public string? CouponsQuantityText
+        {
+            get { return couponsQuantityTextBox.Text; }
+            set { InvokeIfRequired(() => couponsQuantityTextBox.Text = value); }
+        }
+
+        public string? QuantityOfPaymentsInYearText
+        {
+            get { return quantityOfPaymentsInYearTextBox.Text; }
+            set { InvokeIfRequired(() => quantityOfPaymentsInYearTextBox.Text = value); }
+        }
+
+        #endregion ICouponInfoForm Members
+
+        #region IYieldInfoForm Members
+
+        public string? YieldText
+        {
+            get { return yieldTextBox.Text; }
+            set { InvokeIfRequired(() => yieldTextBox.Text = value); }
+        }
+
+        public string? CapitalGainsPercentText
+        {
+            get { return capitalGainsPercentTextBox.Text; }
+            set { InvokeIfRequired(() => capitalGainsPercentTextBox.Text = value); }
+        }
+
+        public string? RealCouponIncomeText
+        {
+            get { return realCouponIncomeTextBox.Text; }
+            set { InvokeIfRequired(() => realCouponIncomeTextBox.Text = value); }
+        }
+
+        public string? RealCouponIncomePercentText
+        {
+            get { return realCouponIncomePercentTextBox.Text; }
+            set { InvokeIfRequired(() => realCouponIncomePercentTextBox.Text = value); }
+        }
+
+        public string? RealYieldPercentText
+        {
+            get { return realYieldPercentTextBox.Text; }
+            set { InvokeIfRequired(() => realYieldPercentTextBox.Text = value); }
+        }
+
+        #endregion IYieldInfoForm Members
     }
 }

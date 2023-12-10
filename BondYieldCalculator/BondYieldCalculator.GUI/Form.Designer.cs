@@ -65,8 +65,8 @@
             couponTextBox = new TextBox();
             couponsQuantityLabel = new Label();
             couponsQuantityTextBox = new TextBox();
-            quantityOfPaymentsLabel = new Label();
-            quantityOfPaymentsTextBox = new TextBox();
+            quantityOfPaymentsInYearLabel = new Label();
+            quantityOfPaymentsInYearTextBox = new TextBox();
             mainTableLayoutPanel.SuspendLayout();
             linkTableLayoutPanel.SuspendLayout();
             bondTableLayoutPanel.SuspendLayout();
@@ -274,8 +274,8 @@
             couponInfoTableLayoutPanel.Controls.Add(couponTextBox, 1, 1);
             couponInfoTableLayoutPanel.Controls.Add(couponsQuantityLabel, 0, 2);
             couponInfoTableLayoutPanel.Controls.Add(couponsQuantityTextBox, 1, 2);
-            couponInfoTableLayoutPanel.Controls.Add(quantityOfPaymentsLabel, 0, 3);
-            couponInfoTableLayoutPanel.Controls.Add(quantityOfPaymentsTextBox, 1, 3);
+            couponInfoTableLayoutPanel.Controls.Add(quantityOfPaymentsInYearLabel, 0, 3);
+            couponInfoTableLayoutPanel.Controls.Add(quantityOfPaymentsInYearTextBox, 1, 3);
             couponInfoTableLayoutPanel.Name = "couponInfoTableLayoutPanel";
             // 
             // accumulatedCouponIncomeLabel
@@ -311,16 +311,16 @@
             couponsQuantityTextBox.Name = "couponsQuantityTextBox";
             couponsQuantityTextBox.ReadOnly = true;
             // 
-            // quantityOfPaymentsLabel
+            // quantityOfPaymentsInYearLabel
             // 
-            resources.ApplyResources(quantityOfPaymentsLabel, "quantityOfPaymentsLabel");
-            quantityOfPaymentsLabel.Name = "quantityOfPaymentsLabel";
+            resources.ApplyResources(quantityOfPaymentsInYearLabel, "quantityOfPaymentsInYearLabel");
+            quantityOfPaymentsInYearLabel.Name = "quantityOfPaymentsInYearLabel";
             // 
-            // quantityOfPaymentsTextBox
+            // quantityOfPaymentsInYearTextBox
             // 
-            resources.ApplyResources(quantityOfPaymentsTextBox, "quantityOfPaymentsTextBox");
-            quantityOfPaymentsTextBox.Name = "quantityOfPaymentsTextBox";
-            quantityOfPaymentsTextBox.ReadOnly = true;
+            resources.ApplyResources(quantityOfPaymentsInYearTextBox, "quantityOfPaymentsInYearTextBox");
+            quantityOfPaymentsInYearTextBox.Name = "quantityOfPaymentsInYearTextBox";
+            quantityOfPaymentsInYearTextBox.ReadOnly = true;
             // 
             // Form
             // 
@@ -381,12 +381,12 @@
         private Label realYieldPercentLabel;
         private TextBox couponTextBox;
         private TextBox couponsQuantityTextBox;
-        private TextBox quantityOfPaymentsTextBox;
+        private TextBox quantityOfPaymentsInYearTextBox;
         private TextBox realCouponIncomeTextBox;
         private TextBox realCouponIncomePercentTextBox;
         private Label couponLabel;
         private Label couponsQuantityLabel;
-        private Label quantityOfPaymentsLabel;
+        private Label quantityOfPaymentsInYearLabel;
         private Label realCouponIncomeLabel;
         private Label realCouponIncomePercentLabel;
         private Button analyzeButton;

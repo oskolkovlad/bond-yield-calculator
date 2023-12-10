@@ -18,9 +18,13 @@ namespace BondYieldCalculator.GUI
             var bondParser = new BondParserCreator();
             var smartLabBondParser = bondParser.CreateSmartLabBondParser();
             var commonInfoController = new CommonBondInfoController(mainForm);
+            var couponInfoController = new CouponInfoController(mainForm);
+            var yieldInfoController = new YieldInfoController(mainForm);
             var linkController = new LinkController(mainForm, smartLabBondParser);
 
             linkController.Subcribe(commonInfoController);
+            linkController.Subcribe(couponInfoController);
+            linkController.Subcribe(yieldInfoController);
 
             try
             {

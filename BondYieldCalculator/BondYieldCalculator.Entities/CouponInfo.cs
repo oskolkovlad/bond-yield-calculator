@@ -8,6 +8,6 @@
 
         public int CouponsQuantity { get; set; }
 
-        public int QuantityOfPayments { get; set; }
+        public int QuantityOfPaymentsInYear { get; set; }
     }
 }
