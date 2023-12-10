@@ -17,10 +17,14 @@ namespace BondYieldCalculator.GUI
             var mainForm = new Form();
             var bondParser = new BondParserCreator();
             var smartLabBondParser = bondParser.CreateSmartLabBondParser();
+            var commonInfoController = new CommonBondInfoController(mainForm);
             var linkController = new LinkController(mainForm, smartLabBondParser);
+
+            linkController.Subcribe(commonInfoController);
 
             try
             {
+                mainForm.LinkText = "https://smart-lab.ru/q/bonds/SU26227RMFS7/"; // For local testing. Delete.
                 Application.Run(mainForm);
             }
             catch (Exception ex)

@@ -1,6 +1,6 @@
 ﻿namespace BondYieldCalculator.GUI.Interfaces.Forms
 {
-    internal interface ICouponInfoForm
+    internal interface ICouponInfoForm : IForm
     {
     }
 }
