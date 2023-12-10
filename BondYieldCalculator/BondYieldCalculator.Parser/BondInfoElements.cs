@@ -6,9 +6,9 @@
 
         public const string CouponInfoXpath = ".//div[@class='quotes-body__block']/section[@class='quotes-info-list']/article[2]";
 
-        public const string NominalPriceXpath = ".//div/div[1]/div[2]";
+        public const string NominalPriceXpath = ".//div/div[11]/div[2]";
 
-        public const string CurrentPriceXpath = ".//div/div[11]/div[2]";
+        public const string CurrentPriceXpath = ".//div/div[1]/div[2]";
 
         public const string MaturityXpath = ".//div/div[6]/div[2]";
 

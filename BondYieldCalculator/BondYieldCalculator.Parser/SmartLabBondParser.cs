@@ -1,6 +1,5 @@
 ﻿namespace BondYieldCalculator.Parser
 {
-    using System.Globalization;
     using BondYieldCalculator.Entities;
     using HtmlAgilityPack;
 
@@ -24,49 +23,47 @@
         {
             var node = document.DocumentNode.SelectSingleNode(BondInfoElements.CommonBondInfoXpath);
 
-            var nominalPrice = node?.SelectSingleNode(BondInfoElements.NominalPriceXpath)?.InnerText?.Trim('\n', '\t', '\r', '%');
+            var nominalPrice = node?.SelectSingleNode(BondInfoElements.NominalPriceXpath)?.InnerText?.TrimInnerText();
             if (nominalPrice is null)
             {
                 return null;
             }
 
-            var currentPrice = node?.SelectSingleNode(BondInfoElements.CurrentPriceXpath)?.InnerText?.Trim('\n', '\t', '\r');
-            if (currentPrice is null)
+            var currentPricePercent = node?.SelectSingleNode(BondInfoElements.CurrentPriceXpath)?.InnerText?.TrimInnerTextWithPercent();
+            if (currentPricePercent is null)
             {
                 return null;
             }
 
-            var maturity = node?.SelectSingleNode(BondInfoElements.MaturityXpath)?.InnerText?.Trim('\n', '\t', '\r');
+            var maturity = node?.SelectSingleNode(BondInfoElements.MaturityXpath)?.InnerText?.TrimInnerText();
             if (maturity is null)
             {
                 return null;
             }
 
-            return new CommonBondInfo
-            {
-                NominalPrice = decimal.Parse(nominalPrice, NumberStyles.AllowDecimalPoint, CultureInfo.InvariantCulture),
-                CurrentPrice = decimal.Parse(currentPrice, NumberStyles.AllowDecimalPoint, CultureInfo.InvariantCulture) * 100,
-                Maturity = decimal.Parse(maturity, NumberStyles.AllowDecimalPoint, CultureInfo.InvariantCulture)
-            };
+            var result = new CommonBondInfo { NominalPrice = nominalPrice.ParseInnerText(), Maturity = maturity.ParseInnerText() };
+            result.CurrentPrice = currentPricePercent.ParseInnerText() * 1000 / 100;
+
+            return result;
         }
 
         private CouponInfo? GetCouponInfo(HtmlDocument document)
         {
             var node = document.DocumentNode.SelectSingleNode(BondInfoElements.CouponInfoXpath);
 
-            var accumulatedCouponIncome = node?.SelectSingleNode(BondInfoElements.AccumulatedCouponIncomeXpath)?.InnerText?.Replace("руб", "")?.Trim('\n', '\t', '\r', ' ');
+            var accumulatedCouponIncome = node?.SelectSingleNode(BondInfoElements.AccumulatedCouponIncomeXpath)?.InnerText?.TrimInnerTextWithRemoveWord("руб");
             if (accumulatedCouponIncome is null)
             {
                 return null;
             }
 
-            var coupon = node?.SelectSingleNode(BondInfoElements.CouponXpath)?.InnerText?.Replace("руб", "")?.Trim('\n', '\t', '\r', ' ');
+            var coupon = node?.SelectSingleNode(BondInfoElements.CouponXpath)?.InnerText?.TrimInnerTextWithRemoveWord("руб");
             if (coupon is null)
             {
                 return null;
             }
 
-            var couponsQuantity = node?.SelectSingleNode(BondInfoElements.CouponsQuantityXpath)?.InnerText?.Trim('\n', '\t', '\r');
+            var couponsQuantity = node?.SelectSingleNode(BondInfoElements.CouponsQuantityXpath)?.InnerText?.TrimInnerText();
             if (couponsQuantity is null)
             {
                 return null;
@@ -80,9 +77,9 @@
 
             return new CouponInfo
             {
-                AccumulatedCouponIncome = decimal.Parse(accumulatedCouponIncome, NumberStyles.AllowDecimalPoint, CultureInfo.InvariantCulture),
-                Coupon = decimal.Parse(coupon, NumberStyles.AllowDecimalPoint, CultureInfo.InvariantCulture),
-                CouponsQuantity = (int)decimal.Parse(couponsQuantity, NumberStyles.AllowDecimalPoint, CultureInfo.InvariantCulture),
+                AccumulatedCouponIncome = accumulatedCouponIncome.ParseInnerText(),
+                Coupon = coupon.ParseInnerText(),
+                CouponsQuantity = (int)couponsQuantity.ParseInnerText(),
                 QuantityOfPayments = quantityOfPayments.HasValue ? quantityOfPayments.Value : 0
             };
         }

@@ -11,13 +11,14 @@ namespace BondYieldCalculator.GUI
         [STAThread]
         static void Main()
         {
+            ApplicationConfiguration.Initialize();
+
             var mainForm = new Form();
             var bondParser = new BondParserCreator();
             var smartLabBondParser = bondParser.CreateSmartLabBondParser();
 
             try
             {
-                ApplicationConfiguration.Initialize();
                 Application.Run(mainForm);
             }
             catch (Exception ex)
