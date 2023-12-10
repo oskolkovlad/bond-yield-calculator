@@ -15,9 +15,11 @@ namespace BondYieldCalculator.GUI
 
             BondPanelEnabled = false;
 
-            addButton.Click += (sender, args) => LinkAdded.Invoke(this, EventArgs.Empty);
-            removeButton.Click += (sender, args) => LinksRemoved.Invoke(this, EventArgs.Empty);
-            analyzeButton.Click += (sender, args) => LinksAnalyzed.Invoke(this, EventArgs.Empty);
+            addButton.Click += (sender, args) => LinkAdding.Invoke(this, EventArgs.Empty);
+            removeButton.Click += (sender, args) => LinksRemoving.Invoke(this, EventArgs.Empty);
+            analyzeButton.Click += (sender, args) => LinksAnalyzing.Invoke(this, EventArgs.Empty);
+            openLinksButton.Click += (sender, args) => LinksOpening.Invoke(this, EventArgs.Empty);
+            saveLinksButton.Click += (sender, args) => LinksSaving.Invoke(this, EventArgs.Empty);
         }
 
         #region IForm
@@ -50,11 +52,15 @@ namespace BondYieldCalculator.GUI
             set { InvokeIfRequired(() => linkTextBox.Text = value); }
         }
 
-        public event EventHandler LinkAdded = delegate { };
+        public event EventHandler LinkAdding = delegate { };
 
-        public event EventHandler LinksRemoved = delegate { };
+        public event EventHandler LinksRemoving = delegate { };
 
-        public event EventHandler LinksAnalyzed = delegate { };
+        public event EventHandler LinksAnalyzing = delegate { };
+
+        public event EventHandler LinksOpening = delegate { };
+
+        public event EventHandler LinksSaving = delegate { };
 
         #endregion ILinkForm Members
 

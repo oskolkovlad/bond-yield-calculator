@@ -11,6 +11,7 @@
         private readonly ILinkForm _form;
         private readonly IBondParser _bondParser;
         private readonly IYieldCalculatorService _yieldCalculatorService;
+        private readonly ILinksStorageService _linksStorageService;
         private readonly ILinksDataGridViewController _linksDataGridViewController;
         private readonly IBondLinkRowSelectionController _bondLinkRowSelectionController;
         private readonly IList<IInfoObserverController> _subscribers;
@@ -21,20 +22,24 @@
             ILinkForm form,
             IBondParser bondParser,
             IYieldCalculatorService yieldCalculatorService,
+            ILinksStorageService linksStorageService,
             ILinksDataGridViewController linksDataGridViewController,
             IBondLinkRowSelectionController bondLinkRowSelectionController)
         {
             _form = form;
             _bondParser = bondParser;
             _yieldCalculatorService = yieldCalculatorService;
+            _linksStorageService = linksStorageService;
             _linksDataGridViewController = linksDataGridViewController;
             _bondLinkRowSelectionController = bondLinkRowSelectionController;
             _subscribers = new List<IInfoObserverController>();
             _bondInfoItems = new List<BondInfo?>();
 
-            _form.LinkAdded += (sender, args) => HandleLinkAdded();
-            _form.LinksRemoved += (sender, args) => HandleLinksRemoved();
-            _form.LinksAnalyzed += (sender, args) => HandleLinksAnalyzed();
+            _form.LinkAdding += (sender, args) => HandleLinkAdding();
+            _form.LinksRemoving += (sender, args) => HandleLinksRemoving();
+            _form.LinksAnalyzing += (sender, args) => HandleLinksAnalyzing();
+            _form.LinksOpening += (sender, args) => HandleLinksOpening();
+            _form.LinksSaving += (sender, args) => HandleLinksSaving();
 
             _bondLinkRowSelectionController.SelectionChanged += HandleSelectionChanged;
         }
@@ -57,7 +62,7 @@
                 return;
             }
 
-            var bondInfo = _bondInfoItems.FirstOrDefault(item => item!.Link == linkRowItem.Link);
+            var bondInfo = _bondInfoItems?.FirstOrDefault(item => item!.Link == linkRowItem.Link);
             if (bondInfo is null)
             {
                 return;
@@ -66,11 +71,11 @@
             _subscribers.AsParallel().ForAll(subscriber => subscriber.FillInfo(bondInfo));
         }
 
-        private void HandleLinkAdded() => _linksDataGridViewController.AddLinkRow(_form.LinkText);
+        private void HandleLinkAdding() => _linksDataGridViewController.AddLinkRow(_form.LinkText);
 
-        private void HandleLinksRemoved() => _linksDataGridViewController.RemoveSelectedLinkRows();
+        private void HandleLinksRemoving() => _linksDataGridViewController.RemoveSelectedLinkRows();
 
-        private void HandleLinksAnalyzed()
+        private void HandleLinksAnalyzing()
         {
             foreach (var subscriber in _subscribers)
             {
@@ -104,6 +109,26 @@
             _form.BondPanelEnabled = true;
 
             _bondLinkRowSelectionController.SelectionChanged += HandleSelectionChanged;
+        }
+
+        private void HandleLinksOpening()
+        {
+            var links = _linksStorageService.GetLinks()?.ToList();
+            if (links is null)
+            {
+                return;
+            }
+
+            foreach (var link in links)
+            {
+                _linksDataGridViewController.AddLinkRow(link);
+            }
+        }
+
+        private void HandleLinksSaving()
+        {
+            _linksStorageService.Save(_linksDataGridViewController.GetLinks());
+            MessageBox.Show("Ссылки успешно сохранены.", "Сохранение ссылок", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void HandleSelectionChanged(object? sender, EventArgs args)

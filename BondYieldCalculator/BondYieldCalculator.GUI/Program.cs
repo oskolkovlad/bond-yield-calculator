@@ -19,11 +19,18 @@ namespace BondYieldCalculator.GUI
             var bondParser = new BondParserCreator();
             var smartLabBondParser = bondParser.CreateSmartLabBondParser();
             var yieldCalculatorService = new YieldCalculatorService();
+            var linksStorageService = new LinksStorageService();
             var commonInfoController = new CommonBondInfoController(mainForm);
             var couponInfoController = new CouponInfoController(mainForm);
             var yieldInfoController = new YieldInfoController(mainForm);
             var linksDataGridViewController = new LinksDataGridViewController(mainForm);
-            var linkController = new LinkController(mainForm, smartLabBondParser, yieldCalculatorService, linksDataGridViewController, linksDataGridViewController);
+            var linkController = new LinkController(
+                mainForm,
+                smartLabBondParser,
+                yieldCalculatorService,
+                linksStorageService,
+                linksDataGridViewController,
+                linksDataGridViewController);
 
             linkController.Subcribe(commonInfoController);
             linkController.Subcribe(couponInfoController);

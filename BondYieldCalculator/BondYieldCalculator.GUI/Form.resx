@@ -57,1043 +57,813 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="&gt;&gt;yieldLabel.Parent" xml:space="preserve">
-    <value>yieldInfoTableLayoutPanel</value>
-  </data>
-  <data name="couponInfoGroupBox.Text" xml:space="preserve">
-    <value>Информация по купонам</value>
-  </data>
-  <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Form, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="commonInfoTableLayoutPanel.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
-    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="nominalPriceLabel" Row="1" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="maturityTextBox" Row="3" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="nominalPriceTextBox" Row="1" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="currentPriceTextBox" Row="2" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="currentPriceLabel" Row="2" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="maturityLabel" Row="3" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="nameLabel" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="nameTextBox" Row="0" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Absolute,231,Percent,100" /&gt;&lt;Rows Styles="AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0" /&gt;&lt;/TableLayoutSettings&gt;</value>
-  </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="linksDataGridView.Location" type="System.Drawing.Point, System.Drawing">
-    <value>5, 32</value>
-  </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="linkTableLayoutPanel.RowCount" type="System.Int32, mscorlib">
-    <value>1</value>
+  <data name="currentPriceLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
   </data>
-  <data name="&gt;&gt;maturityTextBox.Parent" xml:space="preserve">
-    <value>commonInfoTableLayoutPanel</value>
-  </data>
-  <data name="&gt;&gt;yieldTextBox.Name" xml:space="preserve">
-    <value>yieldTextBox</value>
-  </data>
-  <data name="addButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>819, 4</value>
-  </data>
-  <data name="&gt;&gt;linkTableLayoutPanel.Type" xml:space="preserve">
+  <data name="&gt;&gt;commonInfoTableLayoutPanel.Type" xml:space="preserve">
     <value>System.Windows.Forms.TableLayoutPanel, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="couponsQuantityTextBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>333, 77</value>
-  </data>
-  <data name="&gt;&gt;quantityOfPaymentsTextBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;linkLabel.Parent" xml:space="preserve">
-    <value>linkTableLayoutPanel</value>
-  </data>
-  <data name="bondInfoTableLayoutPanel.RowCount" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="capitalGainsPercentLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="accumulatedCouponIncomeTextBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>303, 3</value>
-  </data>
-  <data name="&gt;&gt;quantityOfPaymentsLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="couponsQuantityLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="label3.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
-  </data>
-  <data name="&gt;&gt;couponInfoTableLayoutPanel.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;realYieldPercentLabel.Parent" xml:space="preserve">
-    <value>yieldInfoTableLayoutPanel</value>
-  </data>
-  <data name="yieldInfoGroupBox.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;maturityTextBox.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="RealYieldPercentColumn.Width" type="System.Int32, mscorlib">
-    <value>230</value>
-  </data>
-  <data name="&gt;&gt;textBox4.Parent" xml:space="preserve">
-    <value>couponInfoTableLayoutPanel</value>
-  </data>
-  <data name="&gt;&gt;maturityTextBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="yieldInfoGroupBox.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="mainTableLayoutPanel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1078, 1030</value>
   </data>
   <data name="&gt;&gt;accumulatedCouponIncomeLabel.Parent" xml:space="preserve">
     <value>couponInfoTableLayoutPanel</value>
   </data>
-  <data name="&gt;&gt;bondTableLayoutPanel.Name" xml:space="preserve">
-    <value>bondTableLayoutPanel</value>
-  </data>
-  <data name="&gt;&gt;bondTableLayoutPanel.Parent" xml:space="preserve">
-    <value>mainTableLayoutPanel</value>
-  </data>
-  <data name="&gt;&gt;realCouponIncomePercentLabel.Name" xml:space="preserve">
-    <value>realCouponIncomePercentLabel</value>
-  </data>
-  <data name="&gt;&gt;label2.ZOrder" xml:space="preserve">
-    <value>8</value>
-  </data>
-  <data name="nameLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 0</value>
-  </data>
-  <data name="linkLabel.Text" xml:space="preserve">
-    <value>Введите ссылку на облигацию:</value>
-  </data>
-  <data name="label6.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 0</value>
-  </data>
-  <data name="nominalPriceLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 0</value>
-  </data>
-  <data name="&gt;&gt;quantityOfPaymentsInYearLabel.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="&gt;&gt;textBox1.Name" xml:space="preserve">
-    <value>textBox1</value>
-  </data>
-  <data name="&gt;&gt;accumulatedCouponIncomeLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="maturityTextBox.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
-  </data>
-  <data name="&gt;&gt;nameTextBox.Parent" xml:space="preserve">
-    <value>commonInfoTableLayoutPanel</value>
-  </data>
-  <data name="commonInfoTableLayoutPanel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 27</value>
-  </data>
-  <data name="&gt;&gt;textBox6.Parent" xml:space="preserve">
-    <value>yieldInfoTableLayoutPanel</value>
-  </data>
-  <data name="textBox4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>303, 151</value>
-  </data>
-  <data name="textBox8.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
-  </data>
-  <data name="realCouponIncomeTextBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>333, 151</value>
-  </data>
-  <data name="textBox6.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;realYieldPercentLabel.ZOrder" xml:space="preserve">
-    <value>8</value>
-  </data>
-  <data name="nominalPriceTextBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>303, 3</value>
-  </data>
-  <data name="textBox1.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="analyzeButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 23</value>
-  </data>
-  <data name="&gt;&gt;couponInfoGroupBox.Name" xml:space="preserve">
-    <value>couponInfoGroupBox</value>
-  </data>
-  <data name="&gt;&gt;currentValueLabel.Name" xml:space="preserve">
-    <value>currentValueLabel</value>
-  </data>
-  <data name="quantityOfPaymentsInYearTextBox.TabIndex" type="System.Int32, mscorlib">
-    <value>7</value>
-  </data>
-  <data name="&gt;&gt;couponTextBox.Parent" xml:space="preserve">
-    <value>couponInfoTableLayoutPanel</value>
-  </data>
-  <data name="commonInfoGroupBox.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="linksDataGridView.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="textBox3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>303, 114</value>
-  </data>
-  <data name="yieldTextBox.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="currentValueLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 37</value>
-  </data>
-  <data name="&gt;&gt;linkTableLayoutPanel.Parent" xml:space="preserve">
-    <value>mainTableLayoutPanel</value>
-  </data>
-  <data name="&gt;&gt;label8.Name" xml:space="preserve">
-    <value>label8</value>
-  </data>
-  <data name="&gt;&gt;yieldInfoGroupBox.Parent" xml:space="preserve">
-    <value>bondTableLayoutPanel</value>
-  </data>
-  <data name="&gt;&gt;LinkColumn.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;textBox3.Name" xml:space="preserve">
-    <value>textBox3</value>
-  </data>
-  <data name="&gt;&gt;label7.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;commonInfoTableLayoutPanel.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="couponInfoTableLayoutPanel.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
-    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="accumulatedCouponIncomeLabel" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="accumulatedCouponIncomeTextBox" Row="0" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="couponLabel" Row="1" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="couponTextBox" Row="1" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="couponsQuantityLabel" Row="2" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="couponsQuantityTextBox" Row="2" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="quantityOfPaymentsInYearLabel" Row="3" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="quantityOfPaymentsInYearTextBox" Row="3" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Absolute,231,Percent,100" /&gt;&lt;Rows Styles="AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,Absolute,12,Absolute,12" /&gt;&lt;/TableLayoutSettings&gt;</value>
-  </data>
-  <data name="mainTableLayoutPanel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="&gt;&gt;label4.ZOrder" xml:space="preserve">
-    <value>10</value>
-  </data>
-  <data name="linkTableLayoutPanel.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="&gt;&gt;currentValueTextBox.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="currentValueTextBox.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="label2.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;linkTableLayoutPanel.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="yieldInfoGroupBox.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="&gt;&gt;currentPriceTextBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;nominalPriceTextBox.Name" xml:space="preserve">
-    <value>nominalPriceTextBox</value>
-  </data>
-  <data name="&gt;&gt;couponsQuantityTextBox.Parent" xml:space="preserve">
-    <value>couponInfoTableLayoutPanel</value>
-  </data>
-  <data name="label8.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;nameLabel.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="textBox7.Location" type="System.Drawing.Point, System.Drawing">
-    <value>303, 40</value>
-  </data>
-  <data name="realYieldPercentLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 74</value>
-  </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>Bond yield calculator</value>
-  </data>
-  <data name="&gt;&gt;couponInfoGroupBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="mainTableLayoutPanel.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;bondInfoTableLayoutPanel.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;quantityOfPaymentsTextBox.Name" xml:space="preserve">
-    <value>quantityOfPaymentsTextBox</value>
-  </data>
-  <data name="&gt;&gt;realCouponIncomeLabel.Parent" xml:space="preserve">
-    <value>yieldInfoTableLayoutPanel</value>
-  </data>
-  <data name="&gt;&gt;realCouponIncomePercentLabel.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="RealYieldPercentColumn.HeaderText" xml:space="preserve">
-    <value>Реальная доходность (по сроку), %</value>
-  </data>
-  <data name="&gt;&gt;capitalGainsPercentLabel.Parent" xml:space="preserve">
-    <value>yieldInfoTableLayoutPanel</value>
-  </data>
-  <data name="&gt;&gt;bondInfoTableLayoutPanel.Parent" xml:space="preserve">
-    <value>mainTableLayoutPanel</value>
-  </data>
-  <data name="&gt;&gt;linksDataGridView.Parent" xml:space="preserve">
-    <value>linkTableLayoutPanel</value>
-  </data>
-  <data name="&gt;&gt;nameLabel.Name" xml:space="preserve">
-    <value>nameLabel</value>
-  </data>
-  <data name="&gt;&gt;label3.Parent" xml:space="preserve">
-    <value>couponInfoTableLayoutPanel</value>
-  </data>
-  <data name="&gt;&gt;nameTextBox.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
-  <data name="&gt;&gt;nameTextBox.Name" xml:space="preserve">
-    <value>nameTextBox</value>
-  </data>
-  <data name="addButton.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;mainTableLayoutPanel.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;capitalGainsPercentLabel.Name" xml:space="preserve">
-    <value>capitalGainsPercentLabel</value>
-  </data>
-  <data name="quantityOfPaymentsTextBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>333, 114</value>
-  </data>
-  <data name="&gt;&gt;RealYieldPercentColumn.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="yieldTextBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>333, 3</value>
-  </data>
-  <data name="nameTextBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>333, 3</value>
-  </data>
-  <data name="linkTextBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>273, 3</value>
-  </data>
-  <data name="&gt;&gt;quantityOfPaymentsLabel.Name" xml:space="preserve">
-    <value>quantityOfPaymentsLabel</value>
-  </data>
-  <data name="commonInfoTableLayoutPanel.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;bondInfoTableLayoutPanel.Name" xml:space="preserve">
-    <value>bondInfoTableLayoutPanel</value>
-  </data>
-  <data name="realCouponIncomePercentTextBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>333, 188</value>
-  </data>
-  <data name="&gt;&gt;accumulatedCouponIncomeLabel.Name" xml:space="preserve">
-    <value>accumulatedCouponIncomeLabel</value>
-  </data>
-  <data name="&gt;&gt;analyzeButton.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="linkLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>264, 25</value>
-  </data>
-  <data name="yieldInfoGroupBox.Text" xml:space="preserve">
-    <value>Доходность</value>
-  </data>
-  <data name="commonInfoGroupBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 3</value>
-  </data>
-  <data name="&gt;&gt;textBox8.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;commonInfoGroupBox.Name" xml:space="preserve">
-    <value>commonInfoGroupBox</value>
-  </data>
-  <data name="&gt;&gt;label4.Name" xml:space="preserve">
-    <value>label4</value>
-  </data>
-  <data name="currentPriceTextBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>333, 40</value>
-  </data>
-  <data name="realYieldPercentTextBox.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
-  </data>
-  <data name="maturityLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 74</value>
-  </data>
-  <data name="&gt;&gt;couponsQuantityTextBox.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="&gt;&gt;LinkColumn.Name" xml:space="preserve">
-    <value>LinkColumn</value>
-  </data>
-  <data name="&gt;&gt;yieldTextBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="currentPriceLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="commonInfoGroupBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1066, 301</value>
-  </data>
-  <data name="realCouponIncomeLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 148</value>
-  </data>
-  <data name="yieldInfoTableLayoutPanel.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;realCouponIncomeLabel.Name" xml:space="preserve">
-    <value>realCouponIncomeLabel</value>
-  </data>
-  <data name="bondTableLayoutPanel.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
-    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="yieldInfoGroupBox" Row="2" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="commonInfoGroupBox" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="couponInfoGroupBox" Row="1" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="AutoSize,0" /&gt;&lt;Rows Styles="AutoSize,0,AutoSize,0,AutoSize,0" /&gt;&lt;/TableLayoutSettings&gt;</value>
-  </data>
-  <data name="&gt;&gt;currentValueLabel.Parent" xml:space="preserve">
-    <value>commonInfoTableLayoutPanel</value>
-  </data>
-  <data name="&gt;&gt;maturityTextBox.Name" xml:space="preserve">
-    <value>maturityTextBox</value>
-  </data>
-  <data name="&gt;&gt;accumulatedCouponIncomeTextBox.Parent" xml:space="preserve">
-    <value>couponInfoTableLayoutPanel</value>
-  </data>
-  <data name="yieldInfoTableLayoutPanel.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
-    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="yieldLabel" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="yieldTextBox" Row="0" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="capitalGainsPercentLabel" Row="1" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="capitalGainsPercentTextBox" Row="1" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="realCouponIncomeLabel" Row="2" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="realCouponIncomeTextBox" Row="2" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="realCouponIncomePercentLabel" Row="3" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="realCouponIncomePercentTextBox" Row="3" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="realYieldPercentLabel" Row="4" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="realYieldPercentTextBox" Row="4" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Absolute,231,Percent,100" /&gt;&lt;Rows Styles="AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0" /&gt;&lt;/TableLayoutSettings&gt;</value>
-  </data>
-  <data name="linkTableLayoutPanel.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
-    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="linkLabel" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="linkTextBox" Row="0" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="addButton" Row="0" RowSpan="1" Column="2" ColumnSpan="1" /&gt;&lt;Control Name="linksDataGridView" Row="1" RowSpan="1" Column="0" ColumnSpan="4" /&gt;&lt;Control Name="removeButton" Row="0" RowSpan="1" Column="3" ColumnSpan="1" /&gt;&lt;Control Name="analyzeButton" Row="2" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Absolute,239,Percent,100,Absolute,76,Absolute,76" /&gt;&lt;Rows Styles="AutoSize,0,Absolute,255,AutoSize,0" /&gt;&lt;/TableLayoutSettings&gt;</value>
-  </data>
-  <data name="&gt;&gt;realCouponIncomePercentTextBox.Name" xml:space="preserve">
-    <value>realCouponIncomePercentTextBox</value>
-  </data>
-  <data name="bondInfoTableLayoutPanel.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
-    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="yieldInfoGroupBox" Row="2" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="commonInfoGroupBox" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="couponInfoGroupBox" Row="1" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="AutoSize,0" /&gt;&lt;Rows Styles="Percent,33,Percent,33,Percent,34" /&gt;&lt;/TableLayoutSettings&gt;</value>
-  </data>
-  <data name="label5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 185</value>
-  </data>
-  <data name="&gt;&gt;quantityOfPaymentsInYearTextBox.Name" xml:space="preserve">
-    <value>quantityOfPaymentsInYearTextBox</value>
-  </data>
-  <data name="bondInfoTableLayoutPanel.ColumnCount" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;capitalGainsPercentTextBox.Parent" xml:space="preserve">
-    <value>yieldInfoTableLayoutPanel</value>
-  </data>
-  <data name="&gt;&gt;yieldInfoGroupBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="couponInfoTableLayoutPanel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 27</value>
-  </data>
-  <data name="label7.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 37</value>
-  </data>
-  <data name="bondInfoTableLayoutPanel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 96</value>
-  </data>
-  <data name="&gt;&gt;label4.Parent" xml:space="preserve">
-    <value>couponInfoTableLayoutPanel</value>
-  </data>
-  <data name="&gt;&gt;label2.Parent" xml:space="preserve">
-    <value>couponInfoTableLayoutPanel</value>
-  </data>
-  <data name="&gt;&gt;couponInfoGroupBox.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;label7.Parent" xml:space="preserve">
-    <value>yieldInfoTableLayoutPanel</value>
-  </data>
-  <data name="&gt;&gt;nameLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="currentPriceTextBox.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="linkLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;textBox6.Name" xml:space="preserve">
-    <value>textBox6</value>
-  </data>
-  <data name="&gt;&gt;label8.Parent" xml:space="preserve">
-    <value>yieldInfoTableLayoutPanel</value>
-  </data>
-  <data name="&gt;&gt;label1.Name" xml:space="preserve">
-    <value>label1</value>
-  </data>
-  <data name="&gt;&gt;label3.Name" xml:space="preserve">
-    <value>label3</value>
-  </data>
-  <data name="&gt;&gt;accumulatedCouponIncomeTextBox.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;linkLabel.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;nominalPriceLabel.Parent" xml:space="preserve">
-    <value>commonInfoTableLayoutPanel</value>
-  </data>
-  <data name="&gt;&gt;capitalGainsPercentTextBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;realCouponIncomeTextBox.Name" xml:space="preserve">
-    <value>realCouponIncomeTextBox</value>
-  </data>
-  <data name="&gt;&gt;yieldInfoTableLayoutPanel.Name" xml:space="preserve">
-    <value>yieldInfoTableLayoutPanel</value>
-  </data>
   <data name="nominalPriceTextBox.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
   </data>
-  <data name="textBox2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>303, 77</value>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="couponInfoTableLayoutPanel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 27</value>
   </data>
-  <data name="label4.TabIndex" type="System.Int32, mscorlib">
-    <value>8</value>
-  </data>
-  <data name="&gt;&gt;currentValueLabel.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;textBox8.Parent" xml:space="preserve">
-    <value>yieldInfoTableLayoutPanel</value>
-  </data>
-  <data name="&gt;&gt;NameColumn.Name" xml:space="preserve">
-    <value>NameColumn</value>
-  </data>
-  <data name="&gt;&gt;analyzeButton.Name" xml:space="preserve">
-    <value>analyzeButton</value>
-  </data>
-  <data name="linkTextBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Left, Right</value>
-  </data>
-  <data name="&gt;&gt;realCouponIncomeLabel.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;removeButton.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="couponInfoTableLayoutPanel.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="NameColumn.Width" type="System.Int32, mscorlib">
-    <value>250</value>
-  </data>
-  <data name="&gt;&gt;textBox8.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="currentValueTextBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>303, 40</value>
-  </data>
-  <data name="&gt;&gt;linkLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;couponTextBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="linkLabel.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="yieldInfoGroupBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1066, 311</value>
-  </data>
-  <data name="&gt;&gt;label7.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;mainTableLayoutPanel.Name" xml:space="preserve">
-    <value>mainTableLayoutPanel</value>
-  </data>
-  <data name="&gt;&gt;textBox8.Name" xml:space="preserve">
-    <value>textBox8</value>
-  </data>
-  <data name="&gt;&gt;label8.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="&gt;&gt;textBox5.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;linkTextBox.Parent" xml:space="preserve">
-    <value>linkTableLayoutPanel</value>
-  </data>
-  <data name="&gt;&gt;textBox2.Parent" xml:space="preserve">
-    <value>couponInfoTableLayoutPanel</value>
-  </data>
-  <data name="&gt;&gt;realYieldPercentLabel.Name" xml:space="preserve">
-    <value>realYieldPercentLabel</value>
-  </data>
-  <data name="mainTableLayoutPanel.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="capitalGainsPercentLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 37</value>
-  </data>
-  <data name="&gt;&gt;nominalPriceLabel.Name" xml:space="preserve">
-    <value>nominalPriceLabel</value>
-  </data>
-  <data name="&gt;&gt;mainTableLayoutPanel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TableLayoutPanel, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="linkTableLayoutPanel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 3</value>
-  </data>
-  <data name="label3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 111</value>
-  </data>
-  <data name="&gt;&gt;quantityOfPaymentsTextBox.Parent" xml:space="preserve">
-    <value>couponInfoTableLayoutPanel</value>
-  </data>
-  <data name="LinkColumn.HeaderText" xml:space="preserve">
-    <value>Ссылка</value>
-  </data>
-  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>1078, 1030</value>
-  </data>
-  <data name="&gt;&gt;textBox4.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;couponInfoTableLayoutPanel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TableLayoutPanel, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="yieldLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="currentValueLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;currentValueLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="couponsQuantityLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 74</value>
-  </data>
-  <data name="&gt;&gt;couponLabel.Name" xml:space="preserve">
-    <value>couponLabel</value>
-  </data>
-  <data name="&gt;&gt;accumulatedCouponIncomeTextBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;textBox7.Parent" xml:space="preserve">
-    <value>yieldInfoTableLayoutPanel</value>
-  </data>
-  <data name="&gt;&gt;couponsQuantityLabel.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;textBox2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;realCouponIncomeTextBox.Parent" xml:space="preserve">
-    <value>yieldInfoTableLayoutPanel</value>
-  </data>
-  <data name="quantityOfPaymentsInYearTextBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>333, 114</value>
-  </data>
-  <data name="&gt;&gt;removeButton.Parent" xml:space="preserve">
-    <value>linkTableLayoutPanel</value>
-  </data>
-  <data name="textBox1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>303, 40</value>
-  </data>
-  <data name="&gt;&gt;textBox4.Name" xml:space="preserve">
-    <value>textBox4</value>
-  </data>
-  <data name="&gt;&gt;textBox1.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="mainTableLayoutPanel.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
-    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="linkTableLayoutPanel" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="bondTableLayoutPanel" Row="2" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="AutoSize,0" /&gt;&lt;Rows Styles="AutoSize,0,Absolute,30,Absolute,12" /&gt;&lt;/TableLayoutSettings&gt;</value>
-  </data>
-  <data name="&gt;&gt;yieldLabel.Name" xml:space="preserve">
-    <value>yieldLabel</value>
-  </data>
-  <data name="&gt;&gt;yieldLabel.Type" xml:space="preserve">
+  <data name="&gt;&gt;nominalPriceLabel.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="realYieldPercentTextBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>333, 77</value>
   </data>
-  <data name="realCouponIncomePercentLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>10</value>
+  <data name="&gt;&gt;currentPriceLabel.Name" xml:space="preserve">
+    <value>currentPriceLabel</value>
   </data>
-  <data name="&gt;&gt;realYieldPercentTextBox.Name" xml:space="preserve">
-    <value>realYieldPercentTextBox</value>
+  <data name="capitalGainsPercentLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
   </data>
-  <data name="&gt;&gt;removeButton.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;openLinksButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="label8.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
   </data>
-  <data name="&gt;&gt;couponLabel.Parent" xml:space="preserve">
+  <data name="&gt;&gt;label3.Parent" xml:space="preserve">
     <value>couponInfoTableLayoutPanel</value>
   </data>
-  <data name="&gt;&gt;currentPriceLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;commonInfoGroupBox.Name" xml:space="preserve">
+    <value>commonInfoGroupBox</value>
   </data>
-  <data name="linkLabel.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="&gt;&gt;maturityTextBox.Parent" xml:space="preserve">
+    <value>commonInfoTableLayoutPanel</value>
+  </data>
+  <data name="&gt;&gt;linkTextBox.Parent" xml:space="preserve">
+    <value>linkTableLayoutPanel</value>
+  </data>
+  <data name="&gt;&gt;quantityOfPaymentsInYearLabel.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="RealYieldPercentColumn.HeaderText" xml:space="preserve">
+    <value>Реальная доходность (по сроку), %</value>
+  </data>
+  <data name="mainTableLayoutPanel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="&gt;&gt;bondInfoTableLayoutPanel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TableLayoutPanel, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="analyzeButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1170, 6</value>
+  </data>
+  <data name="nameLabel.Location" type="System.Drawing.Point, System.Drawing">
     <value>3, 0</value>
   </data>
-  <data name="&gt;&gt;quantityOfPaymentsInYearLabel.Parent" xml:space="preserve">
+  <data name="&gt;&gt;RealYieldPercentColumn.Name" xml:space="preserve">
+    <value>RealYieldPercentColumn</value>
+  </data>
+  <data name="&gt;&gt;label5.Parent" xml:space="preserve">
     <value>couponInfoTableLayoutPanel</value>
   </data>
-  <data name="bondInfoTableLayoutPanel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1072, 931</value>
+  <data name="&gt;&gt;bondTableLayoutPanel.ZOrder" xml:space="preserve">
+    <value>1</value>
   </data>
-  <data name="&gt;&gt;textBox5.Parent" xml:space="preserve">
-    <value>couponInfoTableLayoutPanel</value>
-  </data>
-  <data name="linkTableLayoutPanel.TabIndex" type="System.Int32, mscorlib">
+  <data name="linkLabel.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="&gt;&gt;textBox3.ZOrder" xml:space="preserve">
-    <value>4</value>
+  <data name="&gt;&gt;couponLabel.Name" xml:space="preserve">
+    <value>couponLabel</value>
   </data>
   <data name="quantityOfPaymentsLabel.Location" type="System.Drawing.Point, System.Drawing">
     <value>3, 111</value>
   </data>
-  <data name="&gt;&gt;quantityOfPaymentsInYearTextBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;maturityLabel.Name" xml:space="preserve">
+    <value>maturityLabel</value>
   </data>
-  <data name="&gt;&gt;realYieldPercentTextBox.ZOrder" xml:space="preserve">
-    <value>9</value>
+  <data name="label1.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
   </data>
-  <data name="&gt;&gt;yieldTextBox.Parent" xml:space="preserve">
+  <data name="yieldTextBox.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="capitalGainsPercentLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 37</value>
+  </data>
+  <data name="&gt;&gt;removeButton.Parent" xml:space="preserve">
+    <value>linkTableLayoutPanel</value>
+  </data>
+  <data name="&gt;&gt;yieldInfoTableLayoutPanel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TableLayoutPanel, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;bondInfoTableLayoutPanel.Parent" xml:space="preserve">
+    <value>mainTableLayoutPanel</value>
+  </data>
+  <data name="&gt;&gt;label2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label5.Name" xml:space="preserve">
+    <value>label5</value>
+  </data>
+  <data name="&gt;&gt;yieldTextBox.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;textBox3.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="quantityOfPaymentsTextBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>333, 114</value>
+  </data>
+  <data name="textBox2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>303, 77</value>
+  </data>
+  <data name="&gt;&gt;realCouponIncomeTextBox.Parent" xml:space="preserve">
     <value>yieldInfoTableLayoutPanel</value>
   </data>
-  <data name="&gt;&gt;label6.Name" xml:space="preserve">
-    <value>label6</value>
+  <data name="linkTableLayoutPanel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1072, 37</value>
+  </data>
+  <data name="currentPriceLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 37</value>
+  </data>
+  <data name="&gt;&gt;currentPriceLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="RealYieldPercentColumn.Width" type="System.Int32, mscorlib">
+    <value>230</value>
+  </data>
+  <data name="linkTextBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>796, 31</value>
+  </data>
+  <data name="&gt;&gt;label7.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="yieldInfoGroupBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1066, 311</value>
+  </data>
+  <data name="&gt;&gt;quantityOfPaymentsInYearTextBox.Parent" xml:space="preserve">
+    <value>couponInfoTableLayoutPanel</value>
+  </data>
+  <data name="commonInfoTableLayoutPanel.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;currentValueTextBox.Parent" xml:space="preserve">
+    <value>commonInfoTableLayoutPanel</value>
+  </data>
+  <data name="&gt;&gt;maturityLabel.Parent" xml:space="preserve">
+    <value>commonInfoTableLayoutPanel</value>
+  </data>
+  <data name="&gt;&gt;realCouponIncomeLabel.Parent" xml:space="preserve">
+    <value>yieldInfoTableLayoutPanel</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>1078, 1030</value>
+  </data>
+  <data name="&gt;&gt;realCouponIncomePercentLabel.Name" xml:space="preserve">
+    <value>realCouponIncomePercentLabel</value>
+  </data>
+  <data name="label7.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 37</value>
+  </data>
+  <data name="label5.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="openLinksButton.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="mainTableLayoutPanel.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
+    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="linkTableLayoutPanel" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="bondTableLayoutPanel" Row="2" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="AutoSize,0" /&gt;&lt;Rows Styles="AutoSize,0,Absolute,30,Absolute,12" /&gt;&lt;/TableLayoutSettings&gt;</value>
+  </data>
+  <data name="couponInfoGroupBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1066, 301</value>
+  </data>
+  <data name="&gt;&gt;nameLabel.Name" xml:space="preserve">
+    <value>nameLabel</value>
+  </data>
+  <data name="LinkColumn.HeaderText" xml:space="preserve">
+    <value>Ссылка</value>
+  </data>
+  <data name="mainTableLayoutPanel.ColumnCount" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;currentValueTextBox.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="bondInfoTableLayoutPanel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1072, 931</value>
+  </data>
+  <data name="&gt;&gt;label2.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;quantityOfPaymentsInYearLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="couponInfoTableLayoutPanel.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;nominalPriceLabel.Parent" xml:space="preserve">
+    <value>commonInfoTableLayoutPanel</value>
+  </data>
+  <data name="addButton.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
   </data>
   <data name="&gt;&gt;nominalPriceTextBox.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <data name="&gt;&gt;addButton.Name" xml:space="preserve">
-    <value>addButton</value>
+  <data name="couponInfoGroupBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 310</value>
   </data>
-  <data name="&gt;&gt;accumulatedCouponIncomeTextBox.Name" xml:space="preserve">
-    <value>accumulatedCouponIncomeTextBox</value>
+  <data name="&gt;&gt;accumulatedCouponIncomeTextBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="linkTableLayoutPanel.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
+  <data name="textBox8.Location" type="System.Drawing.Point, System.Drawing">
+    <value>303, 77</value>
   </data>
-  <data name="commonInfoGroupBox.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
+  <data name="bondInfoTableLayoutPanel.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;linkLabel.Name" xml:space="preserve">
+    <value>linkLabel</value>
+  </data>
+  <data name="commonInfoGroupBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 3</value>
+  </data>
+  <data name="yieldInfoTableLayoutPanel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 27</value>
+  </data>
+  <data name="&gt;&gt;textBox1.Name" xml:space="preserve">
+    <value>textBox1</value>
   </data>
   <data name="&gt;&gt;yieldInfoGroupBox.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="&gt;&gt;addButton.Parent" xml:space="preserve">
+  <data name="yieldInfoGroupBox.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="LinkColumn.Width" type="System.Int32, mscorlib">
+    <value>450</value>
+  </data>
+  <data name="&gt;&gt;saveLinksButton.Parent" xml:space="preserve">
     <value>linkTableLayoutPanel</value>
+  </data>
+  <data name="commonInfoGroupBox.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;yieldTextBox.Parent" xml:space="preserve">
+    <value>yieldInfoTableLayoutPanel</value>
+  </data>
+  <data name="linkLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>264, 25</value>
+  </data>
+  <data name="&gt;&gt;maturityTextBox.Name" xml:space="preserve">
+    <value>maturityTextBox</value>
+  </data>
+  <data name="&gt;&gt;label6.Parent" xml:space="preserve">
+    <value>yieldInfoTableLayoutPanel</value>
+  </data>
+  <data name="&gt;&gt;bondInfoTableLayoutPanel.Name" xml:space="preserve">
+    <value>bondInfoTableLayoutPanel</value>
+  </data>
+  <data name="&gt;&gt;quantityOfPaymentsLabel.Name" xml:space="preserve">
+    <value>quantityOfPaymentsLabel</value>
+  </data>
+  <data name="realCouponIncomeTextBox.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="nominalPriceTextBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>303, 3</value>
+  </data>
+  <data name="&gt;&gt;quantityOfPaymentsInYearTextBox.Name" xml:space="preserve">
+    <value>quantityOfPaymentsInYearTextBox</value>
+  </data>
+  <data name="&gt;&gt;label4.Parent" xml:space="preserve">
+    <value>couponInfoTableLayoutPanel</value>
+  </data>
+  <data name="&gt;&gt;bondTableLayoutPanel.Name" xml:space="preserve">
+    <value>bondTableLayoutPanel</value>
   </data>
   <data name="&gt;&gt;realCouponIncomeLabel.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;couponsQuantityTextBox.Name" xml:space="preserve">
-    <value>couponsQuantityTextBox</value>
+  <data name="linkTableLayoutPanel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
-  <data name="label8.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 74</value>
+  <data name="&gt;&gt;NameColumn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="nominalPriceLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
+  <data name="&gt;&gt;commonInfoGroupBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;capitalGainsPercentLabel.ZOrder" xml:space="preserve">
-    <value>2</value>
+  <data name="&gt;&gt;textBox5.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="mainTableLayoutPanel.RowCount" type="System.Int32, mscorlib">
-    <value>3</value>
+  <data name="&gt;&gt;couponLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;nameTextBox.Name" xml:space="preserve">
+    <value>nameTextBox</value>
+  </data>
+  <data name="&gt;&gt;textBox8.Name" xml:space="preserve">
+    <value>textBox8</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
+  </data>
+  <data name="couponInfoTableLayoutPanel.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
+    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="accumulatedCouponIncomeLabel" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="accumulatedCouponIncomeTextBox" Row="0" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="couponLabel" Row="1" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="couponTextBox" Row="1" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="couponsQuantityLabel" Row="2" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="couponsQuantityTextBox" Row="2" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="quantityOfPaymentsInYearLabel" Row="3" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="quantityOfPaymentsInYearTextBox" Row="3" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Absolute,231,Percent,100" /&gt;&lt;Rows Styles="AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,Absolute,12,Absolute,12" /&gt;&lt;/TableLayoutSettings&gt;</value>
+  </data>
+  <data name="analyzeButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 23</value>
+  </data>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>10, 25</value>
   </data>
   <data name="couponInfoGroupBox.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
   </data>
-  <data name="nameLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
+  <data name="&gt;&gt;accumulatedCouponIncomeTextBox.Name" xml:space="preserve">
+    <value>accumulatedCouponIncomeTextBox</value>
   </data>
-  <data name="maturityLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
+  <data name="&gt;&gt;currentValueLabel.Parent" xml:space="preserve">
+    <value>commonInfoTableLayoutPanel</value>
   </data>
-  <data name="nameTextBox.TabIndex" type="System.Int32, mscorlib">
+  <data name="quantityOfPaymentsInYearLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;textBox5.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;quantityOfPaymentsInYearLabel.Parent" xml:space="preserve">
+    <value>couponInfoTableLayoutPanel</value>
+  </data>
+  <data name="textBox3.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;commonInfoGroupBox.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="&gt;&gt;label8.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 37</value>
-  </data>
-  <data name="realCouponIncomeLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>8</value>
-  </data>
-  <data name="NameColumn.HeaderText" xml:space="preserve">
-    <value>Наименование облигации</value>
-  </data>
-  <data name="&gt;&gt;realCouponIncomePercentTextBox.Parent" xml:space="preserve">
-    <value>yieldInfoTableLayoutPanel</value>
-  </data>
-  <data name="label6.TabIndex" type="System.Int32, mscorlib">
+  <data name="&gt;&gt;yieldLabel.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <data name="bondInfoTableLayoutPanel.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
   </data>
-  <data name="&gt;&gt;textBox5.Name" xml:space="preserve">
-    <value>textBox5</value>
+  <data name="&gt;&gt;nominalPriceTextBox.Name" xml:space="preserve">
+    <value>nominalPriceTextBox</value>
   </data>
-  <data name="&gt;&gt;label7.Name" xml:space="preserve">
-    <value>label7</value>
-  </data>
-  <data name="&gt;&gt;realCouponIncomePercentTextBox.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
-  <data name="&gt;&gt;linksDataGridView.Name" xml:space="preserve">
-    <value>linksDataGridView</value>
-  </data>
-  <data name="couponLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 37</value>
-  </data>
-  <data name="&gt;&gt;label6.Parent" xml:space="preserve">
-    <value>yieldInfoTableLayoutPanel</value>
-  </data>
-  <data name="&gt;&gt;couponsQuantityLabel.Parent" xml:space="preserve">
-    <value>couponInfoTableLayoutPanel</value>
-  </data>
-  <data name="&gt;&gt;couponInfoGroupBox.Parent" xml:space="preserve">
-    <value>bondTableLayoutPanel</value>
-  </data>
-  <data name="analyzeButton.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="textBox5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>303, 188</value>
-  </data>
-  <data name="capitalGainsPercentTextBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>333, 40</value>
-  </data>
-  <data name="&gt;&gt;label3.ZOrder" xml:space="preserve">
-    <value>9</value>
-  </data>
-  <data name="&gt;&gt;$this.Name" xml:space="preserve">
-    <value>Form</value>
-  </data>
-  <data name="mainTableLayoutPanel.ColumnCount" type="System.Int32, mscorlib">
-    <value>1</value>
+  <data name="&gt;&gt;analyzeButton.Parent" xml:space="preserve">
+    <value>linkTableLayoutPanel</value>
   </data>
   <data name="&gt;&gt;textBox7.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="&gt;&gt;capitalGainsPercentLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="quantityOfPaymentsInYearLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
-  </data>
-  <data name="textBox7.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;textBox3.Parent" xml:space="preserve">
-    <value>couponInfoTableLayoutPanel</value>
-  </data>
-  <data name="couponLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;realCouponIncomePercentLabel.Parent" xml:space="preserve">
-    <value>yieldInfoTableLayoutPanel</value>
-  </data>
-  <data name="&gt;&gt;nominalPriceLabel.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;commonInfoTableLayoutPanel.ZOrder" xml:space="preserve">
     <value>0</value>
-  </data>
-  <data name="&gt;&gt;bondTableLayoutPanel.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="commonInfoGroupBox.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="&gt;&gt;currentValueTextBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;couponInfoTableLayoutPanel.Parent" xml:space="preserve">
-    <value>couponInfoGroupBox</value>
-  </data>
-  <data name="&gt;&gt;textBox6.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;maturityLabel.Name" xml:space="preserve">
-    <value>maturityLabel</value>
-  </data>
-  <data name="&gt;&gt;couponInfoTableLayoutPanel.Name" xml:space="preserve">
-    <value>couponInfoTableLayoutPanel</value>
-  </data>
-  <data name="&gt;&gt;capitalGainsPercentTextBox.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;label5.Name" xml:space="preserve">
-    <value>label5</value>
-  </data>
-  <data name="&gt;&gt;yieldLabel.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;yieldInfoGroupBox.Name" xml:space="preserve">
-    <value>yieldInfoGroupBox</value>
-  </data>
-  <data name="&gt;&gt;nominalPriceLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;linkTextBox.Name" xml:space="preserve">
-    <value>linkTextBox</value>
-  </data>
-  <data name="analyzeButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1170, 6</value>
-  </data>
-  <data name="&gt;&gt;realYieldPercentTextBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;textBox1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;quantityOfPaymentsInYearLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;maturityLabel.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="&gt;&gt;maturityLabel.Parent" xml:space="preserve">
-    <value>commonInfoTableLayoutPanel</value>
-  </data>
-  <data name="&gt;&gt;bondInfoTableLayoutPanel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TableLayoutPanel, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label1.Parent" xml:space="preserve">
-    <value>couponInfoTableLayoutPanel</value>
-  </data>
-  <data name="couponInfoGroupBox.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;label6.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;label4.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="linkTableLayoutPanel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1072, 37</value>
-  </data>
-  <data name="&gt;&gt;RealYieldPercentColumn.Name" xml:space="preserve">
-    <value>RealYieldPercentColumn</value>
-  </data>
-  <data name="&gt;&gt;yieldInfoTableLayoutPanel.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;label2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;quantityOfPaymentsTextBox.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
-  <data name="&gt;&gt;couponTextBox.Name" xml:space="preserve">
-    <value>couponTextBox</value>
-  </data>
-  <data name="LinkColumn.Width" type="System.Int32, mscorlib">
-    <value>450</value>
-  </data>
-  <data name="couponInfoGroupBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 310</value>
-  </data>
-  <data name="&gt;&gt;currentPriceTextBox.Name" xml:space="preserve">
-    <value>currentPriceTextBox</value>
-  </data>
-  <data name="removeButton.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;textBox4.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="label1.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;textBox5.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="&gt;&gt;realCouponIncomePercentLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;textBox2.Name" xml:space="preserve">
-    <value>textBox2</value>
-  </data>
-  <data name="&gt;&gt;linkLabel.Name" xml:space="preserve">
-    <value>linkLabel</value>
-  </data>
-  <data name="realCouponIncomePercentLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 185</value>
-  </data>
-  <data name="label4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 148</value>
-  </data>
-  <data name="&gt;&gt;accumulatedCouponIncomeLabel.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;label5.Parent" xml:space="preserve">
-    <value>couponInfoTableLayoutPanel</value>
-  </data>
-  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>10, 25</value>
-  </data>
-  <data name="textBox2.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
-  </data>
-  <data name="couponTextBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>333, 40</value>
-  </data>
-  <data name="&gt;&gt;couponsQuantityLabel.Name" xml:space="preserve">
-    <value>couponsQuantityLabel</value>
-  </data>
-  <data name="couponInfoGroupBox.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="&gt;&gt;linkTextBox.ZOrder" xml:space="preserve">
-    <value>1</value>
   </data>
   <data name="&gt;&gt;quantityOfPaymentsLabel.Parent" xml:space="preserve">
     <value>couponInfoTableLayoutPanel</value>
   </data>
-  <data name="&gt;&gt;commonInfoTableLayoutPanel.Name" xml:space="preserve">
-    <value>commonInfoTableLayoutPanel</value>
+  <data name="currentPriceTextBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>333, 40</value>
   </data>
-  <data name="quantityOfPaymentsInYearLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 111</value>
+  <data name="&gt;&gt;couponsQuantityLabel.ZOrder" xml:space="preserve">
+    <value>4</value>
   </data>
-  <data name="yieldLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 0</value>
+  <data name="mainTableLayoutPanel.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
   </data>
-  <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
-    <value>7</value>
+  <data name="yieldTextBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>333, 3</value>
   </data>
-  <data name="&gt;&gt;NameColumn.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="linkTableLayoutPanel.ColumnCount" type="System.Int32, mscorlib">
+  <data name="&gt;&gt;capitalGainsPercentLabel.ZOrder" xml:space="preserve">
     <value>2</value>
+  </data>
+  <data name="&gt;&gt;currentValueLabel.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="linksDataGridView.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;currentValueTextBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;couponsQuantityLabel.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="bondTableLayoutPanel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 96</value>
+  <data name="yieldInfoGroupBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 617</value>
   </data>
-  <data name="&gt;&gt;couponTextBox.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;yieldLabel.Name" xml:space="preserve">
+    <value>yieldLabel</value>
+  </data>
+  <data name="&gt;&gt;realCouponIncomeTextBox.Name" xml:space="preserve">
+    <value>realCouponIncomeTextBox</value>
+  </data>
+  <data name="&gt;&gt;label8.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;textBox1.Parent" xml:space="preserve">
+    <value>couponInfoTableLayoutPanel</value>
+  </data>
+  <data name="&gt;&gt;saveLinksButton.Name" xml:space="preserve">
+    <value>saveLinksButton</value>
+  </data>
+  <data name="&gt;&gt;textBox2.Parent" xml:space="preserve">
+    <value>couponInfoTableLayoutPanel</value>
+  </data>
+  <data name="&gt;&gt;bondTableLayoutPanel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TableLayoutPanel, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;textBox3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="commonInfoGroupBox.Text" xml:space="preserve">
+    <value>Общая информация</value>
+  </data>
+  <data name="&gt;&gt;label4.Name" xml:space="preserve">
+    <value>label4</value>
+  </data>
+  <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 74</value>
+  </data>
+  <data name="openLinksButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>828, 287</value>
+  </data>
+  <data name="&gt;&gt;textBox6.Parent" xml:space="preserve">
+    <value>yieldInfoTableLayoutPanel</value>
+  </data>
+  <data name="&gt;&gt;analyzeButton.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="yieldInfoGroupBox.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="bondInfoTableLayoutPanel.RowCount" type="System.Int32, mscorlib">
     <value>3</value>
+  </data>
+  <data name="&gt;&gt;textBox2.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;label1.Name" xml:space="preserve">
+    <value>label1</value>
+  </data>
+  <data name="&gt;&gt;addButton.Parent" xml:space="preserve">
+    <value>linkTableLayoutPanel</value>
+  </data>
+  <data name="&gt;&gt;quantityOfPaymentsTextBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;realYieldPercentTextBox.Parent" xml:space="preserve">
+    <value>yieldInfoTableLayoutPanel</value>
+  </data>
+  <data name="yieldInfoTableLayoutPanel.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
+    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="yieldLabel" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="yieldTextBox" Row="0" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="capitalGainsPercentLabel" Row="1" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="capitalGainsPercentTextBox" Row="1" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="realCouponIncomeLabel" Row="2" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="realCouponIncomeTextBox" Row="2" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="realCouponIncomePercentLabel" Row="3" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="realCouponIncomePercentTextBox" Row="3" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="realYieldPercentLabel" Row="4" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="realYieldPercentTextBox" Row="4" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Absolute,231,Percent,100" /&gt;&lt;Rows Styles="AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0" /&gt;&lt;/TableLayoutSettings&gt;</value>
+  </data>
+  <data name="&gt;&gt;currentPriceLabel.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;realYieldPercentTextBox.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="textBox1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>303, 40</value>
+  </data>
+  <data name="&gt;&gt;removeButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;couponInfoTableLayoutPanel.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;linkTableLayoutPanel.Parent" xml:space="preserve">
+    <value>mainTableLayoutPanel</value>
+  </data>
+  <data name="realCouponIncomeLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 148</value>
+  </data>
+  <data name="&gt;&gt;nameLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;bondTableLayoutPanel.Parent" xml:space="preserve">
+    <value>mainTableLayoutPanel</value>
+  </data>
+  <data name="&gt;&gt;realCouponIncomeTextBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;couponInfoGroupBox.Name" xml:space="preserve">
+    <value>couponInfoGroupBox</value>
+  </data>
+  <data name="couponsQuantityLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;currentPriceTextBox.Name" xml:space="preserve">
+    <value>currentPriceTextBox</value>
+  </data>
+  <data name="&gt;&gt;saveLinksButton.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="label3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 111</value>
+  </data>
+  <data name="&gt;&gt;currentValueLabel.Name" xml:space="preserve">
+    <value>currentValueLabel</value>
+  </data>
+  <data name="&gt;&gt;nameTextBox.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;linkTableLayoutPanel.Name" xml:space="preserve">
+    <value>linkTableLayoutPanel</value>
+  </data>
+  <data name="&gt;&gt;yieldInfoTableLayoutPanel.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="textBox5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>303, 188</value>
+  </data>
+  <data name="&gt;&gt;realCouponIncomePercentTextBox.Parent" xml:space="preserve">
+    <value>yieldInfoTableLayoutPanel</value>
+  </data>
+  <data name="&gt;&gt;realYieldPercentLabel.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;realYieldPercentTextBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;couponInfoGroupBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>Form</value>
+  </data>
+  <data name="&gt;&gt;currentValueTextBox.Name" xml:space="preserve">
+    <value>currentValueTextBox</value>
+  </data>
+  <data name="yieldInfoGroupBox.Text" xml:space="preserve">
+    <value>Доходность</value>
+  </data>
+  <data name="linkTableLayoutPanel.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="currentPriceTextBox.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;nominalPriceTextBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="saveLinksButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>908, 287</value>
+  </data>
+  <data name="&gt;&gt;label4.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="&gt;&gt;textBox5.Parent" xml:space="preserve">
+    <value>couponInfoTableLayoutPanel</value>
+  </data>
+  <data name="&gt;&gt;couponInfoTableLayoutPanel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TableLayoutPanel, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;quantityOfPaymentsTextBox.Name" xml:space="preserve">
+    <value>quantityOfPaymentsTextBox</value>
+  </data>
+  <data name="textBox7.Location" type="System.Drawing.Point, System.Drawing">
+    <value>303, 40</value>
+  </data>
+  <data name="analyzeButton.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;label3.Name" xml:space="preserve">
+    <value>label3</value>
+  </data>
+  <data name="couponsQuantityLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 74</value>
+  </data>
+  <data name="quantityOfPaymentsInYearLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 111</value>
+  </data>
+  <data name="&gt;&gt;quantityOfPaymentsInYearTextBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="label5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 185</value>
+  </data>
+  <data name="linkLabel.Text" xml:space="preserve">
+    <value>Введите ссылку на облигацию:</value>
+  </data>
+  <data name="&gt;&gt;yieldInfoTableLayoutPanel.Name" xml:space="preserve">
+    <value>yieldInfoTableLayoutPanel</value>
+  </data>
+  <data name="NameColumn.HeaderText" xml:space="preserve">
+    <value>Наименование облигации</value>
+  </data>
+  <data name="saveLinksButton.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;maturityTextBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="addButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>819, 4</value>
+  </data>
+  <data name="&gt;&gt;linkLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;NameColumn.Name" xml:space="preserve">
+    <value>NameColumn</value>
+  </data>
+  <data name="textBox7.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;couponTextBox.Name" xml:space="preserve">
+    <value>couponTextBox</value>
   </data>
   <data name="&gt;&gt;realYieldPercentLabel.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="textBox8.Location" type="System.Drawing.Point, System.Drawing">
-    <value>303, 77</value>
+  <data name="label2.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
   </data>
-  <data name="accumulatedCouponIncomeTextBox.TabIndex" type="System.Int32, mscorlib">
+  <data name="&gt;&gt;yieldTextBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="textBox4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>303, 151</value>
+  </data>
+  <data name="&gt;&gt;mainTableLayoutPanel.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;realCouponIncomeLabel.Name" xml:space="preserve">
+    <value>realCouponIncomeLabel</value>
+  </data>
+  <data name="&gt;&gt;linkLabel.Parent" xml:space="preserve">
+    <value>linkTableLayoutPanel</value>
+  </data>
+  <data name="nameLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;openLinksButton.Parent" xml:space="preserve">
+    <value>linkTableLayoutPanel</value>
+  </data>
+  <data name="&gt;&gt;capitalGainsPercentLabel.Name" xml:space="preserve">
+    <value>capitalGainsPercentLabel</value>
+  </data>
+  <data name="accumulatedCouponIncomeTextBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>303, 3</value>
+  </data>
+  <data name="bondInfoTableLayoutPanel.ColumnCount" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;yieldLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="realCouponIncomeLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="linkTableLayoutPanel.RowCount" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;textBox6.Name" xml:space="preserve">
+    <value>textBox6</value>
+  </data>
+  <data name="&gt;&gt;realYieldPercentTextBox.Name" xml:space="preserve">
+    <value>realYieldPercentTextBox</value>
+  </data>
+  <data name="NameColumn.Width" type="System.Int32, mscorlib">
+    <value>250</value>
+  </data>
+  <data name="textBox6.Location" type="System.Drawing.Point, System.Drawing">
+    <value>303, 3</value>
+  </data>
+  <data name="mainTableLayoutPanel.RowCount" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="mainTableLayoutPanel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1078, 1030</value>
+  </data>
+  <data name="couponInfoGroupBox.Text" xml:space="preserve">
+    <value>Информация по купонам</value>
+  </data>
+  <data name="label3.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="linkTableLayoutPanel.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
+    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="linkLabel" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="linkTextBox" Row="0" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="addButton" Row="0" RowSpan="1" Column="2" ColumnSpan="1" /&gt;&lt;Control Name="linksDataGridView" Row="1" RowSpan="1" Column="0" ColumnSpan="4" /&gt;&lt;Control Name="removeButton" Row="0" RowSpan="1" Column="3" ColumnSpan="1" /&gt;&lt;Control Name="analyzeButton" Row="2" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="saveLinksButton" Row="2" RowSpan="1" Column="3" ColumnSpan="1" /&gt;&lt;Control Name="openLinksButton" Row="2" RowSpan="1" Column="2" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Absolute,239,Percent,100,Absolute,80,Absolute,80" /&gt;&lt;Rows Styles="AutoSize,0,Absolute,255,AutoSize,0" /&gt;&lt;/TableLayoutSettings&gt;</value>
+  </data>
+  <data name="&gt;&gt;label4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="nameTextBox.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="nameTextBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>333, 3</value>
+  </data>
+  <data name="&gt;&gt;realCouponIncomePercentTextBox.Name" xml:space="preserve">
+    <value>realCouponIncomePercentTextBox</value>
+  </data>
+  <data name="&gt;&gt;label8.Name" xml:space="preserve">
+    <value>label8</value>
+  </data>
+  <data name="currentValueLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 37</value>
+  </data>
+  <data name="realCouponIncomePercentTextBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>333, 188</value>
+  </data>
+  <data name="&gt;&gt;capitalGainsPercentTextBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="textBox6.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;yieldInfoGroupBox.Name" xml:space="preserve">
+    <value>yieldInfoGroupBox</value>
+  </data>
+  <data name="&gt;&gt;nominalPriceLabel.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="quantityOfPaymentsInYearTextBox.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="currentValueTextBox.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;realYieldPercentLabel.Name" xml:space="preserve">
+    <value>realYieldPercentLabel</value>
+  </data>
+  <data name="&gt;&gt;yieldInfoGroupBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;textBox1.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;label5.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="&gt;&gt;currentPriceLabel.Parent" xml:space="preserve">
+    <value>commonInfoTableLayoutPanel</value>
+  </data>
+  <data name="&gt;&gt;realCouponIncomeTextBox.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
-  <data name="label7.TabIndex" type="System.Int32, mscorlib">
+  <data name="currentValueLabel.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
+  </data>
+  <data name="&gt;&gt;capitalGainsPercentLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;accumulatedCouponIncomeLabel.Name" xml:space="preserve">
+    <value>accumulatedCouponIncomeLabel</value>
+  </data>
+  <data name="&gt;&gt;linkLabel.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;RealYieldPercentColumn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="linkTableLayoutPanel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 3</value>
+  </data>
+  <data name="&gt;&gt;linksDataGridView.Name" xml:space="preserve">
+    <value>linksDataGridView</value>
+  </data>
+  <data name="&gt;&gt;realCouponIncomePercentLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;currentPriceTextBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;currentValueLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;realCouponIncomePercentTextBox.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;label2.Name" xml:space="preserve">
+    <value>label2</value>
+  </data>
+  <data name="commonInfoGroupBox.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="textBox1.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;maturityLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;commonInfoTableLayoutPanel.Name" xml:space="preserve">
+    <value>commonInfoTableLayoutPanel</value>
+  </data>
+  <data name="realCouponIncomeTextBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>333, 151</value>
+  </data>
+  <data name="realYieldPercentTextBox.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
   </data>
   <data name="&gt;&gt;currentPriceTextBox.Parent" xml:space="preserve">
     <value>commonInfoTableLayoutPanel</value>
@@ -1101,189 +871,299 @@
   <data name="&gt;&gt;analyzeButton.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;realCouponIncomePercentTextBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;linkTableLayoutPanel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TableLayoutPanel, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="currentPriceLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 37</value>
-  </data>
-  <data name="&gt;&gt;label3.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label5.ZOrder" xml:space="preserve">
-    <value>11</value>
-  </data>
-  <data name="yieldInfoTableLayoutPanel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 27</value>
-  </data>
-  <data name="&gt;&gt;quantityOfPaymentsInYearTextBox.Parent" xml:space="preserve">
-    <value>couponInfoTableLayoutPanel</value>
-  </data>
-  <data name="couponInfoGroupBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1066, 301</value>
-  </data>
-  <data name="&gt;&gt;quantityOfPaymentsInYearTextBox.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
-  <data name="&gt;&gt;currentPriceLabel.Parent" xml:space="preserve">
-    <value>commonInfoTableLayoutPanel</value>
-  </data>
-  <data name="&gt;&gt;textBox3.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="realCouponIncomePercentTextBox.TabIndex" type="System.Int32, mscorlib">
-    <value>11</value>
-  </data>
-  <data name="&gt;&gt;label1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;bondInfoTableLayoutPanel.ZOrder" xml:space="preserve">
+    <value>1</value>
   </data>
   <data name="accumulatedCouponIncomeLabel.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
   </data>
-  <data name="&gt;&gt;textBox7.Name" xml:space="preserve">
-    <value>textBox7</value>
-  </data>
-  <data name="&gt;&gt;commonInfoGroupBox.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;capitalGainsPercentTextBox.Name" xml:space="preserve">
-    <value>capitalGainsPercentTextBox</value>
-  </data>
-  <data name="&gt;&gt;commonInfoGroupBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="textBox6.Location" type="System.Drawing.Point, System.Drawing">
-    <value>303, 3</value>
-  </data>
-  <data name="&gt;&gt;quantityOfPaymentsLabel.ZOrder" xml:space="preserve">
+  <data name="quantityOfPaymentsLabel.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
   </data>
-  <data name="&gt;&gt;currentValueTextBox.Parent" xml:space="preserve">
-    <value>commonInfoTableLayoutPanel</value>
+  <data name="label4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 148</value>
   </data>
-  <data name="&gt;&gt;label2.Name" xml:space="preserve">
-    <value>label2</value>
+  <data name="nominalPriceLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
   </data>
-  <data name="&gt;&gt;couponLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="quantityOfPaymentsInYearTextBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>333, 114</value>
   </data>
-  <data name="&gt;&gt;commonInfoTableLayoutPanel.Parent" xml:space="preserve">
-    <value>commonInfoGroupBox</value>
+  <data name="commonInfoGroupBox.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
   </data>
-  <data name="&gt;&gt;textBox7.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;quantityOfPaymentsTextBox.ZOrder" xml:space="preserve">
+    <value>7</value>
   </data>
-  <data name="&gt;&gt;analyzeButton.Parent" xml:space="preserve">
-    <value>linkTableLayoutPanel</value>
-  </data>
-  <data name="realYieldPercentLabel.TabIndex" type="System.Int32, mscorlib">
+  <data name="maturityLabel.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
   </data>
-  <data name="&gt;&gt;bondTableLayoutPanel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TableLayoutPanel, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="bondInfoTableLayoutPanel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 96</value>
   </data>
-  <data name="&gt;&gt;label6.Type" xml:space="preserve">
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;quantityOfPaymentsLabel.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="yieldInfoGroupBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 617</value>
-  </data>
-  <data name="removeButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>895, 4</value>
-  </data>
-  <data name="&gt;&gt;textBox2.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;currentPriceLabel.Name" xml:space="preserve">
-    <value>currentPriceLabel</value>
-  </data>
-  <data name="&gt;&gt;addButton.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="bondTableLayoutPanel.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="bondInfoTableLayoutPanel.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="label5.TabIndex" type="System.Int32, mscorlib">
-    <value>10</value>
-  </data>
-  <data name="&gt;&gt;label5.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;linkTextBox.Type" xml:space="preserve">
+  <data name="&gt;&gt;textBox6.Type" xml:space="preserve">
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;maturityLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="capitalGainsPercentTextBox.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;couponsQuantityTextBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;yieldTextBox.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="linkTextBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>796, 31</value>
-  </data>
-  <data name="&gt;&gt;currentPriceTextBox.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="commonInfoGroupBox.Text" xml:space="preserve">
-    <value>Общая информация</value>
-  </data>
-  <data name="realCouponIncomeTextBox.TabIndex" type="System.Int32, mscorlib">
-    <value>9</value>
-  </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
-  </data>
-  <data name="&gt;&gt;currentValueTextBox.Name" xml:space="preserve">
-    <value>currentValueTextBox</value>
-  </data>
-  <data name="&gt;&gt;currentPriceLabel.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;yieldInfoTableLayoutPanel.Parent" xml:space="preserve">
-    <value>yieldInfoGroupBox</value>
-  </data>
-  <data name="&gt;&gt;realCouponIncomeTextBox.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="&gt;&gt;removeButton.Name" xml:space="preserve">
-    <value>removeButton</value>
-  </data>
-  <data name="&gt;&gt;nominalPriceTextBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;linksDataGridView.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;capitalGainsPercentLabel.Parent" xml:space="preserve">
+    <value>yieldInfoTableLayoutPanel</value>
   </data>
   <data name="&gt;&gt;couponLabel.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <data name="quantityOfPaymentsTextBox.TabIndex" type="System.Int32, mscorlib">
-    <value>7</value>
+  <data name="maturityLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 74</value>
+  </data>
+  <data name="textBox8.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;addButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;realYieldPercentLabel.Parent" xml:space="preserve">
+    <value>yieldInfoTableLayoutPanel</value>
+  </data>
+  <data name="&gt;&gt;mainTableLayoutPanel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TableLayoutPanel, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="bondTableLayoutPanel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 96</value>
+  </data>
+  <data name="&gt;&gt;commonInfoGroupBox.Parent" xml:space="preserve">
+    <value>bondTableLayoutPanel</value>
+  </data>
+  <data name="&gt;&gt;removeButton.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="linkLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 0</value>
+  </data>
+  <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 37</value>
+  </data>
+  <data name="&gt;&gt;textBox3.Parent" xml:space="preserve">
+    <value>couponInfoTableLayoutPanel</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Bond yield calculator</value>
+  </data>
+  <data name="&gt;&gt;couponInfoGroupBox.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="linkTextBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>273, 3</value>
+  </data>
+  <data name="couponLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 37</value>
+  </data>
+  <data name="&gt;&gt;linkTextBox.Name" xml:space="preserve">
+    <value>linkTextBox</value>
+  </data>
+  <data name="label6.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 0</value>
+  </data>
+  <data name="&gt;&gt;LinkColumn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="couponLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;label3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;currentPriceTextBox.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;textBox6.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="textBox2.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="commonInfoTableLayoutPanel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 27</value>
+  </data>
+  <data name="&gt;&gt;accumulatedCouponIncomeTextBox.Parent" xml:space="preserve">
+    <value>couponInfoTableLayoutPanel</value>
+  </data>
+  <data name="removeButton.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="yieldLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;openLinksButton.Name" xml:space="preserve">
+    <value>openLinksButton</value>
+  </data>
+  <data name="&gt;&gt;textBox2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="bondTableLayoutPanel.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;linkTextBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label8.Parent" xml:space="preserve">
+    <value>yieldInfoTableLayoutPanel</value>
+  </data>
+  <data name="realCouponIncomePercentTextBox.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="accumulatedCouponIncomeTextBox.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;textBox8.Parent" xml:space="preserve">
+    <value>yieldInfoTableLayoutPanel</value>
+  </data>
+  <data name="&gt;&gt;textBox8.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;accumulatedCouponIncomeLabel.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="commonInfoTableLayoutPanel.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
+    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="nominalPriceLabel" Row="1" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="maturityTextBox" Row="3" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="nominalPriceTextBox" Row="1" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="currentPriceTextBox" Row="2" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="currentPriceLabel" Row="2" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="maturityLabel" Row="3" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="nameLabel" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="nameTextBox" Row="0" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Absolute,231,Percent,100" /&gt;&lt;Rows Styles="AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0" /&gt;&lt;/TableLayoutSettings&gt;</value>
+  </data>
+  <data name="&gt;&gt;textBox7.Name" xml:space="preserve">
+    <value>textBox7</value>
+  </data>
+  <data name="linksDataGridView.Location" type="System.Drawing.Point, System.Drawing">
+    <value>5, 32</value>
+  </data>
+  <data name="&gt;&gt;label7.Parent" xml:space="preserve">
+    <value>yieldInfoTableLayoutPanel</value>
+  </data>
+  <data name="&gt;&gt;textBox4.Name" xml:space="preserve">
+    <value>textBox4</value>
+  </data>
+  <data name="&gt;&gt;couponsQuantityTextBox.Parent" xml:space="preserve">
+    <value>couponInfoTableLayoutPanel</value>
+  </data>
+  <data name="textBox5.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="&gt;&gt;couponTextBox.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="realYieldPercentLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 74</value>
+  </data>
+  <data name="&gt;&gt;nameTextBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="bondTableLayoutPanel.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
+    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="yieldInfoGroupBox" Row="2" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="commonInfoGroupBox" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="couponInfoGroupBox" Row="1" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="AutoSize,0" /&gt;&lt;Rows Styles="AutoSize,0,AutoSize,0,AutoSize,0" /&gt;&lt;/TableLayoutSettings&gt;</value>
+  </data>
+  <data name="label6.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="couponsQuantityTextBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>333, 77</value>
+  </data>
+  <data name="&gt;&gt;textBox7.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;yieldTextBox.Name" xml:space="preserve">
+    <value>yieldTextBox</value>
+  </data>
+  <data name="&gt;&gt;quantityOfPaymentsInYearLabel.Name" xml:space="preserve">
+    <value>quantityOfPaymentsInYearLabel</value>
+  </data>
+  <data name="removeButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>895, 4</value>
+  </data>
+  <data name="label8.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 74</value>
+  </data>
+  <data name="&gt;&gt;quantityOfPaymentsTextBox.Parent" xml:space="preserve">
+    <value>couponInfoTableLayoutPanel</value>
+  </data>
+  <data name="&gt;&gt;addButton.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="maturityTextBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>303, 77</value>
+  </data>
+  <data name="&gt;&gt;label1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="maturityTextBox.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;mainTableLayoutPanel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="yieldInfoTableLayoutPanel.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;couponLabel.Parent" xml:space="preserve">
+    <value>couponInfoTableLayoutPanel</value>
+  </data>
+  <data name="&gt;&gt;label7.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="couponInfoGroupBox.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;textBox3.Name" xml:space="preserve">
+    <value>textBox3</value>
   </data>
   <data name="&gt;&gt;nominalPriceTextBox.Parent" xml:space="preserve">
     <value>commonInfoTableLayoutPanel</value>
   </data>
-  <data name="quantityOfPaymentsLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
+  <data name="linkTextBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="&gt;&gt;linkTableLayoutPanel.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="textBox3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>303, 114</value>
+  </data>
+  <data name="&gt;&gt;couponsQuantityTextBox.Name" xml:space="preserve">
+    <value>couponsQuantityTextBox</value>
+  </data>
+  <data name="bondInfoTableLayoutPanel.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
+    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="yieldInfoGroupBox" Row="2" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="commonInfoGroupBox" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="couponInfoGroupBox" Row="1" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="AutoSize,0" /&gt;&lt;Rows Styles="Percent,33,Percent,33,Percent,34" /&gt;&lt;/TableLayoutSettings&gt;</value>
+  </data>
+  <data name="commonInfoGroupBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1066, 301</value>
+  </data>
+  <data name="linkTextBox.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
   </data>
   <data name="accumulatedCouponIncomeLabel.Location" type="System.Drawing.Point, System.Drawing">
     <value>3, 0</value>
   </data>
-  <data name="&gt;&gt;yieldInfoTableLayoutPanel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TableLayoutPanel, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="yieldLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 0</value>
   </data>
-  <data name="&gt;&gt;linkTableLayoutPanel.Name" xml:space="preserve">
+  <data name="&gt;&gt;commonInfoTableLayoutPanel.Parent" xml:space="preserve">
+    <value>commonInfoGroupBox</value>
+  </data>
+  <data name="&gt;&gt;label6.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="couponTextBox.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;linksDataGridView.Parent" xml:space="preserve">
     <value>linkTableLayoutPanel</value>
+  </data>
+  <data name="capitalGainsPercentTextBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>333, 40</value>
+  </data>
+  <data name="&gt;&gt;textBox4.Parent" xml:space="preserve">
+    <value>couponInfoTableLayoutPanel</value>
   </data>
   <data name="&gt;&gt;nameLabel.Parent" xml:space="preserve">
     <value>commonInfoTableLayoutPanel</value>
@@ -1291,85 +1171,241 @@
   <data name="couponsQuantityTextBox.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
   </data>
-  <data name="&gt;&gt;nameTextBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;commonInfoGroupBox.Parent" xml:space="preserve">
-    <value>bondTableLayoutPanel</value>
-  </data>
-  <data name="&gt;&gt;textBox1.Parent" xml:space="preserve">
+  <data name="&gt;&gt;couponInfoTableLayoutPanel.Name" xml:space="preserve">
     <value>couponInfoTableLayoutPanel</value>
   </data>
-  <data name="&gt;&gt;realCouponIncomeTextBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="textBox3.TabIndex" type="System.Int32, mscorlib">
-    <value>7</value>
-  </data>
-  <data name="linkTextBox.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="maturityTextBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>303, 77</value>
-  </data>
-  <data name="&gt;&gt;addButton.ZOrder" xml:space="preserve">
+  <data name="label7.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
   </data>
-  <data name="couponTextBox.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;linksDataGridView.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;commonInfoTableLayoutPanel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TableLayoutPanel, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;quantityOfPaymentsInYearLabel.Name" xml:space="preserve">
-    <value>quantityOfPaymentsInYearLabel</value>
-  </data>
-  <data name="&gt;&gt;realYieldPercentTextBox.Parent" xml:space="preserve">
-    <value>yieldInfoTableLayoutPanel</value>
-  </data>
-  <data name="&gt;&gt;mainTableLayoutPanel.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;textBox6.Type" xml:space="preserve">
+  <data name="&gt;&gt;textBox1.Type" xml:space="preserve">
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 74</value>
+  <data name="&gt;&gt;analyzeButton.Name" xml:space="preserve">
+    <value>analyzeButton</value>
   </data>
-  <data name="textBox5.TabIndex" type="System.Int32, mscorlib">
-    <value>11</value>
+  <data name="&gt;&gt;label6.Name" xml:space="preserve">
+    <value>label6</value>
+  </data>
+  <data name="&gt;&gt;couponTextBox.Parent" xml:space="preserve">
+    <value>couponInfoTableLayoutPanel</value>
+  </data>
+  <data name="quantityOfPaymentsTextBox.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;label2.Parent" xml:space="preserve">
+    <value>couponInfoTableLayoutPanel</value>
+  </data>
+  <data name="&gt;&gt;maturityLabel.ZOrder" xml:space="preserve">
+    <value>5</value>
   </data>
   <data name="textBox4.TabIndex" type="System.Int32, mscorlib">
     <value>9</value>
   </data>
+  <data name="&gt;&gt;textBox4.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="yieldInfoGroupBox.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;textBox2.Name" xml:space="preserve">
+    <value>textBox2</value>
+  </data>
+  <data name="&gt;&gt;LinkColumn.Name" xml:space="preserve">
+    <value>LinkColumn</value>
+  </data>
+  <data name="&gt;&gt;capitalGainsPercentTextBox.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="realCouponIncomePercentLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 185</value>
+  </data>
+  <data name="&gt;&gt;yieldInfoGroupBox.Parent" xml:space="preserve">
+    <value>bondTableLayoutPanel</value>
+  </data>
+  <data name="linkTableLayoutPanel.ColumnCount" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;quantityOfPaymentsLabel.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;label7.Name" xml:space="preserve">
+    <value>label7</value>
+  </data>
+  <data name="&gt;&gt;yieldLabel.Parent" xml:space="preserve">
+    <value>yieldInfoTableLayoutPanel</value>
+  </data>
+  <data name="&gt;&gt;linksDataGridView.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="realYieldPercentLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;label1.Parent" xml:space="preserve">
+    <value>couponInfoTableLayoutPanel</value>
+  </data>
+  <data name="&gt;&gt;couponsQuantityTextBox.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;mainTableLayoutPanel.Name" xml:space="preserve">
+    <value>mainTableLayoutPanel</value>
+  </data>
+  <data name="linkLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="couponInfoGroupBox.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;couponsQuantityTextBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;couponTextBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;capitalGainsPercentTextBox.Name" xml:space="preserve">
+    <value>capitalGainsPercentTextBox</value>
+  </data>
+  <data name="&gt;&gt;yieldInfoTableLayoutPanel.Parent" xml:space="preserve">
+    <value>yieldInfoGroupBox</value>
+  </data>
+  <data name="linkTableLayoutPanel.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;addButton.Name" xml:space="preserve">
+    <value>addButton</value>
+  </data>
+  <data name="&gt;&gt;label8.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="capitalGainsPercentTextBox.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;nameTextBox.Parent" xml:space="preserve">
+    <value>commonInfoTableLayoutPanel</value>
+  </data>
+  <data name="&gt;&gt;nominalPriceLabel.Name" xml:space="preserve">
+    <value>nominalPriceLabel</value>
+  </data>
+  <data name="&gt;&gt;realCouponIncomeLabel.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;label6.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="realCouponIncomePercentLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="&gt;&gt;textBox8.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;removeButton.Name" xml:space="preserve">
+    <value>removeButton</value>
+  </data>
+  <data name="&gt;&gt;textBox4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;realCouponIncomePercentTextBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;maturityTextBox.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;saveLinksButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="label4.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="mainTableLayoutPanel.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="&gt;&gt;label5.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;capitalGainsPercentTextBox.Parent" xml:space="preserve">
+    <value>yieldInfoTableLayoutPanel</value>
+  </data>
+  <data name="&gt;&gt;couponsQuantityLabel.Name" xml:space="preserve">
+    <value>couponsQuantityLabel</value>
+  </data>
+  <data name="&gt;&gt;textBox7.Parent" xml:space="preserve">
+    <value>yieldInfoTableLayoutPanel</value>
+  </data>
+  <data name="&gt;&gt;accumulatedCouponIncomeTextBox.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="nominalPriceLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 0</value>
+  </data>
+  <data name="&gt;&gt;quantityOfPaymentsInYearTextBox.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;realCouponIncomePercentLabel.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;nameLabel.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="currentValueTextBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>303, 40</value>
+  </data>
+  <data name="&gt;&gt;couponInfoTableLayoutPanel.Parent" xml:space="preserve">
+    <value>couponInfoGroupBox</value>
+  </data>
+  <data name="&gt;&gt;couponsQuantityLabel.Parent" xml:space="preserve">
+    <value>couponInfoTableLayoutPanel</value>
+  </data>
+  <data name="couponTextBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>333, 40</value>
+  </data>
+  <data name="&gt;&gt;label3.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="&gt;&gt;openLinksButton.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;realCouponIncomePercentLabel.Parent" xml:space="preserve">
+    <value>yieldInfoTableLayoutPanel</value>
+  </data>
+  <data name="&gt;&gt;linkTextBox.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;linksDataGridView.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;accumulatedCouponIncomeLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;textBox5.Name" xml:space="preserve">
+    <value>textBox5</value>
+  </data>
+  <data name="&gt;&gt;couponInfoGroupBox.Parent" xml:space="preserve">
+    <value>bondTableLayoutPanel</value>
+  </data>
+  <metadata name="NameColumn.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="RealYieldPercentColumn.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="LinkColumn.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="currentValueLabel.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="$this.Language" type="System.Globalization.CultureInfo, System.Private.CoreLib, Culture=neutral, PublicKeyToken=7cec85d7bea7798e">
+    <value>ru</value>
+  </metadata>
   <metadata name="currentValueTextBox.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <metadata name="quantityOfPaymentsTextBox.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <metadata name="quantityOfPaymentsLabel.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <metadata name="RealYieldPercentColumn.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="NameColumn.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="LinkColumn.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="$this.Language" type="System.Globalization.CultureInfo, System.Private.CoreLib, Culture=neutral, PublicKeyToken=7cec85d7bea7798e">
-    <value>ru</value>
-  </metadata>
-  <metadata name="currentValueLabel.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="quantityOfPaymentsTextBox.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
 </root>

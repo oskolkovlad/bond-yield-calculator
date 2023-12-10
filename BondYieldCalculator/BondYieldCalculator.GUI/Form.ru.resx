@@ -95,7 +95,7 @@
     <value>2, 2, 2, 2</value>
   </data>
   <data name="addButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>72, 23</value>
+    <value>76, 23</value>
   </data>
   <data name="addButton.Text" xml:space="preserve">
     <value>Добавить</value>
@@ -119,7 +119,10 @@
     <value>Fill</value>
   </data>
   <data name="linksDataGridView.Size" type="System.Drawing.Size, System.Drawing">
-    <value>969, 249</value>
+    <value>977, 249</value>
+  </data>
+  <data name="linksDataGridView.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
   </data>
   <data name="removeButton.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
@@ -128,13 +131,16 @@
     <value>NoControl</value>
   </data>
   <data name="removeButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>903, 4</value>
+    <value>907, 4</value>
   </data>
   <data name="removeButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>2, 2, 2, 2</value>
   </data>
   <data name="removeButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>72, 23</value>
+    <value>76, 23</value>
+  </data>
+  <data name="removeButton.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
   </data>
   <data name="removeButton.Text" xml:space="preserve">
     <value>Удалить</value>
@@ -149,10 +155,34 @@
     <value>233, 23</value>
   </data>
   <data name="analyzeButton.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
+    <value>5</value>
   </data>
   <data name="analyzeButton.Text" xml:space="preserve">
     <value>Анализ</value>
+  </data>
+  <data name="saveLinksButton.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="saveLinksButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>74, 23</value>
+  </data>
+  <data name="saveLinksButton.Text" xml:space="preserve">
+    <value>Сохранить</value>
+  </data>
+  <data name="openLinksButton.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="openLinksButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>828, 287</value>
+  </data>
+  <data name="openLinksButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>74, 23</value>
+  </data>
+  <data name="openLinksButton.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="openLinksButton.Text" xml:space="preserve">
+    <value>Открыть</value>
   </data>
   <data name="linkTableLayoutPanel.Location" type="System.Drawing.Point, System.Drawing">
     <value>10, 9</value>
@@ -167,7 +197,7 @@
     <value>3</value>
   </data>
   <data name="linkTableLayoutPanel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>979, 315</value>
+    <value>987, 315</value>
   </data>
   <data name="bondTableLayoutPanel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -209,7 +239,7 @@
     <value>2, 2, 2, 2</value>
   </data>
   <data name="yieldTextBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>724, 23</value>
+    <value>732, 23</value>
   </data>
   <data name="capitalGainsPercentLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -239,7 +269,7 @@
     <value>2, 2, 2, 2</value>
   </data>
   <data name="capitalGainsPercentTextBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>724, 23</value>
+    <value>732, 23</value>
   </data>
   <data name="realCouponIncomeLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -269,7 +299,7 @@
     <value>2, 2, 2, 2</value>
   </data>
   <data name="realCouponIncomeTextBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>724, 23</value>
+    <value>732, 23</value>
   </data>
   <data name="realCouponIncomePercentLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -299,7 +329,7 @@
     <value>2, 2, 2, 2</value>
   </data>
   <data name="realCouponIncomePercentTextBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>724, 23</value>
+    <value>732, 23</value>
   </data>
   <data name="realYieldPercentLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -332,7 +362,7 @@
     <value>2, 2, 2, 2</value>
   </data>
   <data name="realYieldPercentTextBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>724, 23</value>
+    <value>732, 23</value>
   </data>
   <data name="yieldInfoTableLayoutPanel.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
@@ -347,7 +377,7 @@
     <value>3</value>
   </data>
   <data name="yieldInfoTableLayoutPanel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>959, 135</value>
+    <value>967, 135</value>
   </data>
   <data name="yieldInfoGroupBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>2, 286</value>
@@ -359,7 +389,7 @@
     <value>8, 7, 8, 7</value>
   </data>
   <data name="yieldInfoGroupBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>975, 165</value>
+    <value>983, 165</value>
   </data>
   <data name="commonInfoTableLayoutPanel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -395,7 +425,7 @@
     <value>2, 2, 2, 2</value>
   </data>
   <data name="maturityTextBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>724, 23</value>
+    <value>732, 23</value>
   </data>
   <data name="maturityTextBox.TabIndex" type="System.Int32, mscorlib">
     <value>7</value>
@@ -410,7 +440,7 @@
     <value>2, 2, 2, 2</value>
   </data>
   <data name="nominalPriceTextBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>724, 23</value>
+    <value>732, 23</value>
   </data>
   <data name="nominalPriceTextBox.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -425,7 +455,7 @@
     <value>2, 2, 2, 2</value>
   </data>
   <data name="currentPriceTextBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>724, 23</value>
+    <value>732, 23</value>
   </data>
   <data name="currentPriceTextBox.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
@@ -500,7 +530,7 @@
     <value>2, 2, 2, 2</value>
   </data>
   <data name="nameTextBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>724, 23</value>
+    <value>732, 23</value>
   </data>
   <data name="commonInfoTableLayoutPanel.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
@@ -515,7 +545,7 @@
     <value>4</value>
   </data>
   <data name="commonInfoTableLayoutPanel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>959, 108</value>
+    <value>967, 108</value>
   </data>
   <data name="commonInfoGroupBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>2, 2</value>
@@ -527,7 +557,7 @@
     <value>8, 7, 8, 7</value>
   </data>
   <data name="commonInfoGroupBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>975, 138</value>
+    <value>983, 138</value>
   </data>
   <data name="couponInfoTableLayoutPanel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -566,7 +596,7 @@
     <value>2, 2, 2, 2</value>
   </data>
   <data name="accumulatedCouponIncomeTextBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>724, 23</value>
+    <value>732, 23</value>
   </data>
   <data name="accumulatedCouponIncomeTextBox.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -599,7 +629,7 @@
     <value>2, 2, 2, 2</value>
   </data>
   <data name="couponTextBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>724, 23</value>
+    <value>732, 23</value>
   </data>
   <data name="couponsQuantityLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -629,7 +659,7 @@
     <value>2, 2, 2, 2</value>
   </data>
   <data name="couponsQuantityTextBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>724, 23</value>
+    <value>732, 23</value>
   </data>
   <data name="quantityOfPaymentsInYearLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -659,7 +689,7 @@
     <value>2, 2, 2, 2</value>
   </data>
   <data name="quantityOfPaymentsInYearTextBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>724, 23</value>
+    <value>732, 23</value>
   </data>
   <data name="couponInfoTableLayoutPanel.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
@@ -674,7 +704,7 @@
     <value>4</value>
   </data>
   <data name="couponInfoTableLayoutPanel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>959, 108</value>
+    <value>967, 108</value>
   </data>
   <data name="couponInfoGroupBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>2, 144</value>
@@ -686,7 +716,7 @@
     <value>8, 7, 8, 7</value>
   </data>
   <data name="couponInfoGroupBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>975, 138</value>
+    <value>983, 138</value>
   </data>
   <data name="bondTableLayoutPanel.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
@@ -701,7 +731,7 @@
     <value>3</value>
   </data>
   <data name="bondTableLayoutPanel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>979, 448</value>
+    <value>987, 448</value>
   </data>
   <data name="mainTableLayoutPanel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>2, 2, 2, 2</value>

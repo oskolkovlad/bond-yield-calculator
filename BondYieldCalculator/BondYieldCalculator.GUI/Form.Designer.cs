@@ -42,6 +42,7 @@
             RealYieldPercentColumn = new DataGridViewTextBoxColumn();
             removeButton = new Button();
             analyzeButton = new Button();
+            saveLinksButton = new Button();
             bondTableLayoutPanel = new TableLayoutPanel();
             yieldInfoGroupBox = new GroupBox();
             yieldInfoTableLayoutPanel = new TableLayoutPanel();
@@ -75,6 +76,7 @@
             couponsQuantityTextBox = new TextBox();
             quantityOfPaymentsInYearLabel = new Label();
             quantityOfPaymentsInYearTextBox = new TextBox();
+            openLinksButton = new Button();
             mainTableLayoutPanel.SuspendLayout();
             linkTableLayoutPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)linksDataGridView).BeginInit();
@@ -103,6 +105,8 @@
             linkTableLayoutPanel.Controls.Add(linksDataGridView, 0, 1);
             linkTableLayoutPanel.Controls.Add(removeButton, 3, 0);
             linkTableLayoutPanel.Controls.Add(analyzeButton, 0, 2);
+            linkTableLayoutPanel.Controls.Add(saveLinksButton, 3, 2);
+            linkTableLayoutPanel.Controls.Add(openLinksButton, 2, 2);
             linkTableLayoutPanel.Name = "linkTableLayoutPanel";
             // 
             // linkLabel
@@ -187,6 +191,12 @@
             resources.ApplyResources(analyzeButton, "analyzeButton");
             analyzeButton.Name = "analyzeButton";
             analyzeButton.UseVisualStyleBackColor = true;
+            // 
+            // saveLinksButton
+            // 
+            resources.ApplyResources(saveLinksButton, "saveLinksButton");
+            saveLinksButton.Name = "saveLinksButton";
+            saveLinksButton.UseVisualStyleBackColor = true;
             // 
             // bondTableLayoutPanel
             // 
@@ -401,6 +411,12 @@
             quantityOfPaymentsInYearTextBox.Name = "quantityOfPaymentsInYearTextBox";
             quantityOfPaymentsInYearTextBox.ReadOnly = true;
             // 
+            // openLinksButton
+            // 
+            resources.ApplyResources(openLinksButton, "openLinksButton");
+            openLinksButton.Name = "openLinksButton";
+            openLinksButton.UseVisualStyleBackColor = true;
+            // 
             // Form
             // 
             resources.ApplyResources(this, "$this");
@@ -478,5 +494,7 @@
         private DataGridViewTextBoxColumn NameColumn;
         private DataGridViewTextBoxColumn LinkColumn;
         private DataGridViewTextBoxColumn RealYieldPercentColumn;
+        private Button saveLinksButton;
+        private Button openLinksButton;
     }
 }

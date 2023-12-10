@@ -54,18 +54,11 @@
 
             foreach (DataGridViewRow selectedRow in selectedRows)
             {
-                if (selectedRow.DataBoundItem is null)
-                {
-                    continue;
-                }
-
-                if (selectedRow.DataBoundItem is BondLinkRowItem item)
+                if (selectedRow?.DataBoundItem is not null && selectedRow.DataBoundItem is BondLinkRowItem item)
                 {
                     _bindingSource.Remove(item);
                 }
             }
-
-            DataGridView.Refresh();
 
             _form.RemoveButtonEnabled = _linkRowItems.Count != 0;
         }
