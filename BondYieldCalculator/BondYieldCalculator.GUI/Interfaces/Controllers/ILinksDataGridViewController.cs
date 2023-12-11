@@ -4,9 +4,11 @@
 
     internal interface ILinksDataGridViewController : IController
     {
+        int LinksCount { get; }
+
         void AddLinkRow(string? link);
 
-        void RemoveSelectedLinkRows();
+        IEnumerable<string?> RemoveSelectedLinkRows();
 
         void UpdateLinkRowItem(BondInfo? bondInfo);
 

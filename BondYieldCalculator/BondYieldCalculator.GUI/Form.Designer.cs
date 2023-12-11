@@ -37,6 +37,10 @@
             linkTextBox = new TextBox();
             addButton = new Button();
             linksDataGridView = new DataGridView();
+            NameColumn = new DataGridViewTextBoxColumn();
+            LinkColumn = new DataGridViewTextBoxColumn();
+            MaturityColumn = new DataGridViewTextBoxColumn();
+            RealYieldPercentColumn = new DataGridViewTextBoxColumn();
             removeButton = new Button();
             analyzeButton = new Button();
             saveLinksButton = new Button();
@@ -74,10 +78,6 @@
             couponsQuantityTextBox = new TextBox();
             quantityOfPaymentsInYearLabel = new Label();
             quantityOfPaymentsInYearTextBox = new TextBox();
-            NameColumn = new DataGridViewTextBoxColumn();
-            LinkColumn = new DataGridViewTextBoxColumn();
-            MaturityColumn = new DataGridViewTextBoxColumn();
-            RealYieldPercentColumn = new DataGridViewTextBoxColumn();
             mainTableLayoutPanel.SuspendLayout();
             linkTableLayoutPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)linksDataGridView).BeginInit();
@@ -101,13 +101,13 @@
             // 
             resources.ApplyResources(linkTableLayoutPanel, "linkTableLayoutPanel");
             linkTableLayoutPanel.Controls.Add(linkLabel, 0, 0);
-            linkTableLayoutPanel.Controls.Add(linkTextBox, 1, 0);
             linkTableLayoutPanel.Controls.Add(addButton, 2, 0);
             linkTableLayoutPanel.Controls.Add(linksDataGridView, 0, 1);
             linkTableLayoutPanel.Controls.Add(removeButton, 3, 0);
             linkTableLayoutPanel.Controls.Add(analyzeButton, 0, 2);
             linkTableLayoutPanel.Controls.Add(saveLinksButton, 3, 2);
             linkTableLayoutPanel.Controls.Add(openLinksButton, 2, 2);
+            linkTableLayoutPanel.Controls.Add(linkTextBox, 1, 0);
             linkTableLayoutPanel.Name = "linkTableLayoutPanel";
             // 
             // linkLabel
@@ -153,6 +153,43 @@
             dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
             linksDataGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
             linksDataGridView.RowTemplate.Height = 25;
+            // 
+            // NameColumn
+            // 
+            NameColumn.DataPropertyName = "Name";
+            NameColumn.FillWeight = 150F;
+            NameColumn.Frozen = true;
+            resources.ApplyResources(NameColumn, "NameColumn");
+            NameColumn.Name = "NameColumn";
+            NameColumn.ReadOnly = true;
+            // 
+            // LinkColumn
+            // 
+            LinkColumn.DataPropertyName = "Link";
+            LinkColumn.FillWeight = 450F;
+            LinkColumn.Frozen = true;
+            resources.ApplyResources(LinkColumn, "LinkColumn");
+            LinkColumn.Name = "LinkColumn";
+            // 
+            // MaturityColumn
+            // 
+            MaturityColumn.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
+            MaturityColumn.DataPropertyName = "Maturity";
+            MaturityColumn.Frozen = true;
+            resources.ApplyResources(MaturityColumn, "MaturityColumn");
+            MaturityColumn.Name = "MaturityColumn";
+            MaturityColumn.ReadOnly = true;
+            MaturityColumn.Resizable = DataGridViewTriState.False;
+            // 
+            // RealYieldPercentColumn
+            // 
+            RealYieldPercentColumn.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
+            RealYieldPercentColumn.DataPropertyName = "RealYieldPercent";
+            RealYieldPercentColumn.Frozen = true;
+            resources.ApplyResources(RealYieldPercentColumn, "RealYieldPercentColumn");
+            RealYieldPercentColumn.Name = "RealYieldPercentColumn";
+            RealYieldPercentColumn.ReadOnly = true;
+            RealYieldPercentColumn.Resizable = DataGridViewTriState.False;
             // 
             // removeButton
             // 
@@ -390,43 +427,6 @@
             resources.ApplyResources(quantityOfPaymentsInYearTextBox, "quantityOfPaymentsInYearTextBox");
             quantityOfPaymentsInYearTextBox.Name = "quantityOfPaymentsInYearTextBox";
             quantityOfPaymentsInYearTextBox.ReadOnly = true;
-            // 
-            // NameColumn
-            // 
-            NameColumn.DataPropertyName = "Name";
-            NameColumn.FillWeight = 150F;
-            NameColumn.Frozen = true;
-            resources.ApplyResources(NameColumn, "NameColumn");
-            NameColumn.Name = "NameColumn";
-            NameColumn.ReadOnly = true;
-            // 
-            // LinkColumn
-            // 
-            LinkColumn.DataPropertyName = "Link";
-            LinkColumn.FillWeight = 450F;
-            LinkColumn.Frozen = true;
-            resources.ApplyResources(LinkColumn, "LinkColumn");
-            LinkColumn.Name = "LinkColumn";
-            // 
-            // MaturityColumn
-            // 
-            MaturityColumn.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
-            MaturityColumn.DataPropertyName = "Maturity";
-            MaturityColumn.Frozen = true;
-            resources.ApplyResources(MaturityColumn, "MaturityColumn");
-            MaturityColumn.Name = "MaturityColumn";
-            MaturityColumn.ReadOnly = true;
-            MaturityColumn.Resizable = DataGridViewTriState.False;
-            // 
-            // RealYieldPercentColumn
-            // 
-            RealYieldPercentColumn.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
-            RealYieldPercentColumn.DataPropertyName = "RealYieldPercent";
-            RealYieldPercentColumn.Frozen = true;
-            resources.ApplyResources(RealYieldPercentColumn, "RealYieldPercentColumn");
-            RealYieldPercentColumn.Name = "RealYieldPercentColumn";
-            RealYieldPercentColumn.ReadOnly = true;
-            RealYieldPercentColumn.Resizable = DataGridViewTriState.False;
             // 
             // Form
             // 

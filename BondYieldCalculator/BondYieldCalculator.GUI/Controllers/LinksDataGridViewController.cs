@@ -10,24 +10,29 @@
     internal class LinksDataGridViewController : ILinksDataGridViewController, IBondLinkRowSelectionController
     {
         private readonly ILinksDataGridViewForm _form;
+        private readonly IControlsStateController _controlsStateController;
         private readonly BindingSource _bindingSource;
         private readonly List<BondLinkRowItem> _linkRowItems;
 
         private int _lastSelectedRowIndex = -1;
 
-        #region ILinksDataGridViewController Members
-
-        public LinksDataGridViewController(ILinksDataGridViewForm form)
+        public LinksDataGridViewController(ILinksDataGridViewForm form, IControlsStateController controlsStateController)
         {
             _form = form;
+            _controlsStateController = controlsStateController;
             _linkRowItems = new List<BondLinkRowItem>();
             _bindingSource = new BindingSource { DataSource = _linkRowItems };
 
             DataGridView.AutoGenerateColumns = false;
             DataGridView.DataSource = _bindingSource;
-
             DataGridView.SelectionChanged += (sender, args) => HandleSelectionChanged();
+
+            _controlsStateController.SetSensitiveToRowsCountControlsEnabledState(false);
         }
+
+        #region ILinksDataGridViewController Members
+
+        public int LinksCount => _linkRowItems.Count;
 
         public void AddLinkRow(string? link)
         {
@@ -43,25 +48,29 @@
             }
 
             _bindingSource.Add(new BondLinkRowItem { Link = link });
+            _controlsStateController.SetSensitiveToRowsCountControlsEnabledState(true);
         }
 
-        public void RemoveSelectedLinkRows()
+        public IEnumerable<string?> RemoveSelectedLinkRows()
         {
-            var selectedRows = DataGridView.SelectedRows;
+            var selectedRows = GetSelectedRows();
             if (selectedRows is null)
             {
-                return;
+                yield break;
             }
 
             foreach (DataGridViewRow selectedRow in selectedRows)
             {
-                if (selectedRow?.DataBoundItem is not null && selectedRow.DataBoundItem is BondLinkRowItem item)
+                if (selectedRow?.DataBoundItem is null || selectedRow.DataBoundItem is not BondLinkRowItem item)
                 {
-                    _bindingSource.Remove(item);
+                    continue;
                 }
+
+                _bindingSource.Remove(item);
+                yield return item.Link;
             }
 
-            _form.RemoveButtonEnabled = _linkRowItems.Count != 0;
+            _controlsStateController.SetSensitiveToRowsCountControlsEnabledState(LinksCount != 0);
         }
 
         public void UpdateLinkRowItem(BondInfo? bondInfo)
@@ -95,7 +104,7 @@
         public BondLinkRowItem? GetSelectedBondLinkRowItem()
         {
             var selectedRows = GetSelectedRows().ToList();
-            return selectedRows.Count == 1 ? selectedRows[0].DataBoundItem as BondLinkRowItem : null;
+            return selectedRows.Count == 1 && selectedRows[0].DataBoundItem is not null ? selectedRows[0].DataBoundItem as BondLinkRowItem : null;
         }
 
         public event EventHandler SelectionChanged = delegate { };
@@ -117,7 +126,8 @@
             var rowIndexes = DataGridView.SelectedCells
                 .OfType<DataGridViewCell>()
                 .Select(cell => cell.RowIndex)
-                .Distinct();
+                .Distinct()
+                .OrderByDescending(index => index);
             foreach (var rowIndex in rowIndexes)
             {
                 yield return DataGridView.Rows[rowIndex];
@@ -133,6 +143,8 @@
             }
 
             _lastSelectedRowIndex = selectedRows[0].Index;
+            var hasLinkRowItems = _linkRowItems.Count != 0;
+
             SelectionChanged?.Invoke(this, EventArgs.Empty);
         }
 

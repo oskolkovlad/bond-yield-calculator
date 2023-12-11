@@ -3,8 +3,9 @@ namespace BondYieldCalculator.GUI
     using BondYieldCalculator.GUI.Interfaces.Forms;
 
     public partial class Form : System.Windows.Forms.Form,
-        ILinkForm,
+        ILinksForm,
         ILinksDataGridViewForm,
+        IControlsStateForm,
         ICommonBondInfoForm,
         ICouponInfoForm,
         IYieldInfoForm
@@ -38,13 +39,7 @@ namespace BondYieldCalculator.GUI
 
         #endregion IForm
 
-        #region ILinkForm Members
-
-        public bool BondPanelEnabled
-        {
-            get { return bondTableLayoutPanel.Enabled; }
-            set { InvokeIfRequired(() => bondTableLayoutPanel.Enabled = value); }
-        }
+        #region ILinksForm Members
 
         public string? LinkText
         {
@@ -62,9 +57,21 @@ namespace BondYieldCalculator.GUI
 
         public event EventHandler LinksSaving = delegate { };
 
-        #endregion ILinkForm Members
+        #endregion ILinksForm Members
 
         #region ILinksDataGridViewForm Members
+
+        public DataGridView LinksDataGridView => linksDataGridView;
+
+        #endregion ILinksDataGridViewForm Members
+
+        #region IControlsStateForm Members
+
+        public bool BondPanelEnabled
+        {
+            get { return bondTableLayoutPanel.Enabled; }
+            set { InvokeIfRequired(() => bondTableLayoutPanel.Enabled = value); }
+        }
 
         public bool RemoveButtonEnabled
         {
@@ -72,9 +79,19 @@ namespace BondYieldCalculator.GUI
             set { InvokeIfRequired(() => removeButton.Enabled = value); }
         }
 
-        public DataGridView LinksDataGridView => linksDataGridView;
+        public bool AnalyzeButtonEnabled
+        {
+            get { return analyzeButton.Enabled; }
+            set { InvokeIfRequired(() => analyzeButton.Enabled = value); }
+        }
 
-        #endregion ILinksDataGridViewForm Members
+        public bool SaveLinksButtonEnabled
+        {
+            get { return saveLinksButton.Enabled; }
+            set { InvokeIfRequired(() => saveLinksButton.Enabled = value); }
+        }
+
+        #endregion IControlsStateForm Members
 
         #region ICommonBondInfoForm Members
 
