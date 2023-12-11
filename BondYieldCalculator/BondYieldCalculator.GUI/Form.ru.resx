@@ -152,25 +152,22 @@
     <value>10</value>
   </data>
   <data name="NameColumn.Width" type="System.Int32, mscorlib">
-    <value>240</value>
+    <value>310</value>
   </data>
   <data name="LinkColumn.MinimumWidth" type="System.Int32, mscorlib">
     <value>50</value>
-  </data>
-  <data name="LinkColumn.Width" type="System.Int32, mscorlib">
-    <value>360</value>
   </data>
   <data name="MaturityColumn.MinimumWidth" type="System.Int32, mscorlib">
     <value>10</value>
   </data>
   <data name="MaturityColumn.Width" type="System.Int32, mscorlib">
-    <value>150</value>
+    <value>140</value>
   </data>
   <data name="RealYieldPercentColumn.MinimumWidth" type="System.Int32, mscorlib">
     <value>10</value>
   </data>
   <data name="RealYieldPercentColumn.Width" type="System.Int32, mscorlib">
-    <value>240</value>
+    <value>360</value>
   </data>
   <data name="linksDataGridView.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
@@ -180,9 +177,6 @@
   </data>
   <data name="linksDataGridView.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 5, 4, 5</value>
-  </data>
-  <data name="linksDataGridView.RowHeadersWidth" type="System.Int32, mscorlib">
-    <value>62</value>
   </data>
   <data name="linksDataGridView.Size" type="System.Drawing.Size, System.Drawing">
     <value>1396, 415</value>
