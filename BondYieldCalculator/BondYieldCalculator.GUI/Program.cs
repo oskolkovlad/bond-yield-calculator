@@ -24,7 +24,7 @@ namespace BondYieldCalculator.GUI
             var couponInfoController = new CouponInfoController(mainForm);
             var yieldInfoController = new YieldInfoController(mainForm);
             var linksDataGridViewController = new LinksDataGridViewController(mainForm);
-            var linkController = new LinkController(
+            var linksController = new LinksController(
                 mainForm,
                 smartLabBondParser,
                 yieldCalculatorService,
@@ -32,9 +32,9 @@ namespace BondYieldCalculator.GUI
                 linksDataGridViewController,
                 linksDataGridViewController);
 
-            linkController.Subcribe(commonInfoController);
-            linkController.Subcribe(couponInfoController);
-            linkController.Subcribe(yieldInfoController);
+            linksController.Subcribe(commonInfoController);
+            linksController.Subcribe(couponInfoController);
+            linksController.Subcribe(yieldInfoController);
 
             try
             {

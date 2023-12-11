@@ -6,7 +6,7 @@
     using BondYieldCalculator.GUI.Interfaces.Services;
     using BondYieldCalculator.Parser;
 
-    internal class LinkController : IObservableController
+    internal class LinksController : IObservableController
     {
         private readonly ILinkForm _form;
         private readonly IBondParser _bondParser;
@@ -18,7 +18,7 @@
 
         private List<BondInfo?> _bondInfoItems;
 
-        public LinkController(
+        public LinksController(
             ILinkForm form,
             IBondParser bondParser,
             IYieldCalculatorService yieldCalculatorService,
