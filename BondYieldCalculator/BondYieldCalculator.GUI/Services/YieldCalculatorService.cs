@@ -20,7 +20,6 @@
                 bondInfo.YieldInfo = new YieldInfo();
             }
 
-
             var couponYield = bondInfo.CouponInfo.CouponsQuantity * bondInfo.CouponInfo.Coupon * TaxClearanceRatio - bondInfo.CouponInfo.AccumulatedCouponIncome;
             var differenceCost = bondInfo.CommonInfo.NominalPrice - bondInfo.CommonInfo.CurrentPrice;
             var brokerCommissionCost = differenceCost > 0 ? differenceCost * BrokerCommission : 0;

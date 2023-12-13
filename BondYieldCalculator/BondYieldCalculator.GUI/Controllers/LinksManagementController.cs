@@ -92,10 +92,15 @@
         {
             foreach (var link in _linksTableController.RemoveSelectedLinkRows())
             {
-                var bondInfo = _bondInfoItems.FirstOrDefault(item => item?.Link == link);
+                if (string.IsNullOrWhiteSpace(link))
+                {
+                    continue;
+                }
+
+                var bondInfo = _bondInfoItems?.FirstOrDefault(item => item!.Link == link);
                 if (bondInfo is not null)
                 {
-                    _bondInfoItems.Remove(bondInfo);
+                    _bondInfoItems?.Remove(bondInfo);
                 }
             }
 
@@ -109,27 +114,29 @@
         {
             ClearBondInfo();
 
-            _controlsStateManagementController.SetDependenceFromAnalyzeProcessingControlsState(false);
+            _controlsStateManagementController.SetAnalyzeProcessingControlsState(false);
 
             var links = _linksTableController.GetLinks();
             if (links is null)
             {
-                _bondInfoItems = new List<BondInfo?>();
                 MessageBox.Show("Отсутствуют ссылки на облигации.", "Анализ информации", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                _controlsStateManagementController.SetDependenceFromAnalyzeProcessingControlsState(true);
+
+                _bondInfoItems = new List<BondInfo?>();
+                _controlsStateManagementController.SetAnalyzeProcessingControlsState(true);
 
                 return;
             }
 
             _bondInfoItems = links
                 .AsParallel()
+                .Where(link => !string.IsNullOrWhiteSpace(link))
                 .Select(link => _bondParser.GetBondInfoAsync(link).Result)
                 .Where(bondInfo => bondInfo is not null)
                 .ToList() ?? new List<BondInfo?>();
             if (_bondInfoItems.Count == 0)
             {
                 MessageBox.Show("Информация по добавленным ссылкам не найдена.", "Анализ информации", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                _controlsStateManagementController.SetDependenceFromAnalyzeProcessingControlsState(true);
+                _controlsStateManagementController.SetAnalyzeProcessingControlsState(true);
 
                 return;
             }
@@ -144,7 +151,7 @@
 
             UpdateBondInfo();
 
-            _controlsStateManagementController.SetDependenceFromAnalyzeProcessingControlsState(true);
+            _controlsStateManagementController.SetAnalyzeProcessingControlsState(true);
             _linksSelectionController.SelectionChanged += HandleSelectionChanged;
         }
 
@@ -175,7 +182,10 @@
 
         private void HandleLinksSaving()
         {
-            var links = _linksTableController.GetLinks()?.ToList();
+            var links = _linksTableController
+                .GetLinks()?
+                .Where(link => !string.IsNullOrWhiteSpace(link))
+                .ToList();
             if (links is null || links.Count == 0)
             {
                 MessageBox.Show("Отсутствуют ссылки на облигации.", "Сохранение ссылок", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -183,14 +193,14 @@
             }
 
             _linksStorageService.Save(links);
-            MessageBox.Show("Отсутствуют ссылки на облигации.", "Сохранение ссылок", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show("Ссылки успешно сохранены.", "Сохранение ссылок", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void HandleSelectionChanged(object? sender, EventArgs args)
         {
-            _controlsStateManagementController.BondPanelEnabled = false;
+            _controlsStateManagementController.BondInfoEnabled = false;
             UpdateBondInfo();
-            _controlsStateManagementController.BondPanelEnabled = true;
+            _controlsStateManagementController.BondInfoEnabled = true;
         }
 
         #endregion Private Members

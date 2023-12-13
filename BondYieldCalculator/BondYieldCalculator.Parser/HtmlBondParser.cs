@@ -22,10 +22,10 @@
                 return null;
             }
 
-            var document = new HtmlDocument();
-
             try
             {
+                var document = new HtmlDocument();
+
                 document.LoadHtml(htmlContent);
 
                 var boundInfo = GetBondInfo(document);

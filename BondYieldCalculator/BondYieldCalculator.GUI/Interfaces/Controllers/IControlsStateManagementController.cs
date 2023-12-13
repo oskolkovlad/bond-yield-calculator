@@ -14,10 +14,10 @@
 
         public bool SaveLinksButtonEnabled { get; set; }
 
-        public bool BondPanelEnabled { get; set; }
+        public bool BondInfoEnabled { get; set; }
 
-        void SetDependenceFromAnalyzeProcessingControlsState(bool value);
+        void SetAnalyzeProcessingControlsState(bool value);
 
-        void SetDependenceFromRowsCountControlsState(bool value);
+        void SetRowsCountControlsState(bool value);
     }
 }

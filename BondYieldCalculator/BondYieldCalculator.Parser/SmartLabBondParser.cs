@@ -26,7 +26,7 @@
             var name = node?.SelectSingleNode(BondInfoElements.NameXpath)?.InnerText?.TrimInnerText();
             if (name is null)
             {
-                return null;
+                throw new ApplicationException("Наименование облигации не найдено.");
             }
 
             node = document.DocumentNode.SelectSingleNode(BondInfoElements.CommonBondInfoXpath);
@@ -34,19 +34,19 @@
             var nominalPrice = node?.SelectSingleNode(BondInfoElements.NominalPriceXpath)?.InnerText?.TrimInnerText();
             if (nominalPrice is null)
             {
-                return null;
+                throw new ApplicationException("Номинал облигации не найден.");
             }
 
             var currentPricePercent = node?.SelectSingleNode(BondInfoElements.CurrentPriceXpath)?.InnerText?.TrimInnerTextWithPercent();
             if (currentPricePercent is null)
             {
-                return null;
+                throw new ApplicationException("Текущая стоимость облигации не найдена.");
             }
 
             var maturity = node?.SelectSingleNode(BondInfoElements.MaturityXpath)?.InnerText?.TrimInnerText();
             if (maturity is null)
             {
-                return null;
+                throw new ApplicationException("Срок до погашения облигации не найден.");
             }
 
             var result = new CommonBondInfo { Name = name, NominalPrice = nominalPrice.ParseInnerText(), Maturity = maturity.ParseInnerText() };
@@ -62,25 +62,25 @@
             var accumulatedCouponIncome = node?.SelectSingleNode(BondInfoElements.AccumulatedCouponIncomeXpath)?.InnerText?.TrimInnerTextWithRemoveWord("руб");
             if (accumulatedCouponIncome is null)
             {
-                return null;
+                throw new ApplicationException("Накопительный купонный доход облигации не найден.");
             }
 
             var coupon = node?.SelectSingleNode(BondInfoElements.CouponXpath)?.InnerText?.TrimInnerTextWithRemoveWord("руб");
             if (coupon is null)
             {
-                return null;
+                throw new ApplicationException("Величина купона не найдена.");
             }
 
             var couponsQuantity = node?.SelectNodes(BondInfoElements.CouponsQuantityXpath)?.Count;
             if (couponsQuantity is null)
             {
-                return null;
+                throw new ApplicationException("Количество купонов не найдено.");
             }
 
             var quantityOfPaymentsInYear = node?.SelectSingleNode(BondInfoElements.QuantityOfPaymentsInYearXpath)?.InnerText?.TrimInnerText();
             if (quantityOfPaymentsInYear is null)
             {
-                return null;
+                throw new ApplicationException("Количество выплат купонов в год не найдено.");
             }
 
             return new CouponInfo

@@ -27,7 +27,7 @@
             DataGridView.DataSource = _bindingSource;
             DataGridView.SelectionChanged += (sender, args) => HandleSelectionChanged();
 
-            _controlsStateManagementController.SetDependenceFromRowsCountControlsState(false);
+            _controlsStateManagementController.SetRowsCountControlsState(false);
         }
 
         #region ILinksTableController Members
@@ -48,7 +48,7 @@
             }
 
             _bindingSource.Add(new BondLinkRowItem { Link = link });
-            _controlsStateManagementController.SetDependenceFromRowsCountControlsState(true);
+            _controlsStateManagementController.SetRowsCountControlsState(true);
         }
 
         public IEnumerable<string?> RemoveSelectedLinkRows()
@@ -70,13 +70,13 @@
                 yield return item.Link;
             }
 
-            _controlsStateManagementController.SetDependenceFromRowsCountControlsState(LinksCount != 0);
+            _controlsStateManagementController.SetRowsCountControlsState(LinksCount != 0);
         }
 
         public void ClearTable()
         {
             _bindingSource.Clear();
-            _controlsStateManagementController.SetDependenceFromRowsCountControlsState(false);
+            _controlsStateManagementController.SetRowsCountControlsState(false);
         }
 
         public void UpdateLinkRowItem(BondInfo? bondInfo)
@@ -129,11 +129,16 @@
 
         private IEnumerable<DataGridViewRow> GetSelectedRows()
         {
-            var rowIndexes = DataGridView.SelectedCells
+            var rowIndexes = DataGridView.SelectedCells?
                 .OfType<DataGridViewCell>()
                 .Select(cell => cell.RowIndex)
                 .Distinct()
                 .OrderByDescending(index => index);
+            if (rowIndexes is null)
+            {
+                yield break;
+            }
+
             foreach (var rowIndex in rowIndexes)
             {
                 yield return DataGridView.Rows[rowIndex];

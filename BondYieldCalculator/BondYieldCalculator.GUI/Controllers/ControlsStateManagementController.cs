@@ -58,7 +58,7 @@
             set { _linksControlsStateManagementView.SaveLinksButtonEnabled = value; }
         }
 
-        public bool BondPanelEnabled
+        public bool BondInfoEnabled
         {
             get
             {
@@ -74,7 +74,7 @@
             }
         }
 
-        public void SetDependenceFromAnalyzeProcessingControlsState(bool value)
+        public void SetAnalyzeProcessingControlsState(bool value)
         {
             LintTextBoxEnabled = value;
             AddLinkButtonEnabled = value;
@@ -82,15 +82,15 @@
             AnalyzeButtonEnabled = value;
             RestoreLinksButtonEnabled = value;
             SaveLinksButtonEnabled = value;
-            BondPanelEnabled = value;
+            BondInfoEnabled = value;
         }
 
-        public void SetDependenceFromRowsCountControlsState(bool value)
+        public void SetRowsCountControlsState(bool value)
         {
             RemoveLinksButtonEnabled = value;
             AnalyzeButtonEnabled = value;
             SaveLinksButtonEnabled = value;
-            BondPanelEnabled = value;
+            BondInfoEnabled = value;
         }
     }
 }
