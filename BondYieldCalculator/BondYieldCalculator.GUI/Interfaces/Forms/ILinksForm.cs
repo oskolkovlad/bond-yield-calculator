@@ -10,7 +10,7 @@
 
         event EventHandler LinksAnalyzing;
 
-        event EventHandler LinksOpening;
+        event EventHandler LinksRestoring;
 
         event EventHandler LinksSaving;
     }

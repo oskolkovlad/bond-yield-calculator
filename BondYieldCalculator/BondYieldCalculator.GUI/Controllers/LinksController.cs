@@ -41,7 +41,7 @@
             _form.LinkAdding += (sender, args) => HandleLinkAdding();
             _form.LinksRemoving += (sender, args) => HandleLinksRemoving();
             _form.LinksAnalyzing += (sender, args) => HandleLinksAnalyzing();
-            _form.LinksOpening += (sender, args) => HandleLinksOpening();
+            _form.LinksRestoring += (sender, args) => HandleLinksRestoring();
             _form.LinksSaving += (sender, args) => HandleLinksSaving();
 
             _bondLinkRowSelectionController.SelectionChanged += HandleSelectionChanged;
@@ -99,14 +99,14 @@
                 subscriber.ClearInfo();
             }
 
-            _controlsStateController.BondPanelEnabled = false;
+            _controlsStateController.SetDependenceFromAnalyzeProcessingControlsState(false);
 
             var links = _linksDataGridViewController.GetLinks();
             if (links is null)
             {
                 _bondInfoItems = new List<BondInfo?>();
                 MessageBox.Show("Ссылки на облигации отсутствуют.", "Анализ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                _controlsStateController.BondPanelEnabled = true;
+                _controlsStateController.SetDependenceFromAnalyzeProcessingControlsState(true);
 
                 return;
             }
@@ -119,7 +119,7 @@
             if (_bondInfoItems.Count == 0)
             {
                 MessageBox.Show("Информация по добавленным ссылкам не была найдена.", "Анализ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                _controlsStateController.BondPanelEnabled = true;
+                _controlsStateController.SetDependenceFromAnalyzeProcessingControlsState(true);
 
                 return;
             }
@@ -134,17 +134,20 @@
 
             UpdateBondInfo();
 
-            _controlsStateController.BondPanelEnabled = true;
+            _controlsStateController.SetDependenceFromAnalyzeProcessingControlsState(true);
             _bondLinkRowSelectionController.SelectionChanged += HandleSelectionChanged;
         }
 
-        private void HandleLinksOpening()
+        private void HandleLinksRestoring()
         {
             var links = _linksStorageService.GetLinks()?.ToList();
             if (links is null)
             {
                 return;
             }
+
+            _bondInfoItems.Clear();
+            _linksDataGridViewController.ClearTable();
 
             foreach (var link in links)
             {

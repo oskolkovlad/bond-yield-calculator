@@ -16,10 +16,10 @@ namespace BondYieldCalculator.GUI
 
             BondPanelEnabled = false;
 
-            addButton.Click += (sender, args) => LinkAdding.Invoke(this, EventArgs.Empty);
-            removeButton.Click += (sender, args) => LinksRemoving.Invoke(this, EventArgs.Empty);
+            addLinkButton.Click += (sender, args) => LinkAdding.Invoke(this, EventArgs.Empty);
+            removeLinksButton.Click += (sender, args) => LinksRemoving.Invoke(this, EventArgs.Empty);
             analyzeButton.Click += (sender, args) => LinksAnalyzing.Invoke(this, EventArgs.Empty);
-            openLinksButton.Click += (sender, args) => LinksOpening.Invoke(this, EventArgs.Empty);
+            restoreLinksButton.Click += (sender, args) => LinksRestoring.Invoke(this, EventArgs.Empty);
             saveLinksButton.Click += (sender, args) => LinksSaving.Invoke(this, EventArgs.Empty);
         }
 
@@ -53,7 +53,7 @@ namespace BondYieldCalculator.GUI
 
         public event EventHandler LinksAnalyzing = delegate { };
 
-        public event EventHandler LinksOpening = delegate { };
+        public event EventHandler LinksRestoring = delegate { };
 
         public event EventHandler LinksSaving = delegate { };
 
@@ -67,16 +67,22 @@ namespace BondYieldCalculator.GUI
 
         #region IControlsStateForm Members
 
-        public bool BondPanelEnabled
+        public bool LintTextBoxEnabled
         {
-            get { return bondTableLayoutPanel.Enabled; }
-            set { InvokeIfRequired(() => bondTableLayoutPanel.Enabled = value); }
+            get { return linkTextBox.Enabled; }
+            set { InvokeIfRequired(() => linkTextBox.Enabled = value); }
         }
 
-        public bool RemoveButtonEnabled
+        public bool AddLinkButtonEnabled
         {
-            get { return removeButton.Enabled; }
-            set { InvokeIfRequired(() => removeButton.Enabled = value); }
+            get { return addLinkButton.Enabled; }
+            set { InvokeIfRequired(() => addLinkButton.Enabled = value); }
+        }
+
+        public bool RemoveLinksButtonEnabled
+        {
+            get { return removeLinksButton.Enabled; }
+            set { InvokeIfRequired(() => removeLinksButton.Enabled = value); }
         }
 
         public bool AnalyzeButtonEnabled
@@ -85,10 +91,22 @@ namespace BondYieldCalculator.GUI
             set { InvokeIfRequired(() => analyzeButton.Enabled = value); }
         }
 
+        public bool RestoreLinksButtonEnabled
+        {
+            get { return restoreLinksButton.Enabled; }
+            set { InvokeIfRequired(() => restoreLinksButton.Enabled = value); }
+        }
+
         public bool SaveLinksButtonEnabled
         {
             get { return saveLinksButton.Enabled; }
             set { InvokeIfRequired(() => saveLinksButton.Enabled = value); }
+        }
+
+        public bool BondPanelEnabled
+        {
+            get { return bondTableLayoutPanel.Enabled; }
+            set { InvokeIfRequired(() => bondTableLayoutPanel.Enabled = value); }
         }
 
         #endregion IControlsStateForm Members

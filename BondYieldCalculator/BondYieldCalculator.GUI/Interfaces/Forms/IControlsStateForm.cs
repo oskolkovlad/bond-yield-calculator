@@ -2,12 +2,18 @@
 {
     internal interface IControlsStateForm : IForm
     {
-        bool BondPanelEnabled { get; set; }
+        public bool LintTextBoxEnabled { get; set; }
 
-        bool RemoveButtonEnabled { get; set; }
+        public bool AddLinkButtonEnabled { get; set; }
 
-        bool AnalyzeButtonEnabled { get; set; }
+        public bool RemoveLinksButtonEnabled { get; set; }
 
-        bool SaveLinksButtonEnabled { get; set; }
+        public bool AnalyzeButtonEnabled { get; set; }
+
+        public bool RestoreLinksButtonEnabled { get; set; }
+
+        public bool SaveLinksButtonEnabled { get; set; }
+
+        public bool BondPanelEnabled { get; set; }
     }
 }

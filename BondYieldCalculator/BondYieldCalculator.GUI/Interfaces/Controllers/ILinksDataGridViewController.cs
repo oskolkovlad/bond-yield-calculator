@@ -10,6 +10,8 @@
 
         IEnumerable<string?> RemoveSelectedLinkRows();
 
+        void ClearTable();
+
         void UpdateLinkRowItem(BondInfo? bondInfo);
 
         IEnumerable<string?> GetLinks();

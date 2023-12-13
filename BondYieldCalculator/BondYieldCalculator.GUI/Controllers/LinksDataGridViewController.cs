@@ -27,7 +27,7 @@
             DataGridView.DataSource = _bindingSource;
             DataGridView.SelectionChanged += (sender, args) => HandleSelectionChanged();
 
-            _controlsStateController.SetSensitiveToRowsCountControlsEnabledState(false);
+            _controlsStateController.SetDependenceFromRowsCountControlsState(false);
         }
 
         #region ILinksDataGridViewController Members
@@ -48,7 +48,7 @@
             }
 
             _bindingSource.Add(new BondLinkRowItem { Link = link });
-            _controlsStateController.SetSensitiveToRowsCountControlsEnabledState(true);
+            _controlsStateController.SetDependenceFromRowsCountControlsState(true);
         }
 
         public IEnumerable<string?> RemoveSelectedLinkRows()
@@ -70,7 +70,13 @@
                 yield return item.Link;
             }
 
-            _controlsStateController.SetSensitiveToRowsCountControlsEnabledState(LinksCount != 0);
+            _controlsStateController.SetDependenceFromRowsCountControlsState(LinksCount != 0);
+        }
+
+        public void ClearTable()
+        {
+            _bindingSource.Clear();
+            _controlsStateController.SetDependenceFromRowsCountControlsState(false);
         }
 
         public void UpdateLinkRowItem(BondInfo? bondInfo)
