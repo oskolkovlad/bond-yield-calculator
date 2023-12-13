@@ -1,6 +1,6 @@
-﻿namespace BondYieldCalculator.GUI.Interfaces.Forms
+﻿namespace BondYieldCalculator.GUI.Interfaces.ViewControls.Views
 {
-    internal interface ILinksForm : IForm
+    internal interface ILinksManagementView : IView
     {
         string? LinkText { get; set; }
 

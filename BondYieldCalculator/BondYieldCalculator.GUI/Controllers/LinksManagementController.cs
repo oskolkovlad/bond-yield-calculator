@@ -2,49 +2,49 @@
 {
     using BondYieldCalculator.Entities;
     using BondYieldCalculator.GUI.Interfaces.Controllers;
-    using BondYieldCalculator.GUI.Interfaces.Forms;
     using BondYieldCalculator.GUI.Interfaces.Services;
+    using BondYieldCalculator.GUI.Interfaces.ViewControls.Views;
     using BondYieldCalculator.Parser;
 
-    internal class LinksController : IObservableController
+    internal class LinksManagementController : IObservableController
     {
-        private readonly ILinksForm _form;
+        private readonly ILinksManagementView _linksManagementView;
         private readonly IBondParser _bondParser;
         private readonly IYieldCalculatorService _yieldCalculatorService;
         private readonly ILinksStorageService _linksStorageService;
-        private readonly ILinksDataGridViewController _linksDataGridViewController;
-        private readonly IBondLinkRowSelectionController _bondLinkRowSelectionController;
-        private readonly IControlsStateController _controlsStateController;
+        private readonly ILinksTableController _linksTableController;
+        private readonly ILinksSelectionController _linksSelectionController;
+        private readonly IControlsStateManagementController _controlsStateManagementController;
         private readonly IList<IInfoObserverController> _subscribers;
 
         private List<BondInfo?> _bondInfoItems;
 
-        public LinksController(
-            ILinksForm form,
+        public LinksManagementController(
+            ILinksManagementView linksManagementView,
             IBondParser bondParser,
             IYieldCalculatorService yieldCalculatorService,
             ILinksStorageService linksStorageService,
-            ILinksDataGridViewController linksDataGridViewController,
-            IBondLinkRowSelectionController bondLinkRowSelectionController,
-            IControlsStateController controlsStateController)
+            ILinksTableController linksTableController,
+            ILinksSelectionController linksSelectionController,
+            IControlsStateManagementController controlsStateManagementController)
         {
-            _form = form;
+            _linksManagementView = linksManagementView;
             _bondParser = bondParser;
             _yieldCalculatorService = yieldCalculatorService;
             _linksStorageService = linksStorageService;
-            _linksDataGridViewController = linksDataGridViewController;
-            _bondLinkRowSelectionController = bondLinkRowSelectionController;
-            _controlsStateController = controlsStateController;
+            _linksTableController = linksTableController;
+            _linksSelectionController = linksSelectionController;
+            _controlsStateManagementController = controlsStateManagementController;
             _subscribers = new List<IInfoObserverController>();
             _bondInfoItems = new List<BondInfo?>();
 
-            _form.LinkAdding += (sender, args) => HandleLinkAdding();
-            _form.LinksRemoving += (sender, args) => HandleLinksRemoving();
-            _form.LinksAnalyzing += (sender, args) => HandleLinksAnalyzing();
-            _form.LinksRestoring += (sender, args) => HandleLinksRestoring();
-            _form.LinksSaving += (sender, args) => HandleLinksSaving();
+            _linksManagementView.LinkAdding += (sender, args) => HandleLinkAdding();
+            _linksManagementView.LinksRemoving += (sender, args) => HandleLinksRemoving();
+            _linksManagementView.LinksAnalyzing += (sender, args) => HandleLinksAnalyzing();
+            _linksManagementView.LinksRestoring += (sender, args) => HandleLinksRestoring();
+            _linksManagementView.LinksSaving += (sender, args) => HandleLinksSaving();
 
-            _bondLinkRowSelectionController.SelectionChanged += HandleSelectionChanged;
+            _linksSelectionController.SelectionChanged += HandleSelectionChanged;
         }
 
         #region IObservableController Members
@@ -59,7 +59,7 @@
 
         private void UpdateBondInfo()
         {
-            var linkRowItem = _bondLinkRowSelectionController.GetSelectedBondLinkRowItem();
+            var linkRowItem = _linksSelectionController.GetSelectedBondLinkRowItem();
             if (linkRowItem is null)
             {
                 return;
@@ -76,13 +76,13 @@
 
         private void HandleLinkAdding()
         {
-            _linksDataGridViewController.AddLinkRow(_form.LinkText);
-            _form.LinkText = null;
+            _linksTableController.AddLinkRow(_linksManagementView.LinkText);
+            _linksManagementView.LinkText = null;
         }
 
         private void HandleLinksRemoving()
         {
-            foreach (var link in _linksDataGridViewController.RemoveSelectedLinkRows())
+            foreach (var link in _linksTableController.RemoveSelectedLinkRows())
             {
                 var bondInfo = _bondInfoItems.FirstOrDefault(item => item?.Link == link);
                 if (bondInfo is not null)
@@ -99,14 +99,14 @@
                 subscriber.ClearInfo();
             }
 
-            _controlsStateController.SetDependenceFromAnalyzeProcessingControlsState(false);
+            _controlsStateManagementController.SetDependenceFromAnalyzeProcessingControlsState(false);
 
-            var links = _linksDataGridViewController.GetLinks();
+            var links = _linksTableController.GetLinks();
             if (links is null)
             {
                 _bondInfoItems = new List<BondInfo?>();
                 MessageBox.Show("Ссылки на облигации отсутствуют.", "Анализ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                _controlsStateController.SetDependenceFromAnalyzeProcessingControlsState(true);
+                _controlsStateManagementController.SetDependenceFromAnalyzeProcessingControlsState(true);
 
                 return;
             }
@@ -119,23 +119,23 @@
             if (_bondInfoItems.Count == 0)
             {
                 MessageBox.Show("Информация по добавленным ссылкам не была найдена.", "Анализ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                _controlsStateController.SetDependenceFromAnalyzeProcessingControlsState(true);
+                _controlsStateManagementController.SetDependenceFromAnalyzeProcessingControlsState(true);
 
                 return;
             }
 
-            _bondLinkRowSelectionController.SelectionChanged -= HandleSelectionChanged;
+            _linksSelectionController.SelectionChanged -= HandleSelectionChanged;
 
             foreach (var bondInfo in _bondInfoItems)
             {
                 _yieldCalculatorService.UpdateYieldInfo(bondInfo);
-                _linksDataGridViewController.UpdateLinkRowItem(bondInfo);
+                _linksTableController.UpdateLinkRowItem(bondInfo);
             }
 
             UpdateBondInfo();
 
-            _controlsStateController.SetDependenceFromAnalyzeProcessingControlsState(true);
-            _bondLinkRowSelectionController.SelectionChanged += HandleSelectionChanged;
+            _controlsStateManagementController.SetDependenceFromAnalyzeProcessingControlsState(true);
+            _linksSelectionController.SelectionChanged += HandleSelectionChanged;
         }
 
         private void HandleLinksRestoring()
@@ -147,17 +147,17 @@
             }
 
             _bondInfoItems.Clear();
-            _linksDataGridViewController.ClearTable();
+            _linksTableController.ClearTable();
 
             foreach (var link in links)
             {
-                _linksDataGridViewController.AddLinkRow(link);
+                _linksTableController.AddLinkRow(link);
             }
         }
 
         private void HandleLinksSaving()
         {
-            var links = _linksDataGridViewController.GetLinks()?.ToList();
+            var links = _linksTableController.GetLinks()?.ToList();
             if (links is null || links.Count == 0)
             {
                 return;
@@ -169,9 +169,9 @@
 
         private void HandleSelectionChanged(object? sender, EventArgs args)
         {
-            _controlsStateController.BondPanelEnabled = false;
+            _controlsStateManagementController.BondPanelEnabled = false;
             UpdateBondInfo();
-            _controlsStateController.BondPanelEnabled = true;
+            _controlsStateManagementController.BondPanelEnabled = true;
         }
 
         #endregion Private Members

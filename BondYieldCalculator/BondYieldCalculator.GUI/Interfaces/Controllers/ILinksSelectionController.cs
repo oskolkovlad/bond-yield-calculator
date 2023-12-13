@@ -2,7 +2,7 @@
 
 namespace BondYieldCalculator.GUI.Interfaces.Controllers
 {
-    internal interface IBondLinkRowSelectionController : IController
+    internal interface ILinksSelectionController : IController
     {
         void ClearSelection();
 

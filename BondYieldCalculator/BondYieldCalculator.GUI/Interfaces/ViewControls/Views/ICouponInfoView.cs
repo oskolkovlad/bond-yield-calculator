@@ -1,6 +1,6 @@
-﻿namespace BondYieldCalculator.GUI.Interfaces.Forms
+﻿namespace BondYieldCalculator.GUI.Interfaces.ViewControls.Views
 {
-    internal interface ICouponInfoForm : IForm
+    internal interface ICouponInfoView : IView
     {
         string? AccumulatedCouponIncomeText { get; set; }
 

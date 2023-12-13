@@ -3,23 +3,23 @@
     using System.Globalization;
     using BondYieldCalculator.Entities;
     using BondYieldCalculator.GUI.Interfaces.Controllers;
-    using BondYieldCalculator.GUI.Interfaces.Forms;
+    using BondYieldCalculator.GUI.Interfaces.ViewControls.Views;
 
     internal class CouponInfoController : IInfoObserverController
     {
-        private readonly ICouponInfoForm _form;
+        private readonly ICouponInfoView _couponInfoView;
 
-        public CouponInfoController(ICouponInfoForm form)
+        public CouponInfoController(ICouponInfoView couponInfoView)
         {
-            _form = form;
+            _couponInfoView = couponInfoView;
         }
 
         public void ClearInfo()
         {
-            _form.AccumulatedCouponIncomeText = null;
-            _form.CouponText = null;
-            _form.CouponsQuantityText = null;
-            _form.QuantityOfPaymentsInYearText = null;
+            _couponInfoView.AccumulatedCouponIncomeText = null;
+            _couponInfoView.CouponText = null;
+            _couponInfoView.CouponsQuantityText = null;
+            _couponInfoView.QuantityOfPaymentsInYearText = null;
         }
 
         public void FillInfo(BondInfo? bondInfo)
@@ -29,10 +29,10 @@
                 return;
             }
 
-            _form.AccumulatedCouponIncomeText = bondInfo.CouponInfo?.AccumulatedCouponIncome.ToString(CultureInfo.InvariantCulture);
-            _form.CouponText = bondInfo.CouponInfo?.Coupon.ToString(CultureInfo.InvariantCulture);
-            _form.CouponsQuantityText = bondInfo.CouponInfo?.CouponsQuantity.ToString();
-            _form.QuantityOfPaymentsInYearText = bondInfo.CouponInfo?.QuantityOfPaymentsInYear.ToString();
+            _couponInfoView.AccumulatedCouponIncomeText = bondInfo.CouponInfo?.AccumulatedCouponIncome.ToString(CultureInfo.InvariantCulture);
+            _couponInfoView.CouponText = bondInfo.CouponInfo?.Coupon.ToString(CultureInfo.InvariantCulture);
+            _couponInfoView.CouponsQuantityText = bondInfo.CouponInfo?.CouponsQuantity.ToString();
+            _couponInfoView.QuantityOfPaymentsInYearText = bondInfo.CouponInfo?.QuantityOfPaymentsInYear.ToString();
         }
     }
 }

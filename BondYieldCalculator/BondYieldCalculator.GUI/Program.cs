@@ -3,6 +3,7 @@ namespace BondYieldCalculator.GUI
     using System;
     using BondYieldCalculator.GUI.Controllers;
     using BondYieldCalculator.GUI.Services;
+    using BondYieldCalculator.GUI.ViewControls;
     using BondYieldCalculator.Parser;
 
     internal static class Program
@@ -15,28 +16,35 @@ namespace BondYieldCalculator.GUI
         {
             ApplicationConfiguration.Initialize();
 
-            var mainForm = new Form();
+            var mainForm = new MainForm();
+
             var bondParser = new BondParserCreator();
             var smartLabBondParser = bondParser.CreateSmartLabBondParser();
+
             var yieldCalculatorService = new YieldCalculatorService();
             var linksStorageService = new LinksStorageService();
-            var commonInfoController = new CommonBondInfoController(mainForm);
-            var couponInfoController = new CouponInfoController(mainForm);
-            var yieldInfoController = new YieldInfoController(mainForm);
-            var controlsStateController = new ControlsStateController(mainForm);
-            var linksDataGridViewController = new LinksDataGridViewController(mainForm, controlsStateController);
-            var linksController = new LinksController(
-                mainForm,
+
+            var commonInfoController = new CommonInfoController(mainForm.CommonInfoView);
+            var couponInfoController = new CouponInfoController(mainForm.CouponInfoView);
+            var yieldInfoController = new YieldInfoController(mainForm.YieldInfoView);
+            var controlsStateManagementController = new ControlsStateManagementController(
+                mainForm.LinksControlsStateManagementView,
+                mainForm.CommonInfoControlsStateManagementView,
+                mainForm.CouponInfoControlsStateManagementView,
+                mainForm.YieldInfoControlsStateManagementView);
+            var linksDataGridViewController = new LinksTableController(mainForm.LinksTableView, controlsStateManagementController);
+            var linksManagementController = new LinksManagementController(
+                mainForm.LinksManagementView,
                 smartLabBondParser,
                 yieldCalculatorService,
                 linksStorageService,
                 linksDataGridViewController,
                 linksDataGridViewController,
-                controlsStateController);
+                controlsStateManagementController);
 
-            linksController.Subcribe(commonInfoController);
-            linksController.Subcribe(couponInfoController);
-            linksController.Subcribe(yieldInfoController);
+            linksManagementController.Subcribe(commonInfoController);
+            linksManagementController.Subcribe(couponInfoController);
+            linksManagementController.Subcribe(yieldInfoController);
 
             try
             {

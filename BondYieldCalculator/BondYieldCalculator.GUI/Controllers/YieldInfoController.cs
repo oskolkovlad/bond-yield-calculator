@@ -3,24 +3,24 @@
     using System.Globalization;
     using BondYieldCalculator.Entities;
     using BondYieldCalculator.GUI.Interfaces.Controllers;
-    using BondYieldCalculator.GUI.Interfaces.Forms;
+    using BondYieldCalculator.GUI.Interfaces.ViewControls.Views;
 
     internal class YieldInfoController : IInfoObserverController
     {
-        private readonly IYieldInfoForm _form;
+        private readonly IYieldInfoView _yieldInfoView;
 
-        public YieldInfoController(IYieldInfoForm form)
+        public YieldInfoController(IYieldInfoView yieldInfoView)
         {
-            _form = form;
+            _yieldInfoView = yieldInfoView;
         }
 
         public void ClearInfo()
         {
-            _form.YieldText = null;
-            _form.CapitalGainsPercentText = null;
-            _form.RealCouponIncomeText = null;
-            _form.RealCouponIncomePercentText = null;
-            _form.RealYieldPercentText = null;
+            _yieldInfoView.YieldText = null;
+            _yieldInfoView.CapitalGainsPercentText = null;
+            _yieldInfoView.RealCouponIncomeText = null;
+            _yieldInfoView.RealCouponIncomePercentText = null;
+            _yieldInfoView.RealYieldPercentText = null;
         }
 
         public void FillInfo(BondInfo? bondInfo)
@@ -30,11 +30,11 @@
                 return;
             }
 
-            _form.YieldText = bondInfo.YieldInfo?.Yield.ToString(CultureInfo.InvariantCulture);
-            _form.CapitalGainsPercentText = bondInfo.YieldInfo?.CapitalGainsPercent.ToString(CultureInfo.InvariantCulture);
-            _form.RealCouponIncomeText = bondInfo.YieldInfo?.RealCouponIncome.ToString(CultureInfo.InvariantCulture);
-            _form.RealCouponIncomePercentText = bondInfo.YieldInfo?.RealCouponIncomePercent.ToString(CultureInfo.InvariantCulture);
-            _form.RealYieldPercentText = bondInfo.YieldInfo?.RealYieldPercent.ToString(CultureInfo.InvariantCulture);
+            _yieldInfoView.YieldText = bondInfo.YieldInfo?.Yield.ToString(CultureInfo.InvariantCulture);
+            _yieldInfoView.CapitalGainsPercentText = bondInfo.YieldInfo?.CapitalGainsPercent.ToString(CultureInfo.InvariantCulture);
+            _yieldInfoView.RealCouponIncomeText = bondInfo.YieldInfo?.RealCouponIncome.ToString(CultureInfo.InvariantCulture);
+            _yieldInfoView.RealCouponIncomePercentText = bondInfo.YieldInfo?.RealCouponIncomePercent.ToString(CultureInfo.InvariantCulture);
+            _yieldInfoView.RealYieldPercentText = bondInfo.YieldInfo?.RealYieldPercent.ToString(CultureInfo.InvariantCulture);
         }
     }
 }

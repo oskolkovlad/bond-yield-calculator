@@ -1,6 +1,6 @@
-﻿namespace BondYieldCalculator.GUI.Interfaces.Forms
+﻿namespace BondYieldCalculator.GUI.Interfaces.ViewControls.Views
 {
-    internal interface IYieldInfoForm : IForm
+    internal interface IYieldInfoView : IView
     {
         string? YieldText { get; set; }
 

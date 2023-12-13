@@ -1,6 +1,6 @@
 ﻿namespace BondYieldCalculator.GUI.Interfaces.Controllers
 {
-    internal interface IControlsStateController : IController
+    internal interface IControlsStateManagementController : IController
     {
         public bool LintTextBoxEnabled { get; set; }
 

@@ -2,7 +2,7 @@
 {
     using BondYieldCalculator.Entities;
 
-    internal interface ILinksDataGridViewController : IController
+    internal interface ILinksTableController : IController
     {
         int LinksCount { get; }
 

@@ -5,20 +5,20 @@
     using System.Windows.Forms;
     using BondYieldCalculator.Entities;
     using BondYieldCalculator.GUI.Interfaces.Controllers;
-    using BondYieldCalculator.GUI.Interfaces.Forms;
+    using BondYieldCalculator.GUI.Interfaces.ViewControls.Views;
 
-    internal class LinksDataGridViewController : ILinksDataGridViewController, IBondLinkRowSelectionController
+    internal class LinksTableController : ILinksTableController, ILinksSelectionController
     {
-        private readonly ILinksDataGridViewForm _form;
-        private readonly IControlsStateController _controlsStateController;
+        private readonly ILinksTableView _linksTableView;
+        private readonly IControlsStateManagementController _controlsStateController;
         private readonly BindingSource _bindingSource;
         private readonly List<BondLinkRowItem> _linkRowItems;
 
         private int _lastSelectedRowIndex = -1;
 
-        public LinksDataGridViewController(ILinksDataGridViewForm form, IControlsStateController controlsStateController)
+        public LinksTableController(ILinksTableView linksTableView, IControlsStateManagementController controlsStateController)
         {
-            _form = form;
+            _linksTableView = linksTableView;
             _controlsStateController = controlsStateController;
             _linkRowItems = new List<BondLinkRowItem>();
             _bindingSource = new BindingSource { DataSource = _linkRowItems };
@@ -30,7 +30,7 @@
             _controlsStateController.SetDependenceFromRowsCountControlsState(false);
         }
 
-        #region ILinksDataGridViewController Members
+        #region ILinksTableController Members
 
         public int LinksCount => _linkRowItems.Count;
 
@@ -101,9 +101,9 @@
 
         public IEnumerable<string?> GetLinks() => _linkRowItems.Select(item => item.Link);
 
-        #endregion ILinksDataGridViewController Members
+        #endregion ILinksTableController Members
 
-        #region IBondLinkRowSelectionController Members
+        #region ILinksSelectionController Members
 
         public void ClearSelection() => DataGridView.ClearSelection();
 
@@ -115,11 +115,11 @@
 
         public event EventHandler SelectionChanged = delegate { };
 
-        #endregion IBondLinkRowSelectionController Members
+        #endregion ILinksSelectionController Members
 
         #region Private Members
 
-        private DataGridView DataGridView => _form.LinksDataGridView;
+        private DataGridView DataGridView => _linksTableView.LinksTable;
 
         private void RefreshDataSource()
         {
