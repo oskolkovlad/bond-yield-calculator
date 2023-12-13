@@ -98,6 +98,11 @@
                     _bondInfoItems.Remove(bondInfo);
                 }
             }
+
+            if (_linksTableController.LinksCount == 0)
+            {
+                ClearBondInfo();
+            }
         }
 
         private void HandleLinksAnalyzing()
