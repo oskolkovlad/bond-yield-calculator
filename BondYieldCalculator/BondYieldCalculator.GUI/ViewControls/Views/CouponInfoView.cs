@@ -37,7 +37,7 @@
 
         #endregion ICouponInfoView Members
 
-        #region ICommonInfoControlsStateManagementView Members
+        #region ICouponInfoControlsStateManagementView Members
 
         public bool GroupBoxEnabled
         {
@@ -45,6 +45,6 @@
             set { this.InvokeIfRequired(() => couponInfoGroupBox.Enabled = value); }
         }
 
-        #endregion ICommonInfoControlsStateManagementView Members
+        #endregion ICouponInfoControlsStateManagementView Members
     }
 }

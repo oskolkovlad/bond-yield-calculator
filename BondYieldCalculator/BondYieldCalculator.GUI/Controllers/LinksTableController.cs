@@ -10,16 +10,16 @@
     internal class LinksTableController : ILinksTableController, ILinksSelectionController
     {
         private readonly ILinksTableView _linksTableView;
-        private readonly IControlsStateManagementController _controlsStateController;
+        private readonly IControlsStateManagementController _controlsStateManagementController;
         private readonly BindingSource _bindingSource;
         private readonly List<BondLinkRowItem> _linkRowItems;
 
         private int _lastSelectedRowIndex = -1;
 
-        public LinksTableController(ILinksTableView linksTableView, IControlsStateManagementController controlsStateController)
+        public LinksTableController(ILinksTableView linksTableView, IControlsStateManagementController controlsStateManagementController)
         {
             _linksTableView = linksTableView;
-            _controlsStateController = controlsStateController;
+            _controlsStateManagementController = controlsStateManagementController;
             _linkRowItems = new List<BondLinkRowItem>();
             _bindingSource = new BindingSource { DataSource = _linkRowItems };
 
@@ -27,7 +27,7 @@
             DataGridView.DataSource = _bindingSource;
             DataGridView.SelectionChanged += (sender, args) => HandleSelectionChanged();
 
-            _controlsStateController.SetDependenceFromRowsCountControlsState(false);
+            _controlsStateManagementController.SetDependenceFromRowsCountControlsState(false);
         }
 
         #region ILinksTableController Members
@@ -48,7 +48,7 @@
             }
 
             _bindingSource.Add(new BondLinkRowItem { Link = link });
-            _controlsStateController.SetDependenceFromRowsCountControlsState(true);
+            _controlsStateManagementController.SetDependenceFromRowsCountControlsState(true);
         }
 
         public IEnumerable<string?> RemoveSelectedLinkRows()
@@ -70,13 +70,13 @@
                 yield return item.Link;
             }
 
-            _controlsStateController.SetDependenceFromRowsCountControlsState(LinksCount != 0);
+            _controlsStateManagementController.SetDependenceFromRowsCountControlsState(LinksCount != 0);
         }
 
         public void ClearTable()
         {
             _bindingSource.Clear();
-            _controlsStateController.SetDependenceFromRowsCountControlsState(false);
+            _controlsStateManagementController.SetDependenceFromRowsCountControlsState(false);
         }
 
         public void UpdateLinkRowItem(BondInfo? bondInfo)

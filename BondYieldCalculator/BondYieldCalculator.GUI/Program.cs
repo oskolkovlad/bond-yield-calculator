@@ -32,14 +32,14 @@ namespace BondYieldCalculator.GUI
                 mainForm.CommonInfoControlsStateManagementView,
                 mainForm.CouponInfoControlsStateManagementView,
                 mainForm.YieldInfoControlsStateManagementView);
-            var linksDataGridViewController = new LinksTableController(mainForm.LinksTableView, controlsStateManagementController);
+            var linksTableController = new LinksTableController(mainForm.LinksTableView, controlsStateManagementController);
             var linksManagementController = new LinksManagementController(
                 mainForm.LinksManagementView,
                 smartLabBondParser,
                 yieldCalculatorService,
                 linksStorageService,
-                linksDataGridViewController,
-                linksDataGridViewController,
+                linksTableController,
+                linksTableController,
                 controlsStateManagementController);
 
             linksManagementController.Subcribe(commonInfoController);
