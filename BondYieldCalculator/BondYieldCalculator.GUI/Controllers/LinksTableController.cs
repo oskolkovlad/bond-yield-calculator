@@ -43,7 +43,7 @@
 
             if (_linkRowItems.Any(item => item.Link == link))
             {
-                MessageBox.Show("Данная ссылка уже была добавлена.", "Добавление ссылки на облигацию", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Данная ссылка уже была добавлена.", "Добавление ссылки", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
 

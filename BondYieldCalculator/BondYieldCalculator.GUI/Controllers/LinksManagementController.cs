@@ -115,7 +115,7 @@
             if (links is null)
             {
                 _bondInfoItems = new List<BondInfo?>();
-                MessageBox.Show("Ссылки на облигации отсутствуют.", "Анализ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Отсутствуют ссылки на облигации.", "Анализ информации", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 _controlsStateManagementController.SetDependenceFromAnalyzeProcessingControlsState(true);
 
                 return;
@@ -128,7 +128,7 @@
                 .ToList() ?? new List<BondInfo?>();
             if (_bondInfoItems.Count == 0)
             {
-                MessageBox.Show("Информация по добавленным ссылкам не была найдена.", "Анализ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Информация по добавленным ссылкам не найдена.", "Анализ информации", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 _controlsStateManagementController.SetDependenceFromAnalyzeProcessingControlsState(true);
 
                 return;
@@ -150,9 +150,16 @@
 
         private void HandleLinksRestoring()
         {
+            if (!_linksStorageService.IsExists)
+            {
+                MessageBox.Show("Хранилище не найдено.", "Восстановление ссылок", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
             var links = _linksStorageService.GetLinks()?.ToList();
             if (links is null)
             {
+                MessageBox.Show("В хранилище отсутствуют ссылки на облигации.", "Восстановление ссылок", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
@@ -171,11 +178,12 @@
             var links = _linksTableController.GetLinks()?.ToList();
             if (links is null || links.Count == 0)
             {
+                MessageBox.Show("Отсутствуют ссылки на облигации.", "Сохранение ссылок", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
             _linksStorageService.Save(links);
-            MessageBox.Show("Ссылки успешно сохранены.", "Сохранение ссылок", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show("Отсутствуют ссылки на облигации.", "Сохранение ссылок", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void HandleSelectionChanged(object? sender, EventArgs args)
