@@ -57,6 +57,14 @@
 
         #region Private Members
 
+        private void ClearBondInfo()
+        {
+            foreach (var subscriber in _subscribers)
+            {
+                subscriber.ClearInfo();
+            }
+        }
+
         private void UpdateBondInfo()
         {
             var linkRowItem = _linksSelectionController.GetSelectedBondLinkRowItem();
@@ -94,10 +102,7 @@
 
         private void HandleLinksAnalyzing()
         {
-            foreach (var subscriber in _subscribers)
-            {
-                subscriber.ClearInfo();
-            }
+            ClearBondInfo();
 
             _controlsStateManagementController.SetDependenceFromAnalyzeProcessingControlsState(false);
 
@@ -146,6 +151,7 @@
                 return;
             }
 
+            ClearBondInfo();
             _bondInfoItems.Clear();
             _linksTableController.ClearTable();
 
