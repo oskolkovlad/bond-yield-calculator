@@ -1,6 +1,6 @@
 ﻿namespace BondYieldCalculator.Parser
 {
-    using BondYieldCalculator.Entities;
+    using BondYieldCalculator.Entities.Dto;
 
     public interface IBondParser
     {

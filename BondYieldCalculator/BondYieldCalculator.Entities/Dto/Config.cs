@@ -1,4 +1,4 @@
-﻿namespace BondYieldCalculator.Entities
+﻿namespace BondYieldCalculator.Entities.Dto
 {
     public class Config
     {

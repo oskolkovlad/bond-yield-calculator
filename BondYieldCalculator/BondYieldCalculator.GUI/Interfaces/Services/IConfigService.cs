@@ -1,4 +1,4 @@
-﻿using BondYieldCalculator.Entities;
+﻿using BondYieldCalculator.Entities.Dto;
 
 namespace BondYieldCalculator.GUI.Interfaces.Services
 {

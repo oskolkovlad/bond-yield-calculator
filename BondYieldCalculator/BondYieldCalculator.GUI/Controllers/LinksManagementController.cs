@@ -1,6 +1,8 @@
 ﻿namespace BondYieldCalculator.GUI.Controllers
 {
     using BondYieldCalculator.Entities;
+    using BondYieldCalculator.Entities.CustomEventArgs;
+    using BondYieldCalculator.Entities.Dto;
     using BondYieldCalculator.GUI.Interfaces.Controllers;
     using BondYieldCalculator.GUI.Interfaces.Services;
     using BondYieldCalculator.GUI.Interfaces.ViewControls.Views;
@@ -65,9 +67,8 @@
             }
         }
 
-        private void UpdateBondInfo()
+        private void UpdateBondInfo(BondLinkRowItem? linkRowItem)
         {
-            var linkRowItem = _linksSelectionController.GetSelectedBondLinkRowItem();
             if (linkRowItem is null)
             {
                 return;
@@ -149,7 +150,7 @@
                 _linksTableController.UpdateLinkRowItem(bondInfo);
             }
 
-            UpdateBondInfo();
+            UpdateBondInfo(_linksSelectionController.GetSelectedBondLinkRowItem());
 
             _controlsStateManagementController.SetAnalyzeProcessingControlsState(true);
             _linksSelectionController.SelectionChanged += HandleSelectionChanged;
@@ -196,10 +197,10 @@
             MessageBox.Show("Ссылки успешно сохранены.", "Сохранение ссылок", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
-        private void HandleSelectionChanged(object? sender, EventArgs args)
+        private void HandleSelectionChanged(object? sender, SelectionChangedEventArgs args)
         {
             _controlsStateManagementController.BondInfoEnabled = false;
-            UpdateBondInfo();
+            UpdateBondInfo(args?.Item);
             _controlsStateManagementController.BondInfoEnabled = true;
         }
 

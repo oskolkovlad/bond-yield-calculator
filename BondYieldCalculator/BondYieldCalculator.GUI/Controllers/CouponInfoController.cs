@@ -1,7 +1,7 @@
 ﻿namespace BondYieldCalculator.GUI.Controllers
 {
     using System.Globalization;
-    using BondYieldCalculator.Entities;
+    using BondYieldCalculator.Entities.Dto;
     using BondYieldCalculator.GUI.Interfaces.Controllers;
     using BondYieldCalculator.GUI.Interfaces.ViewControls.Views;
 

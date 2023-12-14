@@ -3,6 +3,8 @@
     using System.Collections.Generic;
     using System.Windows.Forms;
     using BondYieldCalculator.Entities;
+    using BondYieldCalculator.Entities.CustomEventArgs;
+    using BondYieldCalculator.Entities.Dto;
     using BondYieldCalculator.GUI.Interfaces.Controllers;
     using BondYieldCalculator.GUI.Interfaces.ViewControls.Views;
 
@@ -22,9 +24,9 @@
             _linkRowItems = new List<BondLinkRowItem>();
             _bindingList = new SortedBindingList<BondLinkRowItem>(_linkRowItems);
 
-            DataGridView.AutoGenerateColumns = false;
-            DataGridView.DataSource = _bindingList;
-            DataGridView.SelectionChanged += (sender, args) => HandleSelectionChanged();
+            LinksTable.AutoGenerateColumns = false;
+            LinksTable.DataSource = _bindingList;
+            LinksTable.SelectionChanged += (sender, args) => HandleSelectionChanged();
 
             _controlsStateManagementController.SetRowsCountControlsState(false);
         }
@@ -69,7 +71,14 @@
                 yield return item.Link;
             }
 
-            _controlsStateManagementController.SetRowsCountControlsState(LinksCount != 0);
+            if (LinksCount == 0)
+            {
+                _controlsStateManagementController.SetRowsCountControlsState(false);
+                yield break;
+            }
+
+            _controlsStateManagementController.SetRowsCountControlsState(true);
+            SelectionChanged?.Invoke(this, new SelectionChangedEventArgs(GetSelectedBondLinkRowItem()));
         }
 
         public void ClearTable()
@@ -104,7 +113,7 @@
 
         #region ILinksSelectionController Members
 
-        public void ClearSelection() => DataGridView.ClearSelection();
+        public void ClearSelection() => LinksTable.ClearSelection();
 
         public BondLinkRowItem? GetSelectedBondLinkRowItem()
         {
@@ -112,17 +121,17 @@
             return selectedRows.Count == 1 && selectedRows[0].DataBoundItem is not null ? selectedRows[0].DataBoundItem as BondLinkRowItem : null;
         }
 
-        public event EventHandler SelectionChanged = delegate { };
+        public event EventHandler<SelectionChangedEventArgs> SelectionChanged = delegate { };
 
         #endregion ILinksSelectionController Members
 
         #region Private Members
 
-        private DataGridView DataGridView => _linksTableView.LinksTable;
+        private DataGridView LinksTable => _linksTableView.LinksTable;
 
         private IEnumerable<DataGridViewRow> GetSelectedRows()
         {
-            var rowIndexes = DataGridView.SelectedCells?
+            var rowIndexes = LinksTable.SelectedCells?
                 .OfType<DataGridViewCell>()
                 .Select(cell => cell.RowIndex)
                 .Distinct()
@@ -134,7 +143,7 @@
 
             foreach (var rowIndex in rowIndexes)
             {
-                yield return DataGridView.Rows[rowIndex];
+                yield return LinksTable.Rows[rowIndex];
             }
         }
 
@@ -149,7 +158,7 @@
             _lastSelectedRowIndex = selectedRows[0].Index;
             var hasLinkRowItems = _linkRowItems.Count != 0;
 
-            SelectionChanged?.Invoke(this, EventArgs.Empty);
+            SelectionChanged?.Invoke(this, new SelectionChangedEventArgs(GetSelectedBondLinkRowItem()));
         }
 
         #endregion Private Members

@@ -1,6 +1,7 @@
 ﻿namespace BondYieldCalculator.GUI.Services
 {
     using BondYieldCalculator.Entities;
+    using BondYieldCalculator.Entities.Dto;
     using BondYieldCalculator.GUI.Interfaces.Services;
 
     internal class YieldCalculatorService : IYieldCalculatorService

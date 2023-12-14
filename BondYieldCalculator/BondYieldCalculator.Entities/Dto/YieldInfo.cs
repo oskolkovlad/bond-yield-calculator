@@ -1,4 +1,4 @@
-﻿namespace BondYieldCalculator.Entities
+﻿namespace BondYieldCalculator.Entities.Dto
 {
     /// <summary>
     /// Информация о доходности облигации.

@@ -1,6 +1,6 @@
 ﻿namespace BondYieldCalculator.GUI.Interfaces.Controllers
 {
-    using BondYieldCalculator.Entities;
+    using BondYieldCalculator.Entities.Dto;
 
     internal interface IInfoObserverController : IController
     {
