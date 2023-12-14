@@ -5,8 +5,12 @@
 
     internal class YieldCalculatorService : IYieldCalculatorService
     {
-        private const decimal TaxClearanceRatio = 0.87M; // TODO: get from config.
-        private const decimal BrokerCommission = 0.0006M; // TODO: get from config.
+        private readonly IConfigService _configService;
+
+        public YieldCalculatorService(IConfigService configService)
+        {
+            _configService = configService;
+        }
 
         public void UpdateYieldInfo(BondInfo? bondInfo)
         {
@@ -30,6 +34,10 @@
             bondInfo.YieldInfo.RealCouponIncomePercent = TruncateDecimalValue(bondInfo.YieldInfo.RealCouponIncome * 100 / bondInfo.CommonInfo.CurrentPrice);
             bondInfo.YieldInfo.RealYieldPercent = TruncateDecimalValue(bondInfo.YieldInfo.CapitalGainsPercent / bondInfo.CommonInfo.Maturity);
         }
+
+        private decimal TaxClearanceRatio => (100 - _configService.Instance.TaxClearanceRatioPercent) / 100;
+
+        private decimal BrokerCommission => _configService.Instance.BrokerCommissionPercent / 100;
 
         private static decimal TruncateDecimalValue(decimal value) => Math.Truncate(value * 100) / 100;
     }

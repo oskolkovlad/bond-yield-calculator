@@ -8,6 +8,8 @@ namespace BondYieldCalculator.GUI
 
     internal static class Program
     {
+        private const string ConfigPath = "appsettings.json";
+
         /// <summary>
         ///  The main entry point for the application.
         /// </summary>
@@ -21,7 +23,8 @@ namespace BondYieldCalculator.GUI
             var bondParser = new BondParserCreator();
             var smartLabBondParser = bondParser.CreateSmartLabBondParser();
 
-            var yieldCalculatorService = new YieldCalculatorService();
+            var configService = new ConfigService(ConfigPath);
+            var yieldCalculatorService = new YieldCalculatorService(configService);
             var linksStorageService = new LinksStorageService();
 
             var commonInfoController = new CommonInfoController(mainForm.CommonInfoView);
