@@ -74,6 +74,8 @@
                 return;
             }
 
+            ClearBondInfo();
+
             var bondInfo = _bondInfoItems?.FirstOrDefault(item => item!.Link == linkRowItem.Link);
             if (bondInfo is null)
             {
