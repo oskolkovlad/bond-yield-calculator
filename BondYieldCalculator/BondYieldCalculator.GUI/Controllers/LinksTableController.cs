@@ -35,7 +35,7 @@
 
         public int LinksCount => _linkRowItems.Count;
 
-        public void AddLinkRow(string? link)
+        public void AddLinkRow(string? link, bool selectRow = false)
         {
             if (string.IsNullOrWhiteSpace(link))
             {
@@ -48,8 +48,30 @@
                 return;
             }
 
-            _bindingList.Add(new BondLinkRowItem { Link = link });
+            var linkRowItem = new BondLinkRowItem { Link = link };
+            _bindingList.Add(linkRowItem);
             _controlsStateManagementController.SetRowsCountControlsState(true);
+
+            if (!selectRow)
+            {
+                return;
+            }
+
+            foreach (DataGridViewRow row in LinksTable.Rows)
+            {
+                if (row.DataBoundItem is not null && row.DataBoundItem is BondLinkRowItem item)
+                {
+                    if (item != linkRowItem)
+                    {
+                        row.Selected = false;
+                    }
+                    else
+                    {
+                        row.Selected = true;
+                        LinksTable.FirstDisplayedScrollingRowIndex = row.Index;
+                    }
+                }
+            }
         }
 
         public IEnumerable<string?> RemoveSelectedLinkRows()

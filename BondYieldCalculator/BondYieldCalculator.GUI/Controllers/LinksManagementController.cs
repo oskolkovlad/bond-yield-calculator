@@ -87,7 +87,7 @@
 
         private void HandleLinkAdding()
         {
-            _linksTableController.AddLinkRow(_linksManagementView.LinkText);
+            _linksTableController.AddLinkRow(_linksManagementView.LinkText, true);
             _linksManagementView.LinkText = null;
         }
 

@@ -6,7 +6,7 @@
     {
         int LinksCount { get; }
 
-        void AddLinkRow(string? link);
+        void AddLinkRow(string? link, bool selectRow = false);
 
         IEnumerable<string?> RemoveSelectedLinkRows();
 
