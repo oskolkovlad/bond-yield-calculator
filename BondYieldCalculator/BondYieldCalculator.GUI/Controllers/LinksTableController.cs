@@ -1,7 +1,6 @@
 ﻿namespace BondYieldCalculator.GUI.Controllers
 {
     using System.Collections.Generic;
-    using System.ComponentModel;
     using System.Windows.Forms;
     using BondYieldCalculator.Entities;
     using BondYieldCalculator.GUI.Interfaces.Controllers;
@@ -11,7 +10,7 @@
     {
         private readonly ILinksTableView _linksTableView;
         private readonly IControlsStateManagementController _controlsStateManagementController;
-        private readonly BindingSource _bindingSource;
+        private readonly SortedBindingList<BondLinkRowItem> _bindingList;
         private readonly List<BondLinkRowItem> _linkRowItems;
 
         private int _lastSelectedRowIndex = -1;
@@ -21,10 +20,10 @@
             _linksTableView = linksTableView;
             _controlsStateManagementController = controlsStateManagementController;
             _linkRowItems = new List<BondLinkRowItem>();
-            _bindingSource = new BindingSource { DataSource = _linkRowItems };
+            _bindingList = new SortedBindingList<BondLinkRowItem>(_linkRowItems);
 
             DataGridView.AutoGenerateColumns = false;
-            DataGridView.DataSource = _bindingSource;
+            DataGridView.DataSource = _bindingList;
             DataGridView.SelectionChanged += (sender, args) => HandleSelectionChanged();
 
             _controlsStateManagementController.SetRowsCountControlsState(false);
@@ -47,7 +46,7 @@
                 return;
             }
 
-            _bindingSource.Add(new BondLinkRowItem { Link = link });
+            _bindingList.Add(new BondLinkRowItem { Link = link });
             _controlsStateManagementController.SetRowsCountControlsState(true);
         }
 
@@ -66,7 +65,7 @@
                     continue;
                 }
 
-                _bindingSource.Remove(item);
+                _bindingList.Remove(item);
                 yield return item.Link;
             }
 
@@ -75,7 +74,7 @@
 
         public void ClearTable()
         {
-            _bindingSource.Clear();
+            _bindingList.Clear();
             _controlsStateManagementController.SetRowsCountControlsState(false);
         }
 
@@ -96,7 +95,7 @@
             linkRowItem.Maturity = bondInfo.CommonInfo?.Maturity;
             linkRowItem.RealYieldPercent = bondInfo.YieldInfo?.RealYieldPercent;
 
-            RefreshDataSource();
+            _bindingList.ResetItem(_bindingList.IndexOf(linkRowItem));
         }
 
         public IEnumerable<string?> GetLinks() => _linkRowItems.Select(item => item.Link);
@@ -120,12 +119,6 @@
         #region Private Members
 
         private DataGridView DataGridView => _linksTableView.LinksTable;
-
-        private void RefreshDataSource()
-        {
-            _bindingSource.DataSource = null;
-            _bindingSource.DataSource = _linkRowItems;
-        }
 
         private IEnumerable<DataGridViewRow> GetSelectedRows()
         {
@@ -157,30 +150,6 @@
             var hasLinkRowItems = _linkRowItems.Count != 0;
 
             SelectionChanged?.Invoke(this, EventArgs.Empty);
-        }
-
-        private void HandleColumnHeaderMouseClick(DataGridViewCellMouseEventArgs args)
-        {
-            ListSortDirection direction;
-
-            var newColumn = DataGridView.Columns[args.ColumnIndex];
-            var oldColumn = DataGridView.SortedColumn;
-
-            if (oldColumn == newColumn)
-            {
-                direction = DataGridView.SortOrder == SortOrder.Ascending ? ListSortDirection.Descending : ListSortDirection.Ascending;
-            }
-            else
-            {
-                direction = ListSortDirection.Ascending;
-                if (oldColumn != null)
-                {
-                    oldColumn.HeaderCell.SortGlyphDirection = SortOrder.None;
-                }
-            }
-
-            DataGridView.Sort(newColumn, direction);
-            newColumn.HeaderCell.SortGlyphDirection = direction == ListSortDirection.Ascending ? SortOrder.Ascending : SortOrder.Descending;
         }
 
         #endregion Private Members
