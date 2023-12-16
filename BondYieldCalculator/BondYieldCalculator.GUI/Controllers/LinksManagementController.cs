@@ -28,6 +28,7 @@
             ILogService logService,
             IYieldCalculatorService yieldCalculatorService,
             ILinksStorageService linksStorageService,
+            IShortcutsController shortcutsController,
             ILinksTableController linksTableController,
             ILinksSelectionController linksSelectionController,
             IControlsStateManagementController controlsStateManagementController)
@@ -49,14 +50,20 @@
             _linksManagementView.LinksRestoring += (sender, args) => HandleLinksRestoring();
             _linksManagementView.LinksSaving += (sender, args) => HandleLinksSaving();
 
+            shortcutsController.LinkAdding += (sender, args) => HandleLinkAdding();
+            shortcutsController.LinksRemoving += (sender, args) => HandleLinksRemoving();
+            shortcutsController.LinksAnalyzing += (sender, args) => HandleLinksAnalyzing();
+            shortcutsController.LinksRestoring += (sender, args) => HandleLinksRestoring();
+            shortcutsController.LinksSaving += (sender, args) => HandleLinksSaving();
+
             _linksSelectionController.SelectionChanged += HandleSelectionChanged;
         }
 
         #region IObservableController Members
 
-        public void Subcribe(IInfoObserverController subscriber) => _subscribers.Add(subscriber);
+        public void Subcribe(IInfoObserverController controller) => _subscribers.Add(controller);
 
-        public void Unsubscribe(IInfoObserverController subscriber) => _subscribers.Remove(subscriber);
+        public void Unsubscribe(IInfoObserverController controller) => _subscribers.Remove(controller);
 
         #endregion IObservableController Members
 
@@ -90,12 +97,30 @@
 
         private void HandleLinkAdding()
         {
+            if (!_controlsStateManagementController.AddLinkButtonEnabled)
+            {
+                return;
+            }
+
+            if (string.IsNullOrWhiteSpace(_linksManagementView.LinkText))
+            {
+                _logService.LogWarn("'Добавление ссылки': невозможно добавить пустую строку. Введите ссылку на облигацию.");
+                MessageBox.Show("Невозможно добавить пустую строку. Введите ссылку на облигацию.", "Анализ информации", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+                return;
+            }
+
             _linksTableController.AddLinkRow(_linksManagementView.LinkText, true);
             _linksManagementView.LinkText = null;
         }
 
         private void HandleLinksRemoving()
         {
+            if (!_controlsStateManagementController.RemoveLinksButtonEnabled)
+            {
+                return;
+            }
+
             foreach (var link in _linksTableController.RemoveSelectedLinkRows())
             {
                 if (string.IsNullOrWhiteSpace(link))
@@ -118,6 +143,11 @@
 
         private void HandleLinksAnalyzing()
         {
+            if (!_controlsStateManagementController.AnalyzeButtonEnabled)
+            {
+                return;
+            }
+
             ClearBondInfo();
 
             _controlsStateManagementController.SetAnalyzeProcessingControlsState(false);
@@ -166,6 +196,11 @@
 
         private void HandleLinksRestoring()
         {
+            if (!_controlsStateManagementController.RestoreLinksButtonEnabled)
+            {
+                return;
+            }
+
             if (!_linksStorageService.IsExists)
             {
                 _logService.LogWarn("'Восстановление ссылок': хранилище не найдено.");
@@ -195,6 +230,11 @@
 
         private void HandleLinksSaving()
         {
+            if (!_controlsStateManagementController.SaveLinksButtonEnabled)
+            {
+                return;
+            }
+
             var links = _linksTableController
                 .GetLinks()?
                 .Where(link => !string.IsNullOrWhiteSpace(link))

@@ -2,8 +2,8 @@
 {
     internal interface IObservableController : IController
     {
-        void Subcribe(IInfoObserverController subscriber);
+        void Subcribe(IInfoObserverController controller);
 
-        void Unsubscribe(IInfoObserverController subscriber);
+        void Unsubscribe(IInfoObserverController controller);
     }
 }

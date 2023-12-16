@@ -2,17 +2,22 @@
 {
     using BondYieldCalculator.GUI.Interfaces.ViewControls.Views;
 
-    internal partial class LinksTableView : UserControl, ILinksTableView, ILinksManagementView, ILinksControlsStateManagementView
+    internal partial class LinksTableView : UserControl,
+        ILinksTableView,
+        ILinksShortcutsView,
+        ILinksManagementView,
+        ILinksControlsStateManagementView
     {
         public LinksTableView()
         {
             InitializeComponent();
 
-            addLinkButton.Click += (sender, args) => LinkAdding.Invoke(this, EventArgs.Empty);
-            removeLinksButton.Click += (sender, args) => LinksRemoving.Invoke(this, EventArgs.Empty);
-            analyzeButton.Click += (sender, args) => LinksAnalyzing.Invoke(this, EventArgs.Empty);
-            restoreLinksButton.Click += (sender, args) => LinksRestoring.Invoke(this, EventArgs.Empty);
-            saveLinksButton.Click += (sender, args) => LinksSaving.Invoke(this, EventArgs.Empty);
+            linkTextBox.KeyDown += (sender, args) => LinkTextBoxKeyDown.Invoke(this, args);
+            addLinkButton.Click += (sender, args) => LinkAdding.Invoke(this, args);
+            removeLinksButton.Click += (sender, args) => LinksRemoving.Invoke(this, args);
+            analyzeButton.Click += (sender, args) => LinksAnalyzing.Invoke(this, args);
+            restoreLinksButton.Click += (sender, args) => LinksRestoring.Invoke(this, args);
+            saveLinksButton.Click += (sender, args) => LinksSaving.Invoke(this, args);
         }
 
         #region ILinksTableView Members
@@ -20,6 +25,12 @@
         public DataGridView LinksTable => linksTable;
 
         #endregion ILinksTableView Members
+
+        #region ILinksShortcutsView Members
+
+        public event KeyEventHandler LinkTextBoxKeyDown = delegate { };
+
+        #endregion ILinksShortcutsView Members
 
         #region ILinksManagementView Members
 

@@ -31,11 +31,8 @@ namespace BondYieldCalculator.GUI
             var commonInfoController = new CommonInfoController(mainForm.CommonInfoView);
             var couponInfoController = new CouponInfoController(mainForm.CouponInfoView);
             var yieldInfoController = new YieldInfoController(mainForm.YieldInfoView);
-            var controlsStateManagementController = new ControlsStateManagementController(
-                mainForm.LinksControlsStateManagementView,
-                mainForm.CommonInfoControlsStateManagementView,
-                mainForm.CouponInfoControlsStateManagementView,
-                mainForm.YieldInfoControlsStateManagementView);
+            var shortcutsController = new ShortcutsController(mainForm);
+            var controlsStateManagementController = new ControlsStateManagementController(mainForm);
             var linksTableController = new LinksTableController(mainForm.LinksTableView, logService, controlsStateManagementController);
             var linksManagementController = new LinksManagementController(
                 mainForm.LinksManagementView,
@@ -43,6 +40,7 @@ namespace BondYieldCalculator.GUI
                 logService,
                 yieldCalculatorService,
                 linksStorageService,
+                shortcutsController,
                 linksTableController,
                 linksTableController,
                 controlsStateManagementController);

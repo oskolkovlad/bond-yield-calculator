@@ -1,76 +1,67 @@
 ﻿namespace BondYieldCalculator.GUI.Controllers
 {
     using BondYieldCalculator.GUI.Interfaces.Controllers;
+    using BondYieldCalculator.GUI.Interfaces.ViewControls;
     using BondYieldCalculator.GUI.Interfaces.ViewControls.Views;
 
     internal class ControlsStateManagementController : IControlsStateManagementController
     {
-        private readonly ILinksControlsStateManagementView _linksControlsStateManagementView;
-        private readonly ICommonInfoControlsStateManagementView _commonInfoControlsStateManagementView;
-        private readonly ICouponInfoControlsStateManagementView _couponInfoControlsStateManagementView;
-        private readonly IYieldInfoControlsStateManagementView _yieldInfoControlsStateManagementView;
+        private readonly IControlsStateManagementForm _controlsStateManagementForm;
 
-        public ControlsStateManagementController(
-            ILinksControlsStateManagementView linksControlsStateManagementView,
-            ICommonInfoControlsStateManagementView commonInfoControlsStateManagementView,
-            ICouponInfoControlsStateManagementView couponInfoControlsStateManagementView,
-            IYieldInfoControlsStateManagementView yieldInfoControlsStateManagementView)
+        public ControlsStateManagementController(IControlsStateManagementForm controlsStateManagementForm)
         {
-            _linksControlsStateManagementView = linksControlsStateManagementView;
-            _commonInfoControlsStateManagementView = commonInfoControlsStateManagementView;
-            _couponInfoControlsStateManagementView = couponInfoControlsStateManagementView;
-            _yieldInfoControlsStateManagementView = yieldInfoControlsStateManagementView;
+            _controlsStateManagementForm = controlsStateManagementForm;
         }
 
         public bool LintTextBoxEnabled
         {
-            get { return _linksControlsStateManagementView.LintTextBoxEnabled; }
-            set { _linksControlsStateManagementView.LintTextBoxEnabled = value; }
+            get { return LinksControlsStateManagementView.LintTextBoxEnabled; }
+            set { LinksControlsStateManagementView.LintTextBoxEnabled = value; }
         }
 
         public bool AddLinkButtonEnabled
         {
-            get { return _linksControlsStateManagementView.AddLinkButtonEnabled; }
-            set { _linksControlsStateManagementView.AddLinkButtonEnabled = value; }
+            get { return LinksControlsStateManagementView.AddLinkButtonEnabled; }
+            set { LinksControlsStateManagementView.AddLinkButtonEnabled = value; }
         }
 
         public bool RemoveLinksButtonEnabled
         {
-            get { return _linksControlsStateManagementView.RemoveLinksButtonEnabled; }
-            set { _linksControlsStateManagementView.RemoveLinksButtonEnabled = value; }
+            get { return LinksControlsStateManagementView.RemoveLinksButtonEnabled; }
+            set { LinksControlsStateManagementView.RemoveLinksButtonEnabled = value; }
         }
 
         public bool AnalyzeButtonEnabled
         {
-            get { return _linksControlsStateManagementView.AnalyzeButtonEnabled; }
-            set { _linksControlsStateManagementView.AnalyzeButtonEnabled = value; }
+            get { return LinksControlsStateManagementView.AnalyzeButtonEnabled; }
+            set { LinksControlsStateManagementView.AnalyzeButtonEnabled = value; }
         }
 
         public bool RestoreLinksButtonEnabled
         {
-            get { return _linksControlsStateManagementView.RestoreLinksButtonEnabled; }
-            set { _linksControlsStateManagementView.RestoreLinksButtonEnabled = value; }
+            get { return LinksControlsStateManagementView.RestoreLinksButtonEnabled; }
+            set { LinksControlsStateManagementView.RestoreLinksButtonEnabled = value; }
         }
 
         public bool SaveLinksButtonEnabled
         {
-            get { return _linksControlsStateManagementView.SaveLinksButtonEnabled; }
-            set { _linksControlsStateManagementView.SaveLinksButtonEnabled = value; }
+            get { return LinksControlsStateManagementView.SaveLinksButtonEnabled; }
+            set { LinksControlsStateManagementView.SaveLinksButtonEnabled = value; }
         }
 
         public bool BondInfoEnabled
         {
             get
             {
-                return _commonInfoControlsStateManagementView.GroupBoxEnabled &&
-                    _couponInfoControlsStateManagementView.GroupBoxEnabled &&
-                    _yieldInfoControlsStateManagementView.GroupBoxEnabled;
+                return CommonInfoControlsStateManagementView.GroupBoxEnabled &&
+                    CouponInfoControlsStateManagementView.GroupBoxEnabled &&
+                    YieldInfoControlsStateManagementView.GroupBoxEnabled;
             }
             set
             {
-                _commonInfoControlsStateManagementView.GroupBoxEnabled = value;
-                _couponInfoControlsStateManagementView.GroupBoxEnabled = value;
-                _yieldInfoControlsStateManagementView.GroupBoxEnabled = value;
+                CommonInfoControlsStateManagementView.GroupBoxEnabled = value;
+                CouponInfoControlsStateManagementView.GroupBoxEnabled = value;
+                YieldInfoControlsStateManagementView.GroupBoxEnabled = value;
             }
         }
 
@@ -92,5 +83,13 @@
             SaveLinksButtonEnabled = value;
             BondInfoEnabled = value;
         }
+
+        private ILinksControlsStateManagementView LinksControlsStateManagementView => _controlsStateManagementForm.LinksControlsStateManagementView;
+
+        private ICommonInfoControlsStateManagementView CommonInfoControlsStateManagementView => _controlsStateManagementForm.CommonInfoControlsStateManagementView;
+
+        private ICouponInfoControlsStateManagementView CouponInfoControlsStateManagementView => _controlsStateManagementForm.CouponInfoControlsStateManagementView;
+
+        private IYieldInfoControlsStateManagementView YieldInfoControlsStateManagementView => _controlsStateManagementForm.YieldInfoControlsStateManagementView;
     }
 }

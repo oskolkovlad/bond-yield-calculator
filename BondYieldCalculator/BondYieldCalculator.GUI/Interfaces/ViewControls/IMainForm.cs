@@ -2,7 +2,7 @@
 {
     using BondYieldCalculator.GUI.Interfaces.ViewControls.Views;
 
-    internal interface IMainForm
+    internal interface IMainForm : IForm
     {
         ILinksTableView LinksTableView { get; }
 

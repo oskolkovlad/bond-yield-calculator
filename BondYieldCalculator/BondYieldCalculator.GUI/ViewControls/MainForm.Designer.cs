@@ -117,6 +117,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(584, 811);
             Controls.Add(mainTableLayoutPanel);
+            KeyPreview = true;
             Name = "MainForm";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Bond yield calculator";
