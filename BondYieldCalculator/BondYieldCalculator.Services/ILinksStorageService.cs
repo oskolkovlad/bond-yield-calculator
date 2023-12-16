@@ -1,6 +1,6 @@
-﻿namespace BondYieldCalculator.GUI.Interfaces.Services
+﻿namespace BondYieldCalculator.Services
 {
-    internal interface ILinksStorageService
+    public interface ILinksStorageService
     {
         bool IsExists { get; }
 

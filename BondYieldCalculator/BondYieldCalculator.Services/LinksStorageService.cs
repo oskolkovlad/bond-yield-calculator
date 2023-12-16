@@ -1,7 +1,5 @@
-﻿namespace BondYieldCalculator.GUI.Services
+﻿namespace BondYieldCalculator.Services
 {
-    using BondYieldCalculator.GUI.Interfaces.Services;
-
     internal class LinksStorageService : ILinksStorageService
     {
         private const string FileName = "SavedLinks.ini";

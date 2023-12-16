@@ -9,13 +9,9 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.Extensions.Configuration.Binder" Version="8.0.0" />
-    <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="8.0.0" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\BondYieldCalculator.Entities\BondYieldCalculator.Entities.csproj" />
     <ProjectReference Include="..\BondYieldCalculator.Parser\BondYieldCalculator.Parser.csproj" />
+    <ProjectReference Include="..\BondYieldCalculator.Services\BondYieldCalculator.Services.csproj" />
   </ItemGroup>
 
   <ItemGroup>

@@ -2,9 +2,9 @@ namespace BondYieldCalculator.GUI
 {
     using System;
     using BondYieldCalculator.GUI.Controllers;
-    using BondYieldCalculator.GUI.Services;
     using BondYieldCalculator.GUI.ViewControls;
     using BondYieldCalculator.Parser;
+    using BondYieldCalculator.Services;
 
     internal static class Program
     {
@@ -20,12 +20,12 @@ namespace BondYieldCalculator.GUI
 
             var mainForm = new MainForm();
 
-            var bondParser = new BondParserCreator();
-            var smartLabBondParser = bondParser.CreateSmartLabBondParser();
+            var bondParserCreator = new BondParserCreator();
+            var smartLabBondParser = bondParserCreator.CreateSmartLabBondParser();
 
-            var configService = new ConfigService(ConfigPath);
-            var yieldCalculatorService = new YieldCalculatorService(configService);
-            var linksStorageService = new LinksStorageService();
+            var servicesCreator = new ServicesCreator();
+            var yieldCalculatorService = servicesCreator.CreateYieldCalculatorService(ConfigPath);
+            var linksStorageService = servicesCreator.CreateLinksStorageService();
 
             var commonInfoController = new CommonInfoController(mainForm.CommonInfoView);
             var couponInfoController = new CouponInfoController(mainForm.CouponInfoView);

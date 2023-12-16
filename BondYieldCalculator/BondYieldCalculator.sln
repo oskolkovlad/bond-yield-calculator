@@ -9,6 +9,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BondYieldCalculator.Parser"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BondYieldCalculator.Entities", "BondYieldCalculator.Entities\BondYieldCalculator.Entities.csproj", "{C1F0CF8C-0513-4DDC-A547-47F07156D419}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BondYieldCalculator.Services", "BondYieldCalculator.Services\BondYieldCalculator.Services.csproj", "{AC3D6B5F-F2CF-4AD7-B6F9-FE5AE81A81BF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{C1F0CF8C-0513-4DDC-A547-47F07156D419}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C1F0CF8C-0513-4DDC-A547-47F07156D419}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C1F0CF8C-0513-4DDC-A547-47F07156D419}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AC3D6B5F-F2CF-4AD7-B6F9-FE5AE81A81BF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AC3D6B5F-F2CF-4AD7-B6F9-FE5AE81A81BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AC3D6B5F-F2CF-4AD7-B6F9-FE5AE81A81BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AC3D6B5F-F2CF-4AD7-B6F9-FE5AE81A81BF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

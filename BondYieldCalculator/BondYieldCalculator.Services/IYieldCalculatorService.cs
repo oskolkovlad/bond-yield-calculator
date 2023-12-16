@@ -1,8 +1,8 @@
-﻿namespace BondYieldCalculator.GUI.Interfaces.Services
+﻿namespace BondYieldCalculator.Services
 {
     using BondYieldCalculator.Entities.Dto;
 
-    internal interface IYieldCalculatorService
+    public interface IYieldCalculatorService
     {
         void UpdateYieldInfo(BondInfo? bondInfo);
     }

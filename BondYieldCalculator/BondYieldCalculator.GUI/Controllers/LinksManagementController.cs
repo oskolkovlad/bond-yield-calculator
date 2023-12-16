@@ -4,9 +4,9 @@
     using BondYieldCalculator.Entities.CustomEventArgs;
     using BondYieldCalculator.Entities.Dto;
     using BondYieldCalculator.GUI.Interfaces.Controllers;
-    using BondYieldCalculator.GUI.Interfaces.Services;
     using BondYieldCalculator.GUI.Interfaces.ViewControls.Views;
     using BondYieldCalculator.Parser;
+    using BondYieldCalculator.Services;
 
     internal class LinksManagementController : IObservableController
     {
