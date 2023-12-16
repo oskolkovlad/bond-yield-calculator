@@ -2,7 +2,7 @@
 {
     using BondYieldCalculator.Entities.Dto;
 
-    public interface IConfigService
+    public interface IConfigService : IService
     {
         Config Instance { get; }
 

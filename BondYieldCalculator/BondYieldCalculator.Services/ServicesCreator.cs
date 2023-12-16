@@ -9,5 +9,7 @@
         public IYieldCalculatorService CreateYieldCalculatorService(string? fileName) => new YieldCalculatorService(CreateConfigService(fileName));
 
         public IYieldCalculatorService CreateYieldCalculatorService(IConfigService configService) => new YieldCalculatorService(configService);
+
+        public ILogService CreateLogService() => new LogService();
     }
 }

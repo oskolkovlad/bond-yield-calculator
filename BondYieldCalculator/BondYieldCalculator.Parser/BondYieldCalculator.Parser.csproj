@@ -12,6 +12,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\BondYieldCalculator.Entities\BondYieldCalculator.Entities.csproj" />
+    <ProjectReference Include="..\BondYieldCalculator.Services\BondYieldCalculator.Services.csproj" />
   </ItemGroup>
 
 </Project>

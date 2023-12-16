@@ -4,16 +4,11 @@
     using BondYieldCalculator.Entities;
     using BondYieldCalculator.Entities.Dto;
     using BondYieldCalculator.Parser.Elements;
+    using BondYieldCalculator.Services;
     using HtmlAgilityPack;
 
     internal class SmartLabBondParser : HtmlBondParser, IBondParser
     {
-        private static readonly IReadOnlyDictionary<int, BondType> _bondTypes = new Dictionary<int, BondType>(2)
-        {
-            { 1, BondType.WithoutRating },
-            { 2, BondType.WithoutRating }
-        };
-
         private static readonly IReadOnlyDictionary<BondType, IReadOnlyDictionary<string, string>> _xPathsByBondType = new Dictionary<BondType, IReadOnlyDictionary<string, string>>
         {
             {
@@ -35,6 +30,8 @@
                 }
             }
         };
+
+        public SmartLabBondParser(ILogService logService) : base(logService) { }
 
         #region IBondParser Members
 

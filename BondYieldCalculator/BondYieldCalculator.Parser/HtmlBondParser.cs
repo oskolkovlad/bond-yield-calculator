@@ -1,10 +1,18 @@
 ﻿namespace BondYieldCalculator.Parser
 {
     using BondYieldCalculator.Entities.Dto;
+    using BondYieldCalculator.Services;
     using HtmlAgilityPack;
 
     internal abstract class HtmlBondParser
     {
+        private readonly ILogService _logService;
+
+        public HtmlBondParser(ILogService logService)
+        {
+            _logService = logService;
+        }
+
         #region Protected Members
 
         protected abstract BondInfo? GetBondInfo(HtmlDocument document);
@@ -36,9 +44,9 @@
 
                 return boundInfo;
             }
-            catch (Exception)
+            catch (Exception exception)
             {
-                // TODO: log errors.
+                _logService.LogError(exception.Message, exception);
             }
 
             return null;
@@ -48,7 +56,7 @@
 
         #region Private Members
 
-        private static async Task<string?> GetHtmlContentAsync(string url)
+        private async Task<string?> GetHtmlContentAsync(string url)
         {
             try
             {
@@ -65,9 +73,9 @@
                     return htmlContent;
                 }
             }
-            catch (Exception)
+            catch (Exception exception)
             {
-                // TODO: log errors.
+                _logService.LogError(exception.Message, exception);
             }
 
             return null;

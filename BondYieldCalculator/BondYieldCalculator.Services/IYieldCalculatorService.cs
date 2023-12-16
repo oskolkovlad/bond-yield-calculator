@@ -2,7 +2,7 @@
 {
     using BondYieldCalculator.Entities.Dto;
 
-    public interface IYieldCalculatorService
+    public interface IYieldCalculatorService : IService
     {
         void UpdateYieldInfo(BondInfo? bondInfo);
     }

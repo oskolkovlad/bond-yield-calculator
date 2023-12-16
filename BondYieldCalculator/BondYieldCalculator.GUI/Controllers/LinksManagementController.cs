@@ -12,6 +12,7 @@
     {
         private readonly ILinksManagementView _linksManagementView;
         private readonly IBondParser _bondParser;
+        private readonly ILogService _logService;
         private readonly IYieldCalculatorService _yieldCalculatorService;
         private readonly ILinksStorageService _linksStorageService;
         private readonly ILinksTableController _linksTableController;
@@ -24,6 +25,7 @@
         public LinksManagementController(
             ILinksManagementView linksManagementView,
             IBondParser bondParser,
+            ILogService logService,
             IYieldCalculatorService yieldCalculatorService,
             ILinksStorageService linksStorageService,
             ILinksTableController linksTableController,
@@ -32,6 +34,7 @@
         {
             _linksManagementView = linksManagementView;
             _bondParser = bondParser;
+            _logService = logService;
             _yieldCalculatorService = yieldCalculatorService;
             _linksStorageService = linksStorageService;
             _linksTableController = linksTableController;
@@ -122,6 +125,7 @@
             var links = _linksTableController.GetLinks();
             if (links is null)
             {
+                _logService.LogWarn("'Анализ информации': oтсутствуют ссылки на облигации.");
                 MessageBox.Show("Отсутствуют ссылки на облигации.", "Анализ информации", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
                 _bondInfoItems = new List<BondInfo?>();
@@ -138,7 +142,9 @@
                 .ToList() ?? new List<BondInfo?>();
             if (_bondInfoItems.Count == 0)
             {
+                _logService.LogWarn("'Анализ информации': информация по добавленным ссылкам не найдена.");
                 MessageBox.Show("Информация по добавленным ссылкам не найдена.", "Анализ информации", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
                 _controlsStateManagementController.SetAnalyzeProcessingControlsState(true);
 
                 return;
@@ -162,14 +168,18 @@
         {
             if (!_linksStorageService.IsExists)
             {
+                _logService.LogWarn("'Восстановление ссылок': хранилище не найдено.");
                 MessageBox.Show("Хранилище не найдено.", "Восстановление ссылок", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
                 return;
             }
 
             var links = _linksStorageService.GetLinks()?.ToList();
             if (links is null)
             {
+                _logService.LogWarn("'Восстановление ссылок': в хранилище отсутствуют ссылки на облигации.");
                 MessageBox.Show("В хранилище отсутствуют ссылки на облигации.", "Восстановление ссылок", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
                 return;
             }
 
@@ -191,11 +201,15 @@
                 .ToList();
             if (links is null || links.Count == 0)
             {
+                _logService.LogWarn("'Сохранение ссылок': отсутствуют ссылки на облигации.");
                 MessageBox.Show("Отсутствуют ссылки на облигации.", "Сохранение ссылок", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
                 return;
             }
 
             _linksStorageService.Save(links);
+
+            _logService.LogInfo("'Сохранение ссылок': ссылки успешно сохранены");
             MessageBox.Show("Ссылки успешно сохранены.", "Сохранение ссылок", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 

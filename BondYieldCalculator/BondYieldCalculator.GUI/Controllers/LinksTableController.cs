@@ -7,19 +7,22 @@
     using BondYieldCalculator.Entities.Dto;
     using BondYieldCalculator.GUI.Interfaces.Controllers;
     using BondYieldCalculator.GUI.Interfaces.ViewControls.Views;
+    using BondYieldCalculator.Services;
 
     internal class LinksTableController : ILinksTableController, ILinksSelectionController
     {
         private readonly ILinksTableView _linksTableView;
+        private readonly ILogService _logService;
         private readonly IControlsStateManagementController _controlsStateManagementController;
         private readonly SortedBindingList<BondLinkRowItem> _bindingList;
         private readonly List<BondLinkRowItem> _linkRowItems;
 
         private int _lastSelectedRowIndex = -1;
 
-        public LinksTableController(ILinksTableView linksTableView, IControlsStateManagementController controlsStateManagementController)
+        public LinksTableController(ILinksTableView linksTableView, ILogService logService, IControlsStateManagementController controlsStateManagementController)
         {
             _linksTableView = linksTableView;
+            _logService = logService;
             _controlsStateManagementController = controlsStateManagementController;
             _linkRowItems = new List<BondLinkRowItem>();
             _bindingList = new SortedBindingList<BondLinkRowItem>(_linkRowItems);
@@ -44,7 +47,9 @@
 
             if (_linkRowItems.Any(item => item.Link == link))
             {
+                _logService.LogInfo("'Добавление ссылки': данная ссылка уже была добавлена.");
                 MessageBox.Show("Данная ссылка уже была добавлена.", "Добавление ссылки", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
                 return;
             }
 

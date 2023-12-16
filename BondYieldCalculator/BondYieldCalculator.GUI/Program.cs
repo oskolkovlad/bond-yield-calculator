@@ -20,12 +20,13 @@ namespace BondYieldCalculator.GUI
 
             var mainForm = new MainForm();
 
-            var bondParserCreator = new BondParserCreator();
-            var smartLabBondParser = bondParserCreator.CreateSmartLabBondParser();
-
             var servicesCreator = new ServicesCreator();
             var yieldCalculatorService = servicesCreator.CreateYieldCalculatorService(ConfigPath);
             var linksStorageService = servicesCreator.CreateLinksStorageService();
+            var logService = servicesCreator.CreateLogService();
+
+            var bondParserCreator = new BondParserCreator();
+            var smartLabBondParser = bondParserCreator.CreateSmartLabBondParser(logService);
 
             var commonInfoController = new CommonInfoController(mainForm.CommonInfoView);
             var couponInfoController = new CouponInfoController(mainForm.CouponInfoView);
@@ -35,10 +36,11 @@ namespace BondYieldCalculator.GUI
                 mainForm.CommonInfoControlsStateManagementView,
                 mainForm.CouponInfoControlsStateManagementView,
                 mainForm.YieldInfoControlsStateManagementView);
-            var linksTableController = new LinksTableController(mainForm.LinksTableView, controlsStateManagementController);
+            var linksTableController = new LinksTableController(mainForm.LinksTableView, logService, controlsStateManagementController);
             var linksManagementController = new LinksManagementController(
                 mainForm.LinksManagementView,
                 smartLabBondParser,
+                logService,
                 yieldCalculatorService,
                 linksStorageService,
                 linksTableController,
@@ -53,9 +55,10 @@ namespace BondYieldCalculator.GUI
             {
                 Application.Run(mainForm);
             }
-            catch (Exception ex)
+            catch (Exception exception)
             {
-                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                logService.LogFatal(exception.Message, exception);
+                MessageBox.Show(exception.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }
