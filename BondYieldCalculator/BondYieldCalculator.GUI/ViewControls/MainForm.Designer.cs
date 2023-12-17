@@ -50,9 +50,9 @@
             mainTableLayoutPanel.RowCount = 5;
             mainTableLayoutPanel.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
             mainTableLayoutPanel.RowStyles.Add(new RowStyle(SizeType.Absolute, 50F));
-            mainTableLayoutPanel.RowStyles.Add(new RowStyle());
-            mainTableLayoutPanel.RowStyles.Add(new RowStyle());
-            mainTableLayoutPanel.RowStyles.Add(new RowStyle());
+            mainTableLayoutPanel.RowStyles.Add(new RowStyle(SizeType.Absolute, 155F));
+            mainTableLayoutPanel.RowStyles.Add(new RowStyle(SizeType.Absolute, 155F));
+            mainTableLayoutPanel.RowStyles.Add(new RowStyle(SizeType.Absolute, 184F));
             mainTableLayoutPanel.Size = new Size(584, 811);
             mainTableLayoutPanel.TabIndex = 1;
             // 
@@ -121,6 +121,7 @@
             Name = "MainForm";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Bond yield calculator";
+            WindowState = FormWindowState.Maximized;
             mainTableLayoutPanel.ResumeLayout(false);
             ResumeLayout(false);
         }

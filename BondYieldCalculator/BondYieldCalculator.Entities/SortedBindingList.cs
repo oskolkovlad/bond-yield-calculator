@@ -6,7 +6,7 @@
     {
         private bool _isSorted;
         private ListSortDirection _sortDirection = ListSortDirection.Ascending;
-        private PropertyDescriptor _sortProperty;
+        private PropertyDescriptor? _sortProperty;
 
         public SortedBindingList(List<T> elements) : base(elements) { }
 
@@ -16,7 +16,7 @@
 
         protected override ListSortDirection SortDirectionCore => _sortDirection;
 
-        protected override PropertyDescriptor SortPropertyCore => _sortProperty;
+        protected override PropertyDescriptor? SortPropertyCore => _sortProperty;
 
         protected override void ApplySortCore(PropertyDescriptor property, ListSortDirection direction)
         {
