@@ -25,8 +25,8 @@
 
             var couponYield = bondInfo.CouponInfo.CouponsQuantity * bondInfo.CouponInfo.Coupon * TaxClearanceRatio - bondInfo.CouponInfo.AccumulatedCouponIncome;
             var differenceCost = bondInfo.CommonInfo.NominalPrice - bondInfo.CommonInfo.CurrentPrice;
-            var brokerCommissionCost = differenceCost > 0 ? differenceCost * BrokerCommission : 0;
-            bondInfo.YieldInfo.Yield = TruncateDecimalValue(couponYield + differenceCost - brokerCommissionCost);
+            var differenceYield = differenceCost > 0 ? differenceCost * TaxClearanceRatio : 0;
+            bondInfo.YieldInfo.Yield = TruncateDecimalValue(couponYield + differenceYield);
 
             bondInfo.YieldInfo.CapitalGainsPercent = TruncateDecimalValue(bondInfo.YieldInfo.Yield * 100 / bondInfo.CommonInfo.CurrentPrice);
             bondInfo.YieldInfo.RealCouponIncome = TruncateDecimalValue(bondInfo.CouponInfo.Coupon * bondInfo.CouponInfo.QuantityOfPaymentsInYear * TaxClearanceRatio);
