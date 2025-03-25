@@ -18,6 +18,6 @@
 
         public const string MaturityXpath = ".//div/div[6]/div[2]";
 
-        public const string CouponsQuantityXpath = "/html/body/div[1]/main/div[2]/div[3]/div[2]/table/tbody/tr";
+        public const string CouponsQuantityXpath = "/html/body/div[2]/main/div[2]/div[3]/div[2]/table/tbody/tr";
     }
 }
